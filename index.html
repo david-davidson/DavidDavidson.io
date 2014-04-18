@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app='Portfolio' ng-init>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Dax' rel='stylesheet' type='text/css'>
+  <! -- Restore Typekit once ready for production -->
+  <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js'></script>
+  <script src='routing.js'></script>
+  <script src='controllers/resumeController.js'></script>
+  <script src='controllers/homeController.js'></script>
+  <script src='models/resumeModel.js'></script>
+  <script src='models/homeModel.js'></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script>
+// $(document).ready(function () {
+//   function linkify(selector) {
+//     var nodeList = document.querySelectorAll(selector);
+//     for (var i = 0, length = nodeList.length; i < length; i++) {
+//       if (nodeList[i].hasChildNodes() == true ){
+//       nodeList[i].style.color = "blue";
+//     }
+//     var hasChildren = nodeList[i].hasChildNodes();
+//     console.log(i, hasChildren)
+//     }
+//   }
+//   linkify(".bullet");
+//   BTW, this works great for selecting CSS classes
+// });
+</script>
+<link rel='stylesheet' href='http://daviddavidson.io/davidson.css'>
+<link rel='stylesheet' href='styles/new.css'>
+<title>Angular test</title>
+</head>
+<body>
+  <h1>Test version built in Angular</h1>
+  <div ng-view>
+<!--   Inject partial views here at runtime. -->
+  </div>
+</body>
+</html>

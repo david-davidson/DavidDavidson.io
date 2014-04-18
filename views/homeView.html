@@ -1,0 +1,20 @@
+<h2>
+  Skills
+</h2>
+<div ng-repeat='skill in skills' class="homePara">
+  <h3 ng-bind-html-unsafe='skill.title'></h3>
+  <p ng-bind-html-unsafe='skill.description'></p>
+  <ul ng-show='skill.bullets'>
+    <li ng-repeat='item in skill.bullets' ng-bind-html-unsafe='item.bullet'></li>
+  </ul>
+</div>
+<h2>
+  Values
+</h2>
+<div ng-repeat='value in values' class="homePara">
+  <h3 ng-bind-html-unsafe='value.title'></h3>
+  <p ng-bind-html-unsafe='value.description'></p>
+  <ul ng-show='value.bullets'>
+    <li ng-repeat='item in value.bullets' ng-bind-html-unsafe='item.bullet'></li>
+  </ul>
+</div>
