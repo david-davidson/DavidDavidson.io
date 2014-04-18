@@ -1,6 +1,10 @@
 
 var portfolioConfig = function($routeProvider) {
   $routeProvider
+    .when('/', {
+      controller: 'homeController',
+      templateUrl: 'views/homeView.html',
+    })
     .when('/resume', {
       controller: 'resumeController',
       templateUrl: 'views/resumeView.html'
@@ -10,8 +14,7 @@ var portfolioConfig = function($routeProvider) {
     //   templateUrl: 'views/portfolioView.html'
     // })
     .otherwise({
-      controller: 'homeController',
-      templateUrl: 'views/homeView.html',
+      controller: '404Controller',
       redirectTo: '/'
     })
   ;

@@ -98,13 +98,13 @@ Portfolio.service('resumeModel',
           ]
         },
         {
-          title: 'Assistant instructor of English (<em>auxiliar de&nbsp;conversación</em>)',
+          title: 'Assistant instructor of English (<em>auxiliar de&nbsp;conversaci&oacute;n</em>)',
           who: '<a href="http://www.safamadrid.com/" target="_blank">Colegio Sagrada Familia</a>',
           when: 'September <span class="nobr">2010</span>&ndash;June&nbsp;2011',
           where: 'Madrid, Spain',
           bullets: [
             {
-              bullet: 'Created and delivered lessons in British and American English for students <span class="nobr">ages 7–17</span>',
+              bullet: 'Created and delivered lessons in British and American English for students <span class="nobr">ages 7&ndash;17</span>',
             },
             {
               bullet: 'Taught conversational American usage alongside the formal&nbsp;curriculum',

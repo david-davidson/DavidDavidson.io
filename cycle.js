@@ -1062,7 +1062,7 @@ $.fn.cycle.defaults = {
     width:            null      // container width (if the 'fit' option is true, the slides will be set to this width as well)
 };
 
-})(jQuery);
+})(jquery);
 
 
 /*!

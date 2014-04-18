@@ -1,39 +1,72 @@
 <!DOCTYPE html>
 <html ng-app='Portfolio' ng-init>
 <head>
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Dax' rel='stylesheet' type='text/css'>
-  <! -- Restore Typekit once ready for production -->
+  <! -- Don't forget to restore Typekit once ready for production -->
   <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js'></script>
   <script src='routing.js'></script>
   <script src='controllers/resumeController.js'></script>
   <script src='controllers/homeController.js'></script>
+  <script src='controllers/404controller.js'></script>
+  <script src='controllers/navController.js'></script>
   <script src='models/resumeModel.js'></script>
   <script src='models/homeModel.js'></script>
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <script>
-// $(document).ready(function () {
-//   function linkify(selector) {
-//     var nodeList = document.querySelectorAll(selector);
-//     for (var i = 0, length = nodeList.length; i < length; i++) {
-//       if (nodeList[i].hasChildNodes() == true ){
-//       nodeList[i].style.color = "blue";
-//     }
-//     var hasChildren = nodeList[i].hasChildNodes();
-//     console.log(i, hasChildren)
-//     }
-//   }
-//   linkify(".bullet");
-//   BTW, this works great for selecting CSS classes
-// });
-</script>
-<link rel='stylesheet' href='http://daviddavidson.io/davidson.css'>
-<link rel='stylesheet' href='styles/new.css'>
-<title>Angular test</title>
+  <!-- Acquire jquery -->
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- Acquire cycle.js -->
+  <script src="http://daviddavidson.io/cycle.js"></script>
+  <!-- Acquire styles -->
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Dax' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='http://daviddavidson.io/davidson.css'>
+  <link rel='stylesheet' href='styles/new.css'>
+  <title>Angular test</title>
 </head>
 <body>
-  <h1>Test version built in Angular</h1>
-  <div ng-view>
-<!--   Inject partial views here at runtime. -->
+  <h1>David M. Davidson</h1>
+  <h2 id="tagline">Web developer | copywriter | copyeditor</h2>
+  <nav>
+    <div ng-controller='navController' class="table">
+      <ul ng-cloak class="nav">
+        <li ng-show='page != "home"' ng-click='page = "home"'><a href="/">Home</a></li>
+        <li ng-show='page != "resume"' ng-click='page = "resume"'><a href="#/resume">Resume</a></li>
+        <li ng-show='page != "portfolio"' ng-click='page = "portfolio"'><a href="#/portfolio">Portfolio</a></li>
+        <li ng-show='page != "contact"' ng-click='page = "contact"'><a href="#/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div ng-cloak- ng-view>
+  <!-- Inject views here at runtime -->
   </div>
+  <nav ng-cloak ng-controller="navController">
+    <div class="table2">
+      <ul ng-cloak class="nav2">
+        <li ng-show='page == "home"' ng-click='page = "resume"'class="CTA2"><a href="#/resume">See my r&eacute;sum&eacute;</a></li>
+        <li ng-show='page == "resume"' ng-click='page = "portfolio"'class="CTA2"><a href="#/portfolio">See my portfolio</a></li>
+        <li ng-show='page == "portfolio"' ng-click='page = "contact"'class="CTA2"><a href="#/contact">Get in touch</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Fire cycle.js -->
+  <script>
+    function cycle () {
+      $('.slideshow').cycle({
+        fx: 'fade',
+        slideExpr: ".slide",
+        slideResize: false,
+        containerResize: false,
+        timeout: 15000, 
+        next:   '#s3', 
+        pager: '#pager', 
+        pagerAnchorBuilder: function paginate(idx, el) {
+          return '<a class="page" href="#" >&bull;</a>';
+        } 
+      });
+    }
+    $(angular.element(window)).ready(function() {
+      // Sometimes (window).load fires *before* the page is built, so we build in some sleep, which should be fly under the radar since the top half of the page looks ready.
+      // What's a cleaner solution?
+      setTimeout("cycle();", 500);
+      console.log("cycle.js fired");
+    });
+  </script>
 </body>
 </html>
