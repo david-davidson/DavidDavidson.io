@@ -1,29 +1,9 @@
 Portfolio.service('portfolioModel',
     function() {
         this.getProjects = function() {
-            return [
+            return [           
                 {
-                    title: 'Zipper Computer',
-                    description: 'FPO',
-                    technologies: [
-                        {
-                            bullet: 'Laravel'
-                        },
-                        {
-                            bullet: 'Foundation'
-                        },
-                        {
-                            bullet: 'SCSS'
-                        },
-                        {
-                            bullet: 'PHP'
-                        },
-                    ],
-                    image: '../images/zipper.png',
-                    url: 'http://zippercomputer.com/'
-                },                
-                {
-                    title: 'Waycross Investment',
+                    title: 'Waycross.com',
                     description: 'FPO',
                     technologies: [
                         {
@@ -37,7 +17,7 @@ Portfolio.service('portfolioModel',
                     url: 'http://waycross.com/',
                 },
                 {
-                    title: 'Bloom Yoga',
+                    title: 'BloomYogaNW.com',
                     description: 'FPO',
                     technologies: [
                         {
@@ -57,7 +37,7 @@ Portfolio.service('portfolioModel',
                     url: 'http://www.bloomyoganw.com/'
                 },
                 {
-                    title: 'SublimeScript',
+                    title: 'SublimeScript/SublimeScript.com',
                     description: 'FPO',
                     technologies: [
                         {
@@ -73,6 +53,26 @@ Portfolio.service('portfolioModel',
                     image: '../images/sublimeScript.png',
                     url: 'http://sublimescript.com/'
                 },
+                {
+                    title: 'ZipperComputer.com views',
+                    description: 'FPO',
+                    technologies: [
+                        {
+                            bullet: 'Laravel'
+                        },
+                        {
+                            bullet: 'Foundation'
+                        },
+                        {
+                            bullet: 'SCSS'
+                        },
+                        {
+                            bullet: 'PHP'
+                        },
+                    ],
+                    image: '../images/zipper.png',
+                    url: 'http://zippercomputer.com/'
+                },     
                 // Maybe restore this once you can have 10 total, not 8?
                 // {
                 //     title: 'OverviewBible.com',
@@ -122,27 +122,27 @@ Portfolio.service('portfolioModel',
                     ],
                     image: '../images/linktagger.png',
                     url: 'https://github.com/david-davidson/linktagger.py'
-                },
-                {
-                    title: 'github profile',
-                    description: 'FPO',
-                    technologies: [
-                        {
-                            bullet: 'Autohotkey_L'
-                        },
-                        {
-                            bullet: 'Bash'
-                        },
-                        {
-                            bullet: 'Python'
-                        },
-                        {
-                            bullet: 'Javascript/AngularJS'
-                        },
-                    ],
-                    image: '../images/Octocat.png',
-                    url: 'https://github.com/david-davidson'
                 }
+                // {
+                //     title: 'All my Github projects',
+                //     description: 'FPO',
+                //     technologies: [
+                //         {
+                //             bullet: 'Autohotkey_L'
+                //         },
+                //         {
+                //             bullet: 'Bash'
+                //         },
+                //         {
+                //             bullet: 'Python'
+                //         },
+                //         {
+                //             bullet: 'Javascript/AngularJS'
+                //         },
+                //     ],
+                //     image: '../images/Octocat.png',
+                //     url: 'https://github.com/david-davidson'
+                // }
             ]
         }
     }
