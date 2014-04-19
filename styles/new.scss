@@ -6,15 +6,35 @@
 $blue: rgb(60, 109, 197);
 $darkBlue: rgb(70,70,150);
 $darkGray: rgb(47, 79, 79);
-
+img {
+	border: 0;
+}
+a {
+	img {
+		border: 0;
+	}
+}
 // Bump up font size from prev. version
 body {
 	font-size: 20px;
 }
 // Include missing font
-.when, .where, .who, .GPA, #elevatorPitch {
+.when, .where, .who, .GPA, #elevatorPitch, button {
 	font-family: "museo-sans";
 }
+// Reusable padding styles
+.padding {
+	padding-bottom: 40px;
+}
+.extraPadding {
+	padding-bottom: 85px
+}
+.center {
+	text-align: center;
+	margin: 0 auto;
+	float: none !important;
+}
+// Default links
 .link {
 	color: $blue;
 	cursor: pointer;
@@ -57,10 +77,6 @@ body {
 	li {
 		list-style: none;
 	}
-}
-// Multiuse padding div
-.padding {
-	padding-bottom: 40px;
 }
 // Hide pipes in tagline for mobile view (when stacked vertically)
 .hideMobile {
@@ -179,6 +195,18 @@ body {
 	}
 }
 
+.portfolioButton {
+	background-color: $blue;
+	color: white;
+	padding: 10px 20px;
+	border: 0px;
+	font-size: 1em;
+	&:hover {
+		background-color: $darkBlue;
+		color: white
+	}
+}
+
 /**
  * Media queries
  */
@@ -217,6 +245,9 @@ body {
 			padding: 0px;
 		}
 	}
+	.portfolioCTA {
+		text-align: right;
+	}
 	.left {
 		float: left;
 		clear: left;
@@ -229,14 +260,14 @@ body {
 		float: left;
 		clear: right;
 		img {
-			left: 140%;
+			left: 130%;
 		}
 	}
 	.rightTiered {
 		float: right;
 		clear: left;
 		img {
-			right: 140%;
+			right: 130%;
 		}
 	}
 	.homePara {
