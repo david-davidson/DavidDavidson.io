@@ -24,7 +24,7 @@ var portfolioConfig = function($routeProvider) {
 // Set up the Portfolio namespace
 var Portfolio = angular.module('Portfolio', []).config(portfolioConfig);
 
-// Define the slider directive
+// Set up the slider directive
 Portfolio.directive('slider', function($timeout) {
   return {
     restrict: 'AE',
