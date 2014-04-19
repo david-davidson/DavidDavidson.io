@@ -1,12 +1,13 @@
-<div>
-  <h2>Things I&rsquo;ve made</h2>
-  <div class="blockWrapper portfolioItem" ng-repeat='project in projects' ng-class-even='"rightTiered"' ng-class-odd='"leftTiered"'>
-    <h3 ng-bind-html-unsafe='project.title'></h3>
-    <a href="{{project.url}}"><img ng-show='project.image' ng-src='{{project.image}}'></a>
-    <p>Test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test v</p>
-    <ul>
-      <li ng-repeat='item in project.technologies' ng-bind-html-unsafe='item.bullet'></li>
-    </ul>
-    <button>sup</button>
-  </div>
+<h2>Things I&rsquo;ve made</h2>
+<div class="blockWrapper portfolioItem extraPadding" ng-repeat='project in projects' ng-class-even='"rightTiered"' ng-class-odd='"leftTiered"'>
+  <h3 ng-bind-html-unsafe='project.title'></h3>
+  <a href="{{project.url}}" target="_blank"><img ng-show='project.image' ng-src='{{project.image}}'></a>
+  <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+  <ul>
+    <li ng-repeat='item in project.technologies' ng-bind-html-unsafe='item.bullet'></li>
+  </ul>
+  <a href="{{project.url}}" target="_blank">
+    <button type="button" class="link portfolioButton">Take a look</button>
+  </a>
 </div>
+<h2 class="center">I&rsquo;d like to make something with you,&nbsp;too.<br>Let&rsquo;s work&nbsp;together:</h2>
