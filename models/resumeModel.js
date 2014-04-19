@@ -64,7 +64,7 @@ Portfolio.service('resumeModel',
               bullet: 'Make some edits directly using HTML/CSS (email) and WordPress&nbsp;(blog)',
             },
             {
-              bullet: 'Researched and wrote marketing style guide (based on <em>The Chicago Manual of&nbsp;Style',
+              bullet: 'Researched and wrote marketing style guide (based on <em>The Chicago Manual of&nbsp;Style</em>)',
             },
             {
               bullet: 'Quickly learned audience&rsquo;s language and habits (I&rsquo;m not&nbsp;Christian)',

@@ -13,6 +13,5 @@ Portfolio.controller('navController',
         else {
             $scope.page = "home";
         }
-        console.log($scope.page);
     }
 );

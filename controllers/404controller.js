@@ -3,5 +3,6 @@ Portfolio.controller('404Controller',
         $window.alert("hi!");
         $location.path('/');
         console.log("404");
+        cycle();
     }
 );

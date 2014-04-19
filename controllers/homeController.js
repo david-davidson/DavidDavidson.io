@@ -4,4 +4,5 @@ Portfolio.controller('homeController',
         $scope.values = homeModel.getValues();
         $scope.testimonials = homeModel.getTestimonials();
     }
+
 );
