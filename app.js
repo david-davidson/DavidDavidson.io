@@ -16,6 +16,7 @@ var portfolioConfig = function($routeProvider) {
   ;
 };
 var Portfolio = angular.module('Portfolio', []).config(portfolioConfig);
+// Define the slider directive
 Portfolio.directive('slider', function($timeout) {
   return {
     restrict: 'AE',
@@ -24,12 +25,15 @@ Portfolio.directive('slider', function($timeout) {
       testimonials: '='
     },
     link: function(scope, elem, attrs) {
-      scope.currentIndex = 0; // Initially the index is at the first image
+      scope.currentIndex = 0; // Start on the first slider
+      // Then
       scope.next = function() {
-        scope.currentIndex < scope.testimonials.length - 1 ? scope.currentIndex++ : scope.currentIndex = 0;
-      };
-      scope.prev = function() {
-        scope.currentIndex > 0 ? scope.currentIndex-- : scope.currentIndex = scope.testimonials.length - 1;
+        if (scope.currentIndex == scope.testimonials.length - 1) {
+          scope.currentIndex = 0;
+        }
+        else {
+          scope.currentIndex++;
+        }
       };
       scope.$watch('currentIndex', function() {
         scope.testimonials.forEach(function(item) {
