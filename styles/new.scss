@@ -1,0 +1,259 @@
+/**
+ * General styles
+ */
+
+// Define colors
+$blue: rgb(60, 109, 197);
+$darkBlue: rgb(70,70,150);
+$darkGray: rgb(47, 79, 79);
+
+// Bump up font size from prev. version
+body {
+	font-size: 20px;
+}
+// Include missing font
+.when, .where, .who, .GPA, #elevatorPitch {
+	font-family: "museo-sans";
+}
+.link {
+	color: $blue;
+	cursor: pointer;
+}
+.link:hover {
+	color: $darkBlue;
+}
+// Treat divs as full-width boxes
+.blockWrapper {
+	display: inline-block;
+	width:100%;
+}
+// Replace the deprecated <nobr>
+.nobr {
+	white-space: nowrap;
+}
+
+/**
+ * Homepage styles
+ */
+
+// Style the tagline
+#elevatorPitch {
+	margin-bottom: 40px;
+	margin-top: -25px;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	font-size: 1.2em;
+	font-weight: bold;
+	ul {
+		text-align: center;
+		margin: 0 auto;
+		display: inline-block;
+		list-style-position: outside;
+		-webkit-margin-before: 0em;
+		-webkit-padding-start: 0px;
+		padding-top: 2em;
+	}
+	li {
+		list-style: none;
+	}
+}
+// Multiuse padding div
+.padding {
+	padding-bottom: 40px;
+}
+// Hide pipes in tagline for mobile view (when stacked vertically)
+.hideMobile {
+	display: none;
+}
+// Style the rule/arrow dividers
+.shadow {
+	margin-top: 80px !important; // We need !important to override the previous stylesheet
+	background-image: none; // Overwrite that fade-out-on-the sides effect
+	background-color: #AAA; // Replace it with a solid line
+}
+.downArrow {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #AAA;
+	font-size: 0;
+	line-height: 0;
+	display: inline-block;
+	position: absolute;
+	// left: 50% is a little off, because it doesn't account for the width of the arrow itself. So, for old browsers, approximate with 49%...
+	left: 49%;
+	// ... and then get it right for the new browsers
+	left: calc((100% - 20px) / 2);;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+/**
+ * Styles for testimonial directive
+ */
+
+// Make the whole thing relative, to allow for absolute positioning of inner elements
+.slideshow {
+	position: relative;
+	max-width: 100%;
+}
+// .slide {
+// 	max-width: 700px;
+// }
+// Absolute position the testimonials on top of an invisible placeholder paragraph, to keep the screen from jerking up and down as testimonials cycle in
+.slideshow {
+	p {
+		position: absolute;
+		&.placeholder {
+			position: relative;
+		}
+	}
+}
+// Style the nav dots
+.navDot {
+	font-size: 75px;
+	padding: 0px;
+	color: #AAA;
+}
+// Center the nav dots
+.dotWrapper {
+	margin: 0 auto;
+	text-align: center;
+}
+// Make active dot darker
+.active {
+	color: rgb(47, 79, 79);
+}
+// Keep the text aligned left
+.testimonial {
+	p {
+		text-align: left;
+	}
+}
+// Tweak the positioning of quotation marks
+.quote, .quote2 {
+	top: -.15em;
+}
+
+
+/**
+ * Resume styles
+ */
+
+// Div around all the bullets
+.bullets {
+	clear: both;
+}
+// Wrapper around individual bullets
+.bulletWrapper {
+	ul {
+		margin: 0;
+		display: inline-block;
+	}
+}
+// Bullet text
+.bullet {
+	text-align: left;
+}
+.GPA {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+/**
+ * Portfolio styles
+ */
+
+.portfolioItem {
+	position: relative;
+	h3 {
+		text-align: center;
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+		padding: 50px;
+		max-height: 250px;
+	}
+}
+
+/**
+ * Media queries
+ */
+
+@media (min-width: 750px) {
+	// Elevator pitch is a vertical list for mobile; make it horizontal for full width
+	#elevatorPitch {
+		li {
+			float: left;
+		}
+	}
+	// Reveal the pipes between words
+	.hideMobile {
+		display: inline;
+	}
+	// Lowercase in middle of list
+	.lowercase {
+		text-transform: lowercase;
+	}
+}
+
+@media (min-width: 1000px) {
+	// Set bullets at ~ half width
+	.bulletWrapper {
+		width: 45%;
+	}
+	.portfolioItem {
+		width: 45%;
+	}
+	.portfolioItem {
+		h3 {
+			text-align: left;
+		}
+		img {
+			position: absolute;
+			padding: 0px;
+		}
+	}
+	.left {
+		float: left;
+		clear: left;
+	}
+	.right {
+		float: right;
+		clear: right;
+	}
+	.leftTiered {
+		float: left;
+		clear: right;
+		img {
+			left: 140%;
+		}
+	}
+	.rightTiered {
+		float: right;
+		clear: left;
+		img {
+			right: 140%;
+		}
+	}
+	.homePara {
+		width: 31.33%;
+		margin-right: 2%;
+		float: left;
+	}
+	.homePara p {
+		clear: left;
+	}
+	// Only give testimonial dots a hover effect on desktop
+	.navDot:hover {
+		color: $darkBlue;
+		cursor: pointer;
+	}
+	.navDot.active:hover {
+		color: $darkGray;
+		cursor: default;
+	}
+}

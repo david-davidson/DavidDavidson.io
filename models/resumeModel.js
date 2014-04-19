@@ -136,23 +136,28 @@ Portfolio.service('resumeModel',
         },
       ]
     };
+    this.getSchools = function() {
+      return [
+        {
+          title: 'Certificate in web design&nbsp;&amp; development',
+          who: '<a href="http://www.acadweb.wwu.edu/eesp/template/home_webdesign.shtml" target="_blank">Western Washington University</a>',
+          when: 'May&nbsp;2013',
+          where: 'Bellingham, WA'
+        },
+        {
+          title: 'MAT (M&aacute;ster en ense&ntilde;anza de la lengua, literatura, y cultura en el mundo&nbsp;hisp&aacute;nico)',
+          who: '<a href="http://www.institutofranklin.net/" target="_blank">Instituto Franklin, Universidad de Alcal&aacute; de&nbsp;Henares</a>',
+          when: 'June 2011',
+          where: 'Alcal&aacute; de Henares, Madrid,&nbsp;Spain',
+          GPA: '4.0 GPA'
+        },
+        {
+          title: 'BA, English &amp; Spanish double&nbsp;major',
+          who: '<a href="http://www.willamette.edu/" target="_blank">Willamette University</a>',
+          when: 'May 2010',
+          where: 'Salem, OR'
+        }
+      ]
+    }
   }
 );
-
-        // {
-        //   id: 1,
-        //   title: '2nd job',
-        //   bullets: [
-        //   {
-        //     bullet: '1',
-        //     children: [
-        //     {
-        //       child: '1',
-        //       child: '2'
-        //     }]
-        //   },
-        //   {
-        //     bullet: '2'
-        //   }
-        //   ]
-        // },

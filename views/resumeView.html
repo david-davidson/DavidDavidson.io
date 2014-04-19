@@ -22,4 +22,12 @@
       </div>
     </div>
   </div>
+  <h2>Education</h2>
+  <div class="blockWrapper" ng-repeat='school in schools'>
+    <h3 ng-bind-html-unsafe='school.title'></h3>
+    <span ng-bind-html-unsafe='school.who' class="who"></span>
+    <span ng-bind-html-unsafe='school.when' class="when"></span>
+    <span ng-bind-html-unsafe='school.where' class="where"></span>
+    <span ng-bind-html-unsafe='school.GPA' ng-show='school.GPA' class="GPA"></span>
+  </div>
 </div>

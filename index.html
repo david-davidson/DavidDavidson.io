@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html ng-app='Portfolio' ng-init>
+<html ng-app='Portfolio' ng-init ng-controller='navController'>
 <head>
+  <!-- Angular -->
   <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js'></script>
+  <!-- Routing and config -->
   <script src='app.js'></script>
-  <script src='controllers/resumeController.js'></script>
-  <script src='controllers/homeController.js'></script>
-  <script src='controllers/404controller.js'></script>
+  <!-- Controllers -->
   <script src='controllers/navController.js'></script>
-  <script src='models/resumeModel.js'></script>
+  <script src='controllers/homeController.js'></script>
+  <script src='controllers/resumeController.js'></script>
+  <script src='controllers/portfolioController.js'></script>
+  <!-- Models -->
   <script src='models/homeModel.js'></script>
+  <script src='models/resumeModel.js'></script>
+  <script src='models/portfolioModel.js'></script>
   <!-- Typekit fonts -->
   <script type="text/javascript" src="//use.typekit.net/fkv6lkh.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -17,18 +22,23 @@
   <!-- Styles -->
   <link rel='stylesheet' href='http://daviddavidson.io/davidson.css'>
   <link rel='stylesheet' href='styles/new.css'>
-  <title>Angular!</title>
+  <title ng-bind-html-unsafe='page'></title>
 </head>
-<body ng-controller='navController'>
+<body>
   <h1>David M. Davidson</h1>
-  <h2 id="elevatorPitch">Web developer | copywriter | copyeditor</h2>
+  <div id="elevatorPitch">
+    <ul>
+      <li>Web developer<span class="hideMobile"> |&nbsp;</span></li>
+      <li><span class="lowercase">C</span>opywriter<span class="hideMobile"> |&nbsp;</span></li>
+      <li><span class="lowercase">C</span>opyeditor</li>
+  </div>
   <nav>
     <div class="table">
       <ul ng-cloak class="nav">
-        <li ng-show='page != "home"' ng-click='page = "home"' onclick='cycleSoon()'><a href="/#/">Home</a></li>
-        <li ng-show='page != "resume"' ng-click='page = "resume"'><a href="#/resume">See my r&eacute;sum&eacute;</a></li>
-        <li ng-show='page != "portfolio"' ng-click='page = "portfolio"'><a href="#/portfolio">See my portfolio</a></li>
-        <li ng-show='page != "contact"' ng-click='page = "contact"'><a href="#/contact">Get in touch</a></li>
+        <li ng-show='page != "home"' ng-click='page = "home"'><a href="/#/">Home</a></li>
+        <li ng-show='page != "resume"' ng-click='page = "resume"'><a href="/#/resume">See my r&eacute;sum&eacute;</a></li>
+        <li ng-show='page != "portfolio"' ng-click='page = "portfolio"'><a href="/#/portfolio">See my portfolio</a></li>
+        <li ng-show='page != "contact"' ng-click='page = "contact"'><a href="/#/contact">Get in touch</a></li>
       </ul>
     </div>
   </nav>

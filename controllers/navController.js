@@ -1,17 +1,23 @@
 Portfolio.controller('navController',
     function ($scope, $location, $routeParams) {
-        var currentPage = $location.path();
-        if (currentPage == "/resume") {
-            $scope.page = "resume";
-        }
-        else if (currentPage == "/portfolio") {
-            $scope.page = "portfolio";
-        }
-        else if (currentPage == "/contact") {
-            $scope.page = "contact";
-        }
-        else {
-            $scope.page = "home";
-        }
+        $scope.$watch('$location.path()', function() {
+            var currentPage = $location.path();
+            if (currentPage == '/resume') {
+                $scope.page = 'resume';
+                $scope.title = 'R&eacute;sum&eacute; | David Davidson';
+            }
+            else if (currentPage == '/portfolio') {
+                $scope.page = 'portfolio';
+                $scope.title = 'Portfolio | David Davidson';
+            }
+            else if (currentPage == '/contact') {
+                $scope.page = 'contact';
+                $scope.title = 'Contact | David Davidson';
+            }
+            else {
+                $scope.page = 'home';
+                $scope.title = 'David Davidson | web developer, copywriter, copyeditor';
+            }
+        })
     }
 );

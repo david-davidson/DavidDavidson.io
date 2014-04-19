@@ -1,21 +1,29 @@
-
+// Set up routing
 var portfolioConfig = function($routeProvider) {
   $routeProvider
   .when('/', {
     controller: 'homeController',
+    // controller: 'navController',
     templateUrl: 'views/homeView.html',
   })
   .when('/resume', {
     controller: 'resumeController',
+    // controller: 'navController',
     templateUrl: 'views/resumeView.html'
   })
+  .when('/portfolio', {
+    controller: 'portfolioController',
+    templateUrl: 'views/portfolioView.html'
+  })
   .otherwise({
-    controller: '404Controller',
     redirectTo: '/'
   })
   ;
 };
+
+// Set up the Portfolio namespace
 var Portfolio = angular.module('Portfolio', []).config(portfolioConfig);
+
 // Define the slider directive
 Portfolio.directive('slider', function($timeout) {
   return {
@@ -25,8 +33,8 @@ Portfolio.directive('slider', function($timeout) {
       testimonials: '='
     },
     link: function(scope, elem, attrs) {
-      scope.currentIndex = 0; // Start on the first slider
-      // Then
+      // Start on the first slider, and then increment from there
+      scope.currentIndex = 0; 
       scope.next = function() {
         if (scope.currentIndex == scope.testimonials.length - 1) {
           scope.currentIndex = 0;
@@ -35,11 +43,13 @@ Portfolio.directive('slider', function($timeout) {
           scope.currentIndex++;
         }
       };
+      // Hide every testimonial
       scope.$watch('currentIndex', function() {
         scope.testimonials.forEach(function(item) {
-          item.visible = false; // make every image invisible
+          item.visible = false; 
         });
-        scope.testimonials[scope.currentIndex].visible = true; // make the current image visible
+        // Then show the current testimonial
+        scope.testimonials[scope.currentIndex].visible = true; 
       });
       scope.activate = function(index) {
         scope.currentIndex = index;
@@ -53,7 +63,7 @@ Portfolio.directive('slider', function($timeout) {
       };
       sliderFunc();
       scope.$on('$destroy', function() {
-        $timeout.cancel(timer); // when the scope is getting destroyed, cancel the timer
+        $timeout.cancel(timer);
       });
     },
     templateUrl: 'views/sliderView.html'
