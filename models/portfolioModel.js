@@ -119,6 +119,7 @@ Portfolio.service('portfolioModel',
                             bullet: 'Python'
                         }
                     ],
+                    image: '../images/linktagger.png',
                     url: 'https://github.com/david-davidson/linktagger.py'
                 },
                 {
