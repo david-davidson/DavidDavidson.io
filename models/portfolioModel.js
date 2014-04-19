@@ -109,6 +109,7 @@ Portfolio.service('portfolioModel',
                             bullet: 'SCSS'
                         }
                     ],
+                    image: '../images/site.png',
                     url: 'https://github.com/david-davidson/DavidDavidson.io'
                 },
                 {
