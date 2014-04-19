@@ -140,6 +140,7 @@ Portfolio.service('portfolioModel',
                             bullet: 'Javascript/AngularJS'
                         },
                     ],
+                    image: '../images/Octocat.png',
                     url: 'https://github.com/david-davidson'
                 }
             ]
