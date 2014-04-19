@@ -22,7 +22,7 @@
   <!-- Styles -->
   <link rel='stylesheet' href='http://daviddavidson.io/davidson.css'>
   <link rel='stylesheet' href='styles/new.css'>
-  <title ng-bind-html-unsafe='page'></title>
+  <title ng-bind-html-unsafe='title'></title>
 </head>
 <body>
   <h1>David M. Davidson</h1>
@@ -35,10 +35,10 @@
   <nav>
     <div class="table">
       <ul ng-cloak class="nav">
-        <li ng-show='page != "home"' ng-click='page = "home"'><a href="/#/">Home</a></li>
-        <li ng-show='page != "resume"' ng-click='page = "resume"'><a href="/#/resume">See my r&eacute;sum&eacute;</a></li>
-        <li ng-show='page != "portfolio"' ng-click='page = "portfolio"'><a href="/#/portfolio">See my portfolio</a></li>
-        <li ng-show='page != "contact"' ng-click='page = "contact"'><a href="/#/contact">Get in touch</a></li>
+        <li ng-show='page != "home"'><a href="/#/">Home</a></li>
+        <li ng-show='page != "resume"'><a href="/#/resume">See my r&eacute;sum&eacute;</a></li>
+        <li ng-show='page != "portfolio"'><a href="/#/portfolio">See my portfolio</a></li>
+        <li ng-show='page != "contact"'><a href="/#/contact">Get in touch</a></li>
       </ul>
     </div>
   </nav>
@@ -48,9 +48,9 @@
   <nav>
     <div class="table2">
       <ul ng-cloak class="nav2">
-        <li ng-show='page == "home"' ng-click='page = "resume"' class="CTA2"><a href="#/resume">See my r&eacute;sum&eacute;</a></li>
-        <li ng-show='page == "resume"' ng-click='page = "portfolio"' class="CTA2"><a href="#/portfolio">See my portfolio</a></li>
-        <li ng-show='page == "portfolio"' ng-click='page = "contact"' class="CTA2"><a href="#/contact">Get in touch</a></li>
+        <li ng-show='page == "home"' class="CTA2"><a href="#/resume" target="_self">See my r&eacute;sum&eacute;</a></li>
+        <li ng-show='page == "resume"' class="CTA2"><a href="#/portfolio" target="_self">See my portfolio</a></li>
+        <li ng-show='page == "portfolio"' class="CTA2 center"><a href="#/contact" target="_self">Get in touch</a></li>
       </ul>
     </div>
   </nav>

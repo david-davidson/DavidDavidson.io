@@ -3,17 +3,18 @@ var portfolioConfig = function($routeProvider) {
   $routeProvider
   .when('/', {
     controller: 'homeController',
-    // controller: 'navController',
     templateUrl: 'views/homeView.html',
+    title: 'David Davidson | web developer, copywriter, copyeditor'
   })
   .when('/resume', {
     controller: 'resumeController',
-    // controller: 'navController',
-    templateUrl: 'views/resumeView.html'
+    templateUrl: 'views/resumeView.html',
+    title: 'Resume | David Davidson'
   })
   .when('/portfolio', {
     controller: 'portfolioController',
-    templateUrl: 'views/portfolioView.html'
+    templateUrl: 'views/portfolioView.html',
+    title: 'Portfolio | David Davidson'
   })
   .otherwise({
     redirectTo: '/'
