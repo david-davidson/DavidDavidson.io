@@ -1,6 +1,6 @@
 Portfolio.controller('navController',
     function ($scope, $location, $routeParams) {
-        $scope.$watch('$location.path()', function() {
+        $scope.$on('$routeChangeSuccess', function () {
             var currentPage = $location.path();
             if (currentPage == '/resume') {
                 $scope.page = 'resume';
@@ -18,6 +18,6 @@ Portfolio.controller('navController',
                 $scope.page = 'home';
                 $scope.title = 'David Davidson | web developer, copywriter, copyeditor';
             }
-        })
+        });
     }
 );
