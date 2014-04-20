@@ -13,7 +13,7 @@ Portfolio.service('portfolioModel',
                             bullet: 'PHP'
                         }
                     ],
-                    image: '../images/waycross.png',
+                    image: '../images/waycross-square.png',
                     url: 'http://waycross.com/',
                 },
                 {
@@ -33,7 +33,7 @@ Portfolio.service('portfolioModel',
                             bullet: 'PHP'
                         },
                     ],
-                    image: '../images/bloom.png',
+                    image: '../images/bloom-square.png',
                     url: 'http://www.bloomyoganw.com/'
                 },
                 {
@@ -70,7 +70,7 @@ Portfolio.service('portfolioModel',
                             bullet: 'PHP'
                         },
                     ],
-                    image: '../images/zipper.png',
+                    image: '../images/zipper-square.png',
                     url: 'http://zippercomputer.com/'
                 },     
                 // Maybe restore this once you can have 10 total, not 8?
