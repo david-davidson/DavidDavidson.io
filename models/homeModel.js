@@ -3,15 +3,15 @@ Portfolio.service('homeModel',
     this.getSkills = function() {
       return [
         {
-          title: 'Writing',
+          title: 'Web',
           description: 'I write blog posts, emails, ads, social, and more. I get to know new products, voices, and audiences quickly, but I&rsquo;m happiest selling books, software, and higher education.',
         },
         {
-          title: 'Editing',
+          title: 'Copy',
           description: 'I know <em>The Chicago Manual of Style</em>, and I&rsquo;m at home doing everything from dev editing to rewriting to proofreading. My work and disposition have won me company-wide peer-nominated awards.',
         },
         {
-          title: 'More',
+          title: 'Marketing',
           bullets: [
             {
               bullet: 'Basic HTML, CSS, PHP, jQuery (I built this responsive site without templates or WYSIWYG&nbsp;tools)'
