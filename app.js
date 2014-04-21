@@ -13,8 +13,8 @@ var portfolioConfig = function($routeProvider) {
     controller: 'portfolioController',
     templateUrl: 'views/portfolioView.html',
   })
-  .when('/portfolio', {
-    templateUrl: 'views/portfolioView.html',
+  .when('/contact', {
+    templateUrl: 'views/contactView.html',
   })
   .otherwise({
     redirectTo: '/'
