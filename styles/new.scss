@@ -6,50 +6,95 @@
 $blue: rgb(60, 109, 197);
 $darkBlue: rgb(70,70,150);
 $darkGray: rgb(47, 79, 79);
+$red: rgb(255,80,0);
+$darkRed: red;
+
 img {
 	border: 0;
 }
+
 a {
 	img {
 		border: 0;
 	}
 }
+
 // Bump up font size from prev. version
 body {
 	font-size: 20px;
 }
+
 // Include missing font
-.when, .where, .who, .GPA, #elevatorPitch, button {
+.when, .where, .who, .GPA, #elevatorPitch, button, .CTA {
 	font-family: "museo-sans";
 }
+
 // Reusable padding styles
 .padding {
 	padding-bottom: 40px;
 }
+
 .extraPadding {
 	padding-bottom: 85px
 }
+
+.paddingTop {
+	padding-top: 100px;
+}
+
 .center {
 	text-align: center;
 	margin: 0 auto;
 	float: none !important;
 }
+
 // Default links
 .link {
 	color: $blue;
 	cursor: pointer;
 }
+
 .link:hover {
 	color: $darkBlue;
 }
+
 // Treat divs as full-width boxes
 .blockWrapper {
 	display: inline-block;
 	width:100%;
 }
+
 // Replace the deprecated <nobr>
 .nobr {
 	white-space: nowrap;
+}
+
+.button {
+	background-color: $blue;
+	color: white;
+	padding: 10px 20px;
+	border: 0px;
+	font-size: 1em;
+	cursor: pointer;
+	&:hover {
+		background-color: $darkBlue;
+		color: white
+	}
+}
+
+.red {
+	background-color: $red;
+	&:hover {
+		background-color: $darkRed;
+		color: white;
+	}
+}
+button {
+	border: 0;
+}
+button:active {
+	border: 0;
+	outline-style: none;
 }
 
 /**
@@ -78,16 +123,19 @@ body {
 		list-style: none;
 	}
 }
+
 // Hide pipes in tagline for mobile view (when stacked vertically)
 .hideMobile {
 	display: none;
 }
+
 // Style the rule/arrow dividers
 .shadow {
 	margin-top: 80px !important; // We need !important to override the previous stylesheet
 	background-image: none; // Overwrite that fade-out-on-the sides effect
 	background-color: #AAA; // Replace it with a solid line
 }
+
 .downArrow {
 	width: 0;
 	height: 0;
@@ -115,9 +163,7 @@ body {
 	position: relative;
 	max-width: 100%;
 }
-// .slide {
-// 	max-width: 700px;
-// }
+
 // Absolute position the testimonials on top of an invisible placeholder paragraph, to keep the screen from jerking up and down as testimonials cycle in
 .slideshow {
 	p {
@@ -127,32 +173,41 @@ body {
 		}
 	}
 }
+
 // Style the nav dots
 .navDot {
 	font-size: 75px;
 	padding: 0px;
 	color: #AAA;
 }
+
 // Center the nav dots
 .dotWrapper {
 	margin: 0 auto;
 	text-align: center;
 }
+
 // Make active dot darker
 .active {
 	color: rgb(47, 79, 79);
 }
+
 // Keep the text aligned left
 .testimonial {
 	p {
 		text-align: left;
 	}
 }
+
 // Tweak the positioning of quotation marks
 .quote, .quote2 {
 	top: -.15em;
 }
 
+.wide {
+	min-width: 14em;
+	width: 100%;
+}
 
 /**
  * Resume styles
@@ -162,6 +217,7 @@ body {
 .bullets {
 	clear: both;
 }
+
 // Wrapper around individual bullets
 .bulletWrapper {
 	ul {
@@ -169,10 +225,12 @@ body {
 		display: inline-block;
 	}
 }
+
 // Bullet text
 .bullet {
 	text-align: left;
 }
+
 .GPA {
 	font-weight: bold;
 	font-size: 1.1em;
@@ -196,21 +254,44 @@ body {
 	}
 }
 
-.portfolioButton {
-	background-color: $blue;
-	color: white;
-	padding: 10px 20px;
-	border: 0px;
-	font-size: 1em;
-	&:hover {
-		background-color: $darkBlue;
-		color: white
-	}
+.CTA {
+	font-size: 1.25em;
+	font-weight: bold;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	display: inline-block;
+	padding-top: 6px; // Total hack to achieve table-ish look
+}
+
+/*
+ * Contact styles
+ */
+
+#contact li {
+	list-style: none;
+}
+
+ul.socialIcons {
+	display: inline-block;
+}
+
+.socialIcons li {
+	float: left;
+}
+.footer {
+	text-align: center;
 }
 
 /**
  * Media queries
  */
+
+ @media (min-width: 500px) {
+ 	.wide {
+ 		width: initial;
+ 	}
+}
 
 @media (min-width: 800px) {
 	// Elevator pitch is a vertical list for mobile; make it horizontal for full width
@@ -219,10 +300,12 @@ body {
 			float: left;
 		}
 	}
+
 	// Reveal the pipes between words
 	.hideMobile {
 		display: inline;
 	}
+
 	// Lowercase in middle of list
 	.lowercase {
 		text-transform: lowercase;
@@ -234,9 +317,11 @@ body {
 	.bulletWrapper {
 		width: 45%;
 	}
+
 	.portfolioItem {
 		width: 45%;
 	}
+
 	.portfolioItem {
 		h3 {
 			text-align: left;
@@ -246,17 +331,17 @@ body {
 			padding: 0px;
 		}
 	}
-	.portfolioCTA {
-		text-align: right;
-	}
+
 	.left {
 		float: left;
 		clear: left;
 	}
+
 	.right {
 		float: right;
 		clear: right;
 	}
+
 	.leftTiered {
 		float: left;
 		clear: right;
@@ -264,6 +349,7 @@ body {
 			left: 130%;
 		}
 	}
+
 	.rightTiered {
 		float: right;
 		clear: left;
@@ -271,21 +357,33 @@ body {
 			right: 130%;
 		}
 	}
+
 	.homePara {
 		width: 30%;
 		margin-right: 3.3%;
 		float: left;
 	}
+
 	.homePara p {
 		clear: left;
 	}
+
 	// Only give testimonial dots a hover effect on desktop
 	.navDot:hover {
 		color: $darkBlue;
 		cursor: pointer;
 	}
+
 	.navDot.active:hover {
 		color: $darkGray;
 		cursor: default;
+	}
+
+ 	.footer span {
+		float: left;
+	}
+
+	.footerWrapper {
+		float: right;
 	}
 }

@@ -19,8 +19,9 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <!-- Google fonts -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <!-- Styles -->
+  <!-- Gross old styles -->
   <link rel='stylesheet' href='http://daviddavidson.io/davidson.css'>
+  <!-- Awesome new styles -->
   <link rel='stylesheet' href='styles/new.css'>
   <link rel='icon' href='images/favicon.gif' type='image/x-icon'>
   <title ng-bind-html-unsafe='title'></title>
@@ -39,21 +40,12 @@
         <li ng-show='page != "home"'><a href="/#/">Home</a></li>
         <li ng-show='page != "resume"'><a href="/#/resume">See my r&eacute;sum&eacute;</a></li>
         <li ng-show='page != "portfolio"'><a href="/#/portfolio">See my portfolio</a></li>
-        <li ng-show='page != "contact"'><a href="/#/contact">Get in touch</a></li>
+        <li ng-show='page != "contact"'><a href="/#/contact">Contact</a></li>
       </ul>
     </div>
   </nav>
   <div ng-cloak ng-view>
   <!-- Inject body here at runtime -->
   </div>
-  <nav>
-    <div class="table2">
-      <ul ng-cloak class="nav2">
-        <li ng-show='page == "home"' class="CTA2"><a href="#/resume" target="_self">See my r&eacute;sum&eacute;</a></li>
-        <li ng-show='page == "resume"' class="CTA2"><a href="#/portfolio" target="_self">See my portfolio</a></li>
-        <li ng-show='page == "portfolio"' class="CTA2 center"><a href="#/contact" target="_self">Get in touch</a></li>
-      </ul>
-    </div>
-  </nav>
 </body>
 </html>
