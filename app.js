@@ -15,6 +15,7 @@ var portfolioConfig = function($routeProvider) {
   })
   .when('/contact', {
     templateUrl: 'views/contactView.html',
+    // redirectTo: '/portfolio#contact'
   })
   .otherwise({
     redirectTo: '/'
