@@ -18,7 +18,7 @@
   <script type="text/javascript" src="//use.typekit.net/fkv6lkh.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <!-- Google fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans|Montserrat' rel='stylesheet' type='text/css'>
   <!-- Gross old styles -->
   <link rel='stylesheet' href='http://daviddavidson.io/davidson.css'>
   <!-- Awesome new styles -->
@@ -35,12 +35,12 @@
       <li><span class="lowercase">M</span>arketing</li>
   </div>
   <nav>
-    <div class="table">
+    <div ng-cloak class="table">
       <ul ng-cloak class="nav">
-        <li ng-show='page != "home"'><a href="/#/">Home</a></li>
-        <li ng-show='page != "resume"'><a href="/#/resume">See my r&eacute;sum&eacute;</a></li>
-        <li ng-show='page != "portfolio"'><a href="/#/portfolio">See my portfolio</a></li>
-        <li ng-show='page != "contact"'><a href="/#/contact">Contact</a></li>
+        <li ng-cloak ng-show='page != "home"'><a href="/#/">Home</a></li>
+        <li ng-cloak ng-show='page != "resume"'><a href="/#/resume">See my r&eacute;sum&eacute;</a></li>
+        <li ng-cloak ng-show='page != "portfolio"'><a href="/#/portfolio">See my portfolio</a></li>
+        <li ng-cloak ng-show='page != "contact"'><a href="/#/contact">Contact</a></li>
       </ul>
     </div>
   </nav>
