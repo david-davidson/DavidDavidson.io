@@ -16,7 +16,7 @@ Portfolio.controller('navController',
             }
             else {
                 $scope.page = 'home';
-                $scope.title = 'David Davidson | web developer, copywriter, copyeditor';
+                $scope.title = 'David Davidson | web development, copywriting, marketing';
             }
         });
     }
