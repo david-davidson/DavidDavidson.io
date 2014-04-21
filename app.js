@@ -15,7 +15,6 @@ var portfolioConfig = function($routeProvider) {
   })
   .when('/contact', {
     templateUrl: 'views/contactView.html',
-    // redirectTo: '/portfolio#contact'
   })
   .otherwise({
     redirectTo: '/'
@@ -26,6 +25,12 @@ var portfolioConfig = function($routeProvider) {
 // Set up the Portfolio namespace
 var Portfolio = angular.module('Portfolio', []).config(portfolioConfig);
 
+// Set up bullet-points directive
+Portfolio.directive('bullets', function() {
+  return {
+    templateUrl: 'views/bulletsView.html'
+  };
+});
 // Set up the slider directive
 Portfolio.directive('slider', function($timeout) {
   return {
