@@ -58,10 +58,10 @@ Portfolio.service('resumeModel',
               bullet: 'Check links, names, prices, dates, and everything else that can go&nbsp;wrong',
             },
             {
-              bullet: 'Help optimize email subject&nbsp;lines',
+              bullet: 'Make some edits directly using HTML/CSS (email) and WordPress&nbsp;(blog)',
             },
             {
-              bullet: 'Make some edits directly using HTML/CSS (email) and WordPress&nbsp;(blog)',
+              bullet: 'Help optimize email subject&nbsp;lines',
             },
             {
               bullet: 'Researched and wrote marketing style guide (based on <em>The Chicago Manual of&nbsp;Style</em>)',
