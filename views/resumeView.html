@@ -5,19 +5,36 @@
     <span ng-bind-html-unsafe='job.who' class="who"></span>
     <span ng-bind-html-unsafe='job.when' class="when"></span>
     <span ng-bind-html-unsafe='job.where' class="where"></span>
-    <div class="bullets">
-      <div class="bulletWrapper" ng-repeat='item in job.bullets' ng-class-even='"right"' ng-class-odd='"left"'>
+    <div class="blockWrapper">
+      <!-- Since putting alternating left and right (float) classes on li's still leaves odd whitespace, we divide the bullets into two columns and float the columns instead -->
+      <div class="half left">
         <ul>
-          <li ng-init='hideDetails.$index = true' ng-click='hideDetails.$index = false' ng-class='{link: item.children && hideDetails.$index}' class="bullet" ng-bind-html-unsafe='item.bullet'>
+          <li ng-show='isEven($index)' ng-init='hideDetails.$index = true' ng-repeat='item in job.bullets'>
+            <div ng-bind-html-unsafe='item.bullet' ng-class='{link: item.children && hideDetails.$index}' ng-click='hideDetails.$index=false'>
+            </div>
+            <div ng-show='item.children && !hideDetails.$index'>
+              <ul>
+                <li ng-repeat='anotheritem in item.children' ng-bind-html-unsafe='anotheritem.child'>
+                </li>
+              </ul>
+              <p class="link" ng-click='hideDetails.$index = true'>Hide</p>
+            </div>
           </li>
-          <div ng-hide='!item.children || hideDetails.$index'>
-            <ul>
-              <li ng-repeat='anotheritem in item.children' ng-bind-html-unsafe='anotheritem.child'></li>
-            </ul>
-            <p ng-click='hideDetails.$index = true' class="small link">
-              Hide
-            </p>
-          </div>
+        </ul>
+      </div>
+      <div class="half right">
+        <ul>
+          <li ng-show='!isEven($index)' ng-init='hideDetails.$index = true' ng-repeat='item in job.bullets'>
+            <div ng-bind-html-unsafe='item.bullet' ng-class='{link: item.children && hideDetails.$index}' ng-click='hideDetails.$index=false'>
+            </div>
+            <div ng-show='item.children && !hideDetails.$index'>
+              <ul>
+                <li ng-repeat='anotheritem in item.children' ng-bind-html-unsafe='anotheritem.child'>
+                </li>
+              </ul>
+              <p class="link" ng-click='hideDetails.$index = true'>Hide</p>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -32,5 +49,5 @@
   </div>
 </div>
 <div class="blockWrapper paddingTop">
-    <a href="/#/portfolio"><button type="button" class="button red wide right">See my portfolio</button></a>
+    <a href="/#/portfolio"><button type="button" class="button red wide rightButton">See my portfolio</button></a>
 </div>
