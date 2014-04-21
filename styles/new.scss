@@ -25,7 +25,7 @@ body {
 }
 
 // Include missing font
-.when, .where, .who, .GPA, #elevatorPitch, button, .CTA {
+.when, .where, .who, .GPA, #elevatorPitch, button, .CTA, .CTAemail {
 	font-family: "museo-sans";
 }
 
@@ -82,6 +82,10 @@ body {
 	}
 }
 
+.rightButton {
+	float: right;
+}
+
 .red {
 	background-color: $red;
 	&:hover {
@@ -89,14 +93,19 @@ body {
 		color: white;
 	}
 }
+
 button {
 	border: 0;
 }
+
 button:active {
 	border: 0;
 	outline-style: none;
 }
 
+.none {
+	display: none;
+}
 /**
  * Homepage styles
  */
@@ -213,9 +222,16 @@ button:active {
  * Resume styles
  */
 
+
+
 // Div around all the bullets
-.bullets {
-	clear: both;
+
+.half, .half ul {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	display: inline-block;
 }
 
 // Wrapper around individual bullets
@@ -257,11 +273,14 @@ button:active {
 .CTA {
 	font-size: 1.25em;
 	font-weight: bold;
-	padding-right: 20px;
-	padding-bottom: 20px;
 	text-align: center;
 	display: inline-block;
 	padding-top: 6px; // Total hack to achieve table-ish look
+}
+
+.footerWrapper span {
+	margin-right: 20px;
+	margin-bottom: 20px;
 }
 
 /*
@@ -314,8 +333,18 @@ ul.socialIcons {
 
 @media (min-width: 1000px) {
 	// Set bullets at ~ half width
-	.bulletWrapper {
+	.half {
 		width: 45%;
+	}
+
+	.left {
+		float: left;
+		clear: left;
+	}
+
+	.right {
+		float: right;
+		clear: right;
 	}
 
 	.portfolioItem {
@@ -330,16 +359,6 @@ ul.socialIcons {
 			position: absolute;
 			padding: 0px;
 		}
-	}
-
-	.left {
-		float: left;
-		clear: left;
-	}
-
-	.right {
-		float: right;
-		clear: right;
 	}
 
 	.leftTiered {
