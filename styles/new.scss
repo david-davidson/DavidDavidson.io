@@ -5,6 +5,7 @@
 // Define colors
 $blue: rgb(60, 109, 197);
 $darkBlue: rgb(70,70,150);
+$lightestGray: #EEE;
 $darkGray: rgb(47, 79, 79);
 $red: rgb(255,80,0);
 $darkRed: red;
@@ -109,6 +110,27 @@ button:active {
 /**
  * Homepage styles
  */
+
+// Style the nav
+nav {
+	li {
+		list-style: none;
+		border-right: 1px solid $lightestGray;
+	}
+	button {
+		width: 100%;
+	}
+}
+
+// Style the current page's tab
+.current {
+	background-color: $darkBlue;
+	cursor: default;
+}
+
+a:focus, button:focus, button a:focus, input:focus {
+	outline: none;
+}
 
 // Style the tagline
 #elevatorPitch {
@@ -306,7 +328,7 @@ ul.socialIcons {
  * Media queries
  */
 
- @media (min-width: 500px) {
+ @media (min-width: 700px) {
  	.wide {
  		width: initial;
  	}
@@ -331,7 +353,7 @@ ul.socialIcons {
 	}
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 	// Set bullets at ~ half width
 	.half {
 		width: 45%;
@@ -404,5 +426,11 @@ ul.socialIcons {
 
 	.footerWrapper {
 		float: right;
+	}
+
+	// Float the nav buttons
+	nav li {
+		float: left;
+		width: 24%;
 	}
 }
