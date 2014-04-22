@@ -35,14 +35,20 @@
       <li><span class="lowercase">M</span>arketing</li>
   </div>
   <nav>
-    <div ng-cloak class="table">
+    <ul>
+      <li><a href="/#/"><button type="button" class="button" ng-class='{current: page == "home"}'>Home</button></a></li>
+      <li><a href="/#/resume"><button type="button" class="button" ng-class='{current: page == "resume"}'>R&eacute;sum&eacute;</button></a></li>
+      <li><a href="/#/portfolio"><button type="button" class="button" ng-class='{current: page == "portfolio"}'>Portfolio</button></a></li>
+      <li><a href="/#/contact"><button type="button" class="button" ng-class='{current: page == "contact"}'>Contact</button></a></li>
+    </ul>
+<!--     <div ng-cloak class="table">
       <ul ng-cloak class="nav">
         <li ng-cloak ng-show='page != "home"'><a href="/#/">Home</a></li>
         <li ng-cloak ng-show='page != "resume"'><a href="/#/resume">See my r&eacute;sum&eacute;</a></li>
         <li ng-cloak ng-show='page != "portfolio"'><a href="/#/portfolio">See my portfolio</a></li>
         <li ng-cloak ng-show='page != "contact"'><a href="/#/contact">Contact</a></li>
       </ul>
-    </div>
+    </div> -->
   </nav>
   <div ng-cloak ng-view>
   <!-- Inject body here at runtime -->
