@@ -82,16 +82,12 @@ h1, h2, h3 {
 	}
 }
 
-h1 {
+h1, h2 {
 	padding-top: 50px;
 }
 
-h2 {
-	padding-top: 40px;
-}
-
 h3 {
-	padding-top: 30px;
+	padding-top: 40px;
 }
 // Default links
 .link {
@@ -542,6 +538,6 @@ ul.socialIcons {
 	// Float the nav buttons
 	nav li {
 		float: left;
-		width: 24%;
+		width: 249px; // Using px, not percentage, because we know the exact width and there's that 1px border to account for
 	}
 }
