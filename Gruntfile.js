@@ -16,15 +16,6 @@ module.exports = function(grunt){
                   connect.static(options.base)
                 ];
               }
-            },
-            livereload: {
-              options: {
-                open: true
-                // base: [
-                //   '.tmp',
-                //   '<%= yeoman.app %>'
-                // ]
-              }
             }
           }
         },
@@ -35,8 +26,8 @@ module.exports = function(grunt){
         },
         regarde: {
           all: {
-            files: ['index.html', 'styles/*.scss', 'controllers/*', 'models/*', 'views/*'],
-            tasks: ['concat', 'uglify', 'buildcss', 'livereload']
+            files: ['index.html', 'styles/*.scss', 'controllers/*', 'models/*', 'views/*', 'app.js'],
+            tasks: ['sass', 'concat', 'uglify', 'cssmin', 'livereload']
           }
         },
         concat: {
@@ -57,7 +48,7 @@ module.exports = function(grunt){
           models: {
               files: {
                   'combinedModels.js': ['combinedModels.js']
-              }
+              },
           }
         },
         cssmin: {
@@ -86,6 +77,6 @@ module.exports = function(grunt){
       }
     });
     grunt.registerTask('default', ['livereload-start', 'connect', 'regarde']);
-    grunt.registerTask('buildcss',  ['sass', 'cssmin']);
-    grunt.registerTask('server', ['livereload-start', 'connect', 'open', 'regarde', 'watch']);
+    // grunt.registerTask('buildcss',  ['sass', 'cssmin']);
+    // grunt.registerTask('server', ['livereload-start', 'connect', 'open', 'regarde', 'watch']);
 };
