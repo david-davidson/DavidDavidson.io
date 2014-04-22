@@ -49,6 +49,15 @@ body {
 	float: none !important;
 }
 
+h3 {
+	text-align: center;
+}
+.resume {
+	h3 {
+		text-align: left;
+	}
+}
+
 // Default links
 .link {
 	color: $blue;
@@ -117,8 +126,16 @@ nav {
 		list-style: none;
 		border-right: 1px solid $lightestGray;
 	}
+
 	button {
 		width: 100%;
+		max-width: 22em;
+	}
+
+	ul {
+		-webkit-padding-start: 0px;
+		margin: 0 auto;
+		text-align: center;
 	}
 }
 
@@ -237,6 +254,8 @@ a:focus, button:focus, button a:focus, input:focus {
 
 .wide {
 	min-width: 14em;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	width: 100%;
 }
 
@@ -297,7 +316,7 @@ a:focus, button:focus, button a:focus, input:focus {
 	font-weight: bold;
 	text-align: center;
 	display: inline-block;
-	padding-top: 6px; // Total hack to achieve table-ish look
+	padding-top: 28px; // Total hack to achieve table-ish look
 }
 
 .footerWrapper span {
@@ -315,6 +334,7 @@ a:focus, button:focus, button a:focus, input:focus {
 
 ul.socialIcons {
 	display: inline-block;
+	-webkit-padding-start: 0;
 }
 
 .socialIcons li {
@@ -354,6 +374,9 @@ ul.socialIcons {
 }
 
 @media (min-width: 1025px) {
+	h3 {
+		text-align: left;
+	}
 	// Set bullets at ~ half width
 	.half {
 		width: 45%;
