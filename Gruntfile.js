@@ -64,5 +64,5 @@ module.exports = function(grunt){
             }
         }
     });
-    grunt.registerTask('default', ['livereload-start', 'connect', 'open', 'regarde']);
+    grunt.registerTask('default', ['sass', 'concat', 'uglify', 'cssmin', 'livereload-start', 'connect', 'open', 'regarde']);
 };
