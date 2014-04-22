@@ -9,7 +9,6 @@ module.exports = function(grunt){
             options: {
               port: 9000,
               hostname: "localhost",
-              // keepalive: true,
               middleware: function(connect, options) {
                 return [
                   require('grunt-contrib-livereload/lib/utils').livereloadSnippet,
@@ -47,7 +46,7 @@ module.exports = function(grunt){
         uglify: {
           models: {
               files: {
-                  'combinedModels.js': ['combinedModels.js']
+                  'combinedModels.min.js': ['combinedModels.js']
               },
           }
         },
@@ -63,20 +62,7 @@ module.exports = function(grunt){
                     'styles/styles.css': 'styles/styles.scss'
                 }
             }
-        },
-        // Run watch tasks
-        watch: {
-          js: {
-              files: ['controllers/*', 'models/*'],
-              tasks: ['uglify']
-          },
-          css: {
-            files: ['styles/*.scss'],
-            tasks: ['buildcss']
-          }
-      }
+        }
     });
-    grunt.registerTask('default', ['livereload-start', 'connect', 'regarde']);
-    // grunt.registerTask('buildcss',  ['sass', 'cssmin']);
-    // grunt.registerTask('server', ['livereload-start', 'connect', 'open', 'regarde', 'watch']);
+    grunt.registerTask('default', ['livereload-start', 'connect', 'open', 'regarde']);
 };
