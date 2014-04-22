@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html ng-app='Portfolio' ng-init ng-controller='navController'>
 <head>
+  <!-- Typekit fonts -->
+  <script type="text/javascript" src="//use.typekit.net/fkv6lkh.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <!-- Styles -->
+  <link rel='stylesheet' href='styles/new.css'>
+  <link rel='icon' href='images/favicon.gif' type='image/x-icon'>
   <!-- Angular -->
   <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js'></script>
   <!-- Routing and config -->
@@ -14,16 +20,6 @@
   <script src='models/homeModel.js'></script>
   <script src='models/resumeModel.js'></script>
   <script src='models/portfolioModel.js'></script>
-  <!-- Typekit fonts -->
-  <script type="text/javascript" src="//use.typekit.net/fkv6lkh.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  <!-- Google fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans|Montserrat' rel='stylesheet' type='text/css'>
-  <!-- Gross old styles -->
-  <link rel='stylesheet' href='http://daviddavidson.io/davidson.css'>
-  <!-- Awesome new styles -->
-  <link rel='stylesheet' href='styles/new.css'>
-  <link rel='icon' href='images/favicon.gif' type='image/x-icon'>
   <title ng-bind-html-unsafe='title'></title>
 </head>
 <body>
@@ -41,14 +37,6 @@
       <li><a href="/#/portfolio"><button type="button" class="button" ng-class='{current: page == "portfolio"}'>Portfolio</button></a></li>
       <li><a href="/#/contact"><button type="button" class="button" ng-class='{current: page == "contact"}'>Contact</button></a></li>
     </ul>
-<!--     <div ng-cloak class="table">
-      <ul ng-cloak class="nav">
-        <li ng-cloak ng-show='page != "home"'><a href="/#/">Home</a></li>
-        <li ng-cloak ng-show='page != "resume"'><a href="/#/resume">See my r&eacute;sum&eacute;</a></li>
-        <li ng-cloak ng-show='page != "portfolio"'><a href="/#/portfolio">See my portfolio</a></li>
-        <li ng-cloak ng-show='page != "contact"'><a href="/#/contact">Contact</a></li>
-      </ul>
-    </div> -->
   </nav>
   <div ng-cloak ng-view>
   <!-- Inject body here at runtime -->
