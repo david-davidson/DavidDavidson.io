@@ -4,8 +4,10 @@
 
 // Define colors
 $blue: rgb(60, 109, 197);
+$lightBlue: #3c6dc5;
 $darkBlue: rgb(70,70,150);
 $lightestGray: #EEE;
+$gray: #AAA;
 $darkGray: rgb(47, 79, 79);
 $red: rgb(255,80,0);
 $darkRed: red;
@@ -19,11 +21,33 @@ a {
 		border: 0;
 	}
 }
+a {
+	color: $lightBlue;
+	text-decoration: none;
+	&:hover {
+		color: $darkBlue;
+	}
+	&:visited {
+		color: $lightBlue;
+	}
+}
 
 // Bump up font size from prev. version
 body {
 	font-size: 20px;
+	background-color: #EEE;
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: 150px;
+	margin-bottom: 150px;
+	margin-left: 15%;
+	margin-right: 15%;
+	color: $darkGray;
+	font-family: sans-serif;
 }
+
+/* Typekit */
+.tk-museo-sans {font-family: "Museo Sans", sans-serif}
 
 // Include missing font
 .when, .where, .who, .GPA, #elevatorPitch, button, .CTA, .CTAemail {
@@ -49,7 +73,7 @@ body {
 	float: none !important;
 }
 
-h3 {
+h1, h2, h3 {
 	text-align: center;
 }
 .resume {
@@ -58,6 +82,17 @@ h3 {
 	}
 }
 
+h1 {
+	padding-top: 50px;
+}
+
+h2 {
+	padding-top: 40px;
+}
+
+h3 {
+	padding-top: 30px;
+}
 // Default links
 .link {
 	color: $blue;
@@ -178,10 +213,13 @@ a:focus, button:focus, button a:focus, input:focus {
 }
 
 // Style the rule/arrow dividers
-.shadow {
-	margin-top: 80px !important; // We need !important to override the previous stylesheet
-	background-image: none; // Overwrite that fade-out-on-the sides effect
-	background-color: #AAA; // Replace it with a solid line
+hr {
+	background-color: $gray;
+	height: 1px;
+	border: 0;
+	margin-top: 80px;
+ 	margin-bottom: 0;
+ 	padding-bottom: 0;
 }
 
 .downArrow {
@@ -189,7 +227,7 @@ a:focus, button:focus, button a:focus, input:focus {
 	height: 0;
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
-	border-top: 20px solid #AAA;
+	border-top: 20px solid $gray;
 	font-size: 0;
 	line-height: 0;
 	display: inline-block;
@@ -198,8 +236,6 @@ a:focus, button:focus, button a:focus, input:focus {
 	left: 49%;
 	// ... and then get it right for the new browsers
 	left: calc((100% - 20px) / 2);;
-	margin-top: 0px;
-	padding-top: 0px;
 }
 
 /**
@@ -213,6 +249,11 @@ a:focus, button:focus, button a:focus, input:focus {
 }
 
 // Absolute position the testimonials on top of an invisible placeholder paragraph, to keep the screen from jerking up and down as testimonials cycle in
+.placeholder {
+	visibility: hidden;
+	height: auto !important;
+}
+
 .slideshow {
 	p {
 		position: absolute;
@@ -226,7 +267,7 @@ a:focus, button:focus, button a:focus, input:focus {
 .navDot {
 	font-size: 75px;
 	padding: 0px;
-	color: #AAA;
+	color: $gray;
 }
 
 // Center the nav dots
@@ -247,9 +288,21 @@ a:focus, button:focus, button a:focus, input:focus {
 	}
 }
 
-// Tweak the positioning of quotation marks
-.quote, .quote2 {
-	top: -.15em;
+.leftQuote {
+	font-family: helvetica;
+	font-size: 7em;
+	color: $gray;
+	position: absolute;
+	left: -.55em;
+}
+
+/* Styles the right quotation mark */
+.rightQuote {
+	font-family: helvetica;
+	font-size: 7em;
+	color: $gray;
+	position: absolute;
+	right: -.45em;
 }
 
 .wide {
@@ -263,7 +316,39 @@ a:focus, button:focus, button a:focus, input:focus {
  * Resume styles
  */
 
+.who {
+	float: left;
+	clear: left;
+	text-align: left;
+	width: 48%;
+	margin-right: 2%;
+}
 
+.when {
+	float: right;
+	clear: right;
+	text-align: right;
+	width: 48%;
+	margin-left: 2%;
+}
+
+.where {
+	float: right;
+	clear: right;
+	text-align: right;
+	width: 48%;
+	margin-left: 2%;
+	margin-bottom: .5em;
+}
+
+.GPA {
+	float: left;
+	clear: left;
+	text-align: left;
+	width: 48%;
+	margin-right: 2%;
+	text-indent: 1em;
+}
 
 // Div around all the bullets
 
@@ -327,6 +412,9 @@ a:focus, button:focus, button a:focus, input:focus {
 /*
  * Contact styles
  */
+#contact {
+	text-align: center;
+}
 
 #contact li {
 	list-style: none;
