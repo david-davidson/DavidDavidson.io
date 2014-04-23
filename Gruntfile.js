@@ -34,26 +34,26 @@ module.exports = function(grunt){
               src : [
                   'models/*',
               ],
-              dest : 'combinedModels.js',
+              dest : 'grunted/combinedModels.js',
           },
           controllers : {
             src : [
                   'controllers/*',
               ],
-              dest : 'combinedControllers.js'
+              dest : 'grunted/combinedControllers.js'
           }
         },
         uglify: {
           models: {
               files: {
-                  'combinedModels.min.js': ['combinedModels.js']
+                  'grunted/combinedModels.min.js': ['grunted/combinedModels.js']
               },
           }
         },
         cssmin: {
             build: {
                 src: 'styles/styles.css',
-                dest: 'styles/styles.min.css'
+                dest: 'grunted/styles.min.css'
             }
         },
         sass: {
