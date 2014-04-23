@@ -5,25 +5,27 @@
   <script type="text/javascript" src="//use.typekit.net/fkv6lkh.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <!-- Styles -->
-  <link rel='stylesheet' href='styles/styles.min.css'>
+  <link rel='stylesheet' href='grunted/styles.min.css'>
   <link rel='icon' href='images/favicon.gif' type='image/x-icon'>
   <!-- Angular -->
   <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js'></script>
   <!-- Routing and config -->
   <script src='app.js'></script>
   <!-- Controllers -->
-  <script src='combinedControllers.js'></script>
+  <script src='grunted/combinedControllers.js'></script>
   <!-- Models -->
-  <script src='combinedModels.min.js'></script>
+  <script src='grunted/combinedModels.min.js'></script>
   <title ng-bind-html-unsafe='title'></title>
 </head>
 <body>
+<div class="contentWrapper">
   <h1>David Davidson</h1>
   <div id="elevatorPitch">
     <ul>
       <li>Web development<span class="hideMobile"> |&nbsp;</span></li>
       <li><span class="lowercase">C</span>opywriting<span class="hideMobile"> |&nbsp;</span></li>
       <li><span class="lowercase">M</span>arketing</li>
+    </ul>
   </div>
   <nav>
     <ul>
@@ -36,5 +38,6 @@
   <div ng-cloak ng-view>
   <!-- Inject body here at runtime -->
   </div>
+</div>
 </body>
 </html>
