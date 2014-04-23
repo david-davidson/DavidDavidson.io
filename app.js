@@ -28,13 +28,13 @@ var Portfolio = angular.module('Portfolio', []).config(portfolioConfig);
 // Set up bullet-points directive
 Portfolio.directive('bullets', function() {
   return {
-    templateUrl: 'views/bulletsView.html'
+    templateUrl: 'views/bulletsDirective.html'
   };
 });
 
 // Set up the slider directive
 Portfolio.directive('slider', function() {
   return {
-    templateUrl: 'views/sliderView.html'
+    templateUrl: 'views/sliderDirective.html'
   };
 });
