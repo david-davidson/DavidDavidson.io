@@ -60,6 +60,11 @@ module.exports = function(grunt){
                 files: {
                     'grunted/combinedModels.min.js': ['grunted/combinedModels.js']
                 },
+            },
+            controllers: {
+                files: {
+                    'grunted/combinedControllers.min.js': ['grunted/combinedControllers.js']
+                },
             }
         },
         cssmin: {
