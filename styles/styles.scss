@@ -36,14 +36,14 @@ a {
 body {
 	font-size: 20px;
 	background-color: #EEE;
-	max-width: 1000px;
-	margin-left: 15%;
-	margin-right: 15%;
+	max-width: 1250px;
 	margin: 0 auto;
-	margin-top: 150px;
-	margin-bottom: 150px;
 	color: $darkGray;
 	font-family: sans-serif;
+}
+.contentWrapper {
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 /* Typekit */
@@ -538,6 +538,6 @@ ul.socialIcons {
 	// Float the nav buttons
 	nav li {
 		float: left;
-		width: 249px; // Using px, not percentage, because we know the exact width and there's that 1px border to account for
+		width: calc(25% - 1px); // Using px, not percentage, because we know the exact width and there's that 1px border to account for
 	}
 }
