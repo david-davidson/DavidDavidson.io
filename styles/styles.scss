@@ -6,7 +6,7 @@
 $blue: rgb(60, 109, 197);
 $lightBlue: #3c6dc5;
 $darkBlue: rgb(70,70,150);
-$lightestGray: #EEE;
+$lightGray: #EEE;
 $gray: #AAA;
 $darkGray: rgb(47, 79, 79);
 $red: rgb(255,80,0);
@@ -35,15 +35,14 @@ a {
 // Bump up font size from prev. version
 body {
 	font-size: 20px;
-	background-color: #EEE;
-	max-width: 1250px;
-	margin: 0 auto;
+	background-color: $lightGray;
+	margin: 150px 15%;
 	color: $darkGray;
 	font-family: sans-serif;
 }
 .contentWrapper {
-	margin-left: 10%;
-	margin-right: 10%;
+	margin: 0 auto;
+	max-width: 1000px;
 }
 
 /* Typekit */
@@ -153,19 +152,26 @@ button:active {
 
 // Style the nav
 nav {
+	margin: 0 auto;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	
 	li {
 		list-style: none;
-		border-right: 1px solid $lightestGray;
+		// margin: 50px;
 	}
 
 	button {
 		width: 100%;
-		max-width: 22em;
+		// max-width: 22em;
+		border-right: 1px solid $lightGray !important;
 	}
 
 	ul {
+		display: inline-block;
+		width: 100%;
 		-webkit-padding-start: 0px;
-		margin: 0 auto;
 		text-align: center;
 	}
 }
@@ -538,6 +544,6 @@ ul.socialIcons {
 	// Float the nav buttons
 	nav li {
 		float: left;
-		width: calc(25% - 1px); // Using px, not percentage, because we know the exact width and there's that 1px border to account for
+		width: 25%; // Using px, not percentage, because we know the exact width and there's that 1px border to account for
 	}
 }
