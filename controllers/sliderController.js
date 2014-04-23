@@ -32,7 +32,7 @@ Portfolio.controller('sliderController',
             timer = $timeout(function() {
                 next();
                 timer = $timeout(sliderFunc, 0);
-            }, 5000);
+            }, 15000);
         };
         sliderFunc();
     }
