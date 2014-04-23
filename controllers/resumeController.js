@@ -10,5 +10,4 @@ Portfolio.controller('resumeController',
             return false;
         };
     };
-    }
-);
+});
