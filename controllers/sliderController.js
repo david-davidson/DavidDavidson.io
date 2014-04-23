@@ -2,9 +2,7 @@ Portfolio.controller('sliderController',
     function ($scope, $timeout, homeModel) {
         // Get the testimonials
         $scope.testimonials = homeModel.getTestimonials();
-        // Start on the first slider...
         $scope.currentIndex = 0; 
-        // ...and then increment from there
         function next() {
             if ($scope.currentIndex == $scope.testimonials.length - 1) {
                 // From final slide, tick over to first
@@ -15,6 +13,26 @@ Portfolio.controller('sliderController',
             $scope.currentIndex ++;
             }
         };
+        // Fire when someone clicks a nav dot
+        $scope.activate = function(index) {
+            $scope.currentIndex = index;
+            $scope.timer = 0;
+        };
+        // Build a one-second timer...
+        $scope.timer = 0;
+        function newTimer() {
+            $scope.timer++;
+            $timeout(newTimer, 1000);
+        };
+        // ... and start it
+        newTimer();
+        // When 15 seconds are up, change slides
+        $scope.$watch('timer', function() {
+            if ($scope.timer > 15) {
+                $scope.timer = 0;
+                next();
+            }
+        });
         // Hide all the testimonials as default
         $scope.$watch('currentIndex', function() {
             $scope.testimonials.forEach(function(item) {
@@ -23,17 +41,5 @@ Portfolio.controller('sliderController',
             // Then show the current testimonial
             $scope.testimonials[$scope.currentIndex].visible = true; 
         });
-        // Fired when someone clicks on a nav dot
-        $scope.activate = function(index) {
-            $scope.currentIndex = index;
-        };
-        // Tick over every 15 seconds
-        var sliderFunc = function() {
-            timer = $timeout(function() {
-                next();
-                timer = $timeout(sliderFunc, 0);
-            }, 15000);
-        };
-        sliderFunc();
     }
 );   
