@@ -1,4 +1,4 @@
-<div class="slideshow">
+<div class="slideshow" ng-controller='sliderController'>
   <h2>Kind words</h2>
   <div class="dotWrapper">
       <span ng-repeat='item in testimonials' ng-click='activate($index)' class="navDot" ng-class='{active: testimonials[$index].visible}'>&bull;</span>
