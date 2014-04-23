@@ -1,11 +1,22 @@
 <div class="slideshow" ng-controller='sliderController'>
-  <h2>Kind words</h2>
-  <div class="dotWrapper">
-      <span ng-repeat='item in testimonials' ng-click='activate($index)' class="navDot" ng-class='{active: testimonials[$index].visible}'>&bull;</span>
-  </div>
-  <span class="leftQuote">&ldquo;</span>
-  <span class="rightQuote">&rdquo;</span>
-  <p ng-bind-html-unsafe='item.testimonial' class="slide" ng-repeat="item in testimonials" ng-show="item.visible"></p>
-  <!-- The testimonials are of inconsistent width, so--on their own--they jerk the screen up and down as they cycle in. To avoid that, I absolute position them on top of placeholder text, which doesn't cycle out and which keeps the right size gap open no matter the screen width -->
-  <p class="placeholder">Hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me</p>
+    <h2>
+        Kind words
+    </h2>
+    <!-- Use bullet points as nav dots -->
+    <div class="dotWrapper">
+        <!-- Don't move &bull; onto its own line or it'll get extra padding! -->
+        <span ng-repeat='item in testimonials' ng-click='activate($index)' class="navDot" ng-class='{active: testimonials[$index].visible}'>&bull;</span>
+    </div>
+    <!-- The quotation marks around the testimonials -->
+    <span class="leftQuote">
+        &ldquo;
+    </span>
+    <span class="rightQuote">
+        &rdquo;
+    </span>
+    <p ng-bind-html-unsafe='item.testimonial' class="slide" ng-repeat="item in testimonials" ng-show="item.visible"></p>
+    <!-- The testimonials are, naturally, of inconsistent width, so--on their own--they jerk the screen up and down as they cycle in. To avoid that, I absolute position them on top of placeholder text, which doesn't cycle and which keeps the right-size gap open no matter the screen width. -->
+    <p class="placeholder">
+        Hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me hire me
+    </p>
 </div>
