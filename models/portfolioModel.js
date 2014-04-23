@@ -85,6 +85,7 @@ Portfolio.service('portfolioModel',
                 //             bullet: 'PHP'
                 //         }
                 //     ],
+                //     image: '',
                 //     url: 'http://overviewbible.com/',
                 // },      
                 {
