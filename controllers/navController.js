@@ -1,4 +1,5 @@
 Portfolio.controller('navController',
+    ['$scope', '$location', '$routeParams',
     function ($scope, $location, $routeParams) {
         $scope.$on('$routeChangeSuccess', function () {
             var currentPage = $location.path();
@@ -20,4 +21,5 @@ Portfolio.controller('navController',
             }
         });
     }
-);
+]);
+// navController.$inject = ['$scope', '$location'];

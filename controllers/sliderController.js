@@ -1,4 +1,5 @@
-Portfolio.controller('sliderController',
+Portfolio.controller('sliderController', 
+    ['$scope', '$timeout', 'homeModel',
     function ($scope, $timeout, homeModel) {
         // Get the testimonials
         $scope.testimonials = homeModel.getTestimonials();
@@ -42,4 +43,4 @@ Portfolio.controller('sliderController',
             $scope.testimonials[$scope.currentIndex].visible = true; 
         });
     }
-);   
+]);
