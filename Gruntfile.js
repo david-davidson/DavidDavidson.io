@@ -42,17 +42,17 @@ module.exports = function(grunt){
             }
         },
         concat: {
-            models : {
-                src : [
-                    'models/*',
+            models: {
+                src: [
+                    'models/*'
                 ],
-                dest : 'grunted/models.js',
+                dest: 'grunted/models.js'
             },
-            controllers : {
-                src : [
-                    'controllers/*',
+            controllers: {
+                src: [
+                    'controllers/*'
                 ],
-                dest : 'grunted/controllers.js'
+                dest: 'grunted/controllers.js'
             }
         },
         uglify: {
