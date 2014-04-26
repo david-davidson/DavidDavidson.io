@@ -9,6 +9,10 @@ var portfolioConfig = function($routeProvider) {
         controller: 'resumeController',
         templateUrl: 'views/resumeView.html',
     })
+    .when('/copy', {
+        controller: 'portfolioController',
+        templateUrl: 'views/copyView.html',
+    })
     .when('/portfolio', {
         controller: 'portfolioController',
         templateUrl: 'views/portfolioView.html',
@@ -18,8 +22,7 @@ var portfolioConfig = function($routeProvider) {
     })
     .otherwise({
         redirectTo: '/'
-    })
-    ;
+    });
 };
 
 // Set up the Portfolio namespace
