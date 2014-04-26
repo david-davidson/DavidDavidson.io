@@ -25,7 +25,7 @@ Portfolio.service('portfolioModel',
                 },
                 {
                     title: 'Copyanswers.com',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?.',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
                     url: 'test.com'
                 }
             ]
@@ -34,7 +34,7 @@ Portfolio.service('portfolioModel',
             return [           
                 {
                     title: 'Waycross.com',
-                    description: 'FPO',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
                     technologies: [
                         {
                             bullet: 'WordPress'
@@ -48,7 +48,7 @@ Portfolio.service('portfolioModel',
                 },
                 {
                     title: 'BloomYogaNW.com',
-                    description: 'FPO',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
                     technologies: [
                         {
                             bullet: 'WordPress'
@@ -68,7 +68,7 @@ Portfolio.service('portfolioModel',
                 },
                 {
                     title: 'SublimeScript/SublimeScript.com',
-                    description: 'FPO',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
                     technologies: [
                         {
                             bullet: 'HTML/CSS'
@@ -85,7 +85,7 @@ Portfolio.service('portfolioModel',
                 },
                 {
                     title: 'ZipperComputer.com views',
-                    description: 'FPO',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
                     technologies: [
                         {
                             bullet: 'Laravel'
@@ -106,7 +106,7 @@ Portfolio.service('portfolioModel',
                 // Maybe restore this once you can have 10 total, not 8?
                 // {
                 //     title: 'OverviewBible.com',
-                //     description: 'FPO',
+                //     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
                 //     technologies: [
                 //         {
                 //             bullet: 'WordPress'
@@ -120,7 +120,7 @@ Portfolio.service('portfolioModel',
                 // },      
                 {
                     title: 'Bible Search Chrome extension',
-                    description: 'FPO',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
                     technologies: [
                         {
                             bullet: 'HTML/CSS'
@@ -131,7 +131,7 @@ Portfolio.service('portfolioModel',
                 },
                 {
                     title: 'DavidDavidson.io',
-                    description: 'FPO',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
                     technologies: [
                         {
                             bullet: 'AngularJS'
@@ -145,7 +145,7 @@ Portfolio.service('portfolioModel',
                 },
                 {
                     title: 'linktagger.py',
-                    description: 'FPO',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
                     technologies: [
                         {
                             bullet: 'Python'
@@ -156,7 +156,7 @@ Portfolio.service('portfolioModel',
                 }
                 // {
                 //     title: 'All my Github projects',
-                //     description: 'FPO',
+                //     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
                 //     technologies: [
                 //         {
                 //             bullet: 'Autohotkey_L'
