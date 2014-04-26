@@ -7,6 +7,10 @@ Portfolio.controller('navController',
                 $scope.page = 'resume';
                 $scope.title = 'R&eacute;sum&eacute; | David Davidson';
             }
+            else if (currentPage == '/copy') {
+                $scope.page = 'copy';
+                $scope.title = 'Portfolio | David Davidson';
+            }
             else if (currentPage == '/portfolio') {
                 $scope.page = 'portfolio';
                 $scope.title = 'Portfolio | David Davidson';
