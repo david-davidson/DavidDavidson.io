@@ -1,5 +1,35 @@
 Portfolio.service('portfolioModel',
     function() {
+        this.getCopy = function() {
+            return [
+                {
+                    title: 'Posts on blog.logos.com',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, perspiciatis, nobis saepe officiis unde neque rerum blanditiis at. Nobis, quam, sint unde facilis maxime dolore voluptate officia libero excepturi cupiditate ipsum vitae repudiandae temporibus tempora a porro cumque. Omnis nulla blanditiis aut architecto suscipit exercitationem quae accusamus sunt optio praesentium.',
+                    bullets: [
+                        {
+                            bullet: '<a href="test.com">Greek math</a>: this one was sweet',
+                            url: 'test.com',
+                            description: 'test'
+                        },
+                        {
+                            bullet: 'Another post',
+                            url: 'test.com',
+                            description: 'test'
+                        }
+                    ]
+                },                
+                {
+                    title: 'Noet.com',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, assumenda, nam, quae, fuga ab debitis nisi consequuntur commodi eum natus nesciunt repellat nihil minima et beatae! Saepe, aliquid, dolorum expedita in consectetur blanditiis vitae sit pariatur earum tenetur id esse voluptatibus autem libero praesentium molestiae cumque aliquam excepturi nulla impedit!',
+                    url: 'test.com'
+                },
+                {
+                    title: 'Copyanswers.com',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?.',
+                    url: 'test.com'
+                }
+            ]
+        }
         this.getProjects = function() {
             return [           
                 {
