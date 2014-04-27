@@ -119,6 +119,8 @@ h3 {
 	border: 0px;
 	font-size: 1em;
 	cursor: pointer;
+}
+a .button {
 	&:hover, :active, :focus {
 		background-color: $darkBlue;
 		color: white
@@ -132,7 +134,7 @@ h3 {
 .red {
 	background-color: $red;
 	&:hover {
-		background-color: $darkRed;
+		background-color: $darkRed !important;
 		color: white;
 	}
 }
@@ -200,7 +202,7 @@ a:focus, button:focus, button a:focus, input:focus {
 	outline: none;
 }
 
-.noMouse {
+.noLink {
 	cursor: default;
 }
 
@@ -332,6 +334,15 @@ hr {
 	width: 100%;
 }
 
+.footer {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.footerWrapper span {
+	padding: 15px;
+}
+
 /**
  * Resume styles
  */
@@ -433,16 +444,9 @@ hr {
 }
 
 .CTA {
-	font-size: 1.25em;
 	font-weight: bold;
 	text-align: center;
 	display: inline-block;
-	padding-top: 28px; // Total hack to achieve table-ish look
-}
-
-.footerWrapper span {
-	margin-right: 20px;
-	margin-bottom: 20px;
 }
 
 /*
@@ -482,6 +486,16 @@ ul.socialIcons {
 	body {
 		margin-top: 8em;
 		margin-bottom: 8em;
+	}
+
+	.footerWrapper {
+		float: right;
+		text-align: center;
+	}
+
+	.footerWrapper span {
+		margin: 0 auto;
+		// padding: 15px;
 	}
 
 	// Elevator pitch is a vertical list for mobile; make it horizontal for full width
@@ -537,7 +551,7 @@ ul.socialIcons {
 		float: left;
 		clear: right;
 		img {
-			left: 130%;
+			left: 120%;
 		}
 	}
 
@@ -545,7 +559,7 @@ ul.socialIcons {
 		float: right;
 		clear: left;
 		img {
-			right: 130%;
+			right: 120%;
 		}
 	}
 
@@ -568,14 +582,6 @@ ul.socialIcons {
 	.navDot.active:hover {
 		color: $darkGray;
 		cursor: default;
-	}
-
- 	.footer span {
-		float: left;
-	}
-
-	.footerWrapper {
-		float: right;
 	}
 
 	// Float the nav buttons
