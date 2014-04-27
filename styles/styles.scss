@@ -11,44 +11,16 @@ $darkGray: rgb(47, 79, 79);
 $red: rgb(255,80,0);
 $darkRed: red;
 
-img {
-	border: 0;
-}
-
-a {
-	img {
-		border: 0;
-	}
-}
-a {
-	color: $blue;
-	text-decoration: none;
-	&:hover {
-		color: $darkBlue;
-	}
-	&:visited {
-		color: $blue;
-	}
-}
-
-// Bump up font size from prev. version
-
+// Global styles
 body {
 	font-size: 1.4em;
 	background-color: $lightGray;
 	margin: 6em 20%;
-	// margin-left: 20%;
-	// margin-right: 20%;
 	color: $darkGray;
-	font-family: sans-serif;
+	font-family: sans-serif; // The fallback
 }
 
-.contentWrapper {
-	margin: 0 auto;
-	max-width: 1000px;
-}
-
-/* Typekit */
+// Typekit
 .tk-museo-sans {font-family: "Museo Sans", sans-serif}
 
 // Include missing font
@@ -56,28 +28,11 @@ body {
 	font-family: "museo-sans";
 }
 
-// Reusable padding styles
-.padding {
-	padding-bottom: 50px;
-}
-
-.extraPadding {
-	padding-bottom: 100px
-}
-
-.paddingTop {
-	padding-top: 7em;
-}
-
-.center {
-	text-align: center;
-	margin: 0 auto;
-	float: none !important;
-}
-
+// Headers
 h1, h2, h3 {
 	text-align: center;
 }
+
 .resume {
 	h3 {
 		text-align: left;
@@ -91,7 +46,22 @@ h1, h2 {
 h3 {
 	padding-top: 40px;
 }
-// Default links
+
+// Links
+a {
+	color: $blue;
+	text-decoration: none;
+	&:hover {
+		color: $darkBlue;
+	}
+	&:visited {
+		color: $blue;
+	}
+	img {
+		border: 0;
+	}
+}
+
 .link {
 	color: $blue;
 	cursor: pointer;
@@ -101,17 +71,41 @@ h3 {
 	color: $darkBlue;
 }
 
-// Treat divs as full-width boxes
+// Img border? LOL no
+img {
+	border: 0;
+}
+
+// Reusable div types
+.padding {
+	padding-bottom: 50px;
+}
+
+.extraPadding {
+	padding-bottom: 100px
+}
+
+.paddingTop {
+	padding-top: 7em;
+}
+
+.contentWrapper {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.center {
+	text-align: center;
+	margin: 0 auto;
+	float: none !important;
+}
+
 .blockWrapper {
 	display: inline-block;
 	width:100%;
 }
 
-// Replace the deprecated <nobr>
-.nobr {
-	white-space: nowrap;
-}
-
+// Buttons
 .button {
 	background-color: $blue;
 	color: white;
@@ -120,6 +114,8 @@ h3 {
 	font-size: 1em;
 	cursor: pointer;
 }
+
+// No hover on buttons w/o links, like /portfolio
 a .button {
 	&:hover, :active, :focus {
 		background-color: $darkBlue;
@@ -141,16 +137,18 @@ a .button {
 
 button {
 	border: 0;
+	&:active {
+		border: 0;
+		outline-style: none;
+	}
 }
 
-button:active {
-	border: 0;
-	outline-style: none;
+// Replace the deprecated <nobr>
+.nobr {
+	white-space: nowrap;
 }
 
-.none {
-	display: none;
-}
+
 /**
  * Homepage styles
  */
@@ -164,9 +162,6 @@ nav {
 	width: 100%;
 	li {
 		list-style: none;
-		// &:hover > ul {
-		// 	display: block;
-		// }
 	}
 	.button {
 		width: 100%;
@@ -174,12 +169,12 @@ nav {
 		padding-bottom: 1em;
 		border-right: 1px solid $lightGray !important;
 	}
-
 	ul {
 		display: inline-block;
 		width: 100%;
 		-webkit-padding-start: 0px;
 		text-align: center;
+		// The dropdown
 		ul {
 			list-style: none;
 			display: inherit;
@@ -201,6 +196,7 @@ a:focus, button:focus, button a:focus, input:focus {
 	outline: none;
 }
 
+// No pointer effect on /portfolio
 .noLink {
 	cursor: default;
 }
@@ -214,24 +210,8 @@ a:focus, button:focus, button a:focus, input:focus {
 	width: 100%;
 	font-size: 1.2em;
 	font-weight: bold;
-	ul {
-		text-align: center;
-		margin: 0 auto;
-		display: inline-block;
-		list-style-position: outside;
-		-webkit-margin-before: 0em;
-		-webkit-padding-start: 0px;
-		padding-top: 2em;
-	}
-	li {
-		list-style: none;
-	}
 }
 
-// Hide pipes in tagline for mobile view (when stacked vertically)
-.hideMobile {
-	display: none;
-}
 
 // Style the rule/arrow dividers
 hr {
@@ -317,7 +297,6 @@ hr {
 	left: -.55em;
 }
 
-/* Styles the right quotation mark */
 .rightQuote {
 	font-family: helvetica;
 	font-size: 7em;
@@ -338,6 +317,7 @@ hr {
 	margin: 0 auto;
 }
 
+// For the CTA on /portfolio:
 .footerWrapper span {
 	padding: 15px;
 }
@@ -378,6 +358,8 @@ hr {
 	width: 48%;
 	margin-right: 2%;
 	text-indent: 1em;
+	font-weight: bold;
+	font-size: 1.1em;
 }
 
 // Div around all the bullets
@@ -401,11 +383,6 @@ hr {
 // Bullet text
 .bullet {
 	text-align: left;
-}
-
-.GPA {
-	font-weight: bold;
-	font-size: 1.1em;
 }
 
 /**
@@ -432,14 +409,14 @@ hr {
 	}
 }
 
-.resumeItem {
+// Styles each div on /copy
+.copyItem {
 	.button {
 		margin-top: 1.5em;
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
-	display: block {
-	}
+	display: block;
 }
 
 .CTA {
@@ -451,6 +428,7 @@ hr {
 /*
  * Contact styles
  */
+
 #contact {
 	text-align: center;
 }
@@ -467,6 +445,7 @@ ul.socialIcons {
 .socialIcons li {
 	float: left;
 }
+
 .footer {
 	text-align: center;
 }
@@ -494,29 +473,12 @@ ul.socialIcons {
 
 	.footerWrapper span {
 		margin: 0 auto;
-		// padding: 15px;
-	}
-
-	// Elevator pitch is a vertical list for mobile; make it horizontal for full width
-	#elevatorPitch {
-		li {
-			float: left;
-		}
-	}
-
-	// Reveal the pipes between words
-	.hideMobile {
-		display: inline;
-	}
-
-	// Lowercase in middle of list
-	.lowercase {
-		text-transform: lowercase;
 	}
 
 	h3 {
 		text-align: left;
 	}
+
 	// Set bullets at ~ half width
 	.half {
 		width: 45%;
@@ -534,9 +496,6 @@ ul.socialIcons {
 
 	.portfolioItem {
 		width: 45%;
-	}
-
-	.portfolioItem {
 		h3 {
 			text-align: left;
 		}
@@ -550,7 +509,7 @@ ul.socialIcons {
 		float: left;
 		clear: right;
 		img {
-			left: 120%;
+			left: 130%;
 		}
 	}
 
@@ -558,7 +517,7 @@ ul.socialIcons {
 		float: right;
 		clear: left;
 		img {
-			right: 120%;
+			right: 130%;
 		}
 	}
 
@@ -588,7 +547,7 @@ ul.socialIcons {
 		position: relative;
 		li {
 			float: left;
-			width: 25%; // Using px, not percentage, because we know the exact width and there's that 1px border to account for
+			width: 25%;
 		}
 		.button {
 			padding-top: 10px;
@@ -596,8 +555,8 @@ ul.socialIcons {
 		}
 		ul {
 			ul {
-				position: absolute;
-				width:25%;
+				position: absolute; // To keep it from bumping the rest of the page down
+				width:25%; // = the width of one main nav button
 				li {
 					margin-left: 0;
 					width: 100%;
