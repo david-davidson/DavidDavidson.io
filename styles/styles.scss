@@ -164,9 +164,9 @@ nav {
 	width: 100%;
 	li {
 		list-style: none;
-		&:hover > ul {
-			display: block;
-		}
+		// &:hover > ul {
+		// 	display: block;
+		// }
 	}
 	.button {
 		width: 100%;
@@ -181,13 +181,12 @@ nav {
 		-webkit-padding-start: 0px;
 		text-align: center;
 		ul {
+			list-style: none;
+			display: inherit;
 			li {
 				margin-left: 10%;
 				clear:left;
 			}
-			// .button {
-			// 	padding: .5em 2em !important;
-			// }
 		}
 	}
 }
@@ -598,8 +597,10 @@ ul.socialIcons {
 		ul {
 			ul {
 				position: absolute;
+				width:25%;
 				li {
 					margin-left: 0;
+					width: 100%;
 				}
 			}
 		}
