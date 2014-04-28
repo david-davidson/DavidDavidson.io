@@ -8,10 +8,10 @@
         <span ng-repeat='item in testimonials' ng-click='activate($index)' class="navDot" ng-class='{active: testimonials[$index].visible}'>&bull;</span>
     </div>
     <!-- The quotation marks around the testimonials -->
-    <span class="leftQuote">
+    <span class="leftQuote hideMobile">
         &ldquo;
     </span>
-    <span class="rightQuote">
+    <span class="rightQuote hideMobile">
         &rdquo;
     </span>
     <p ng-bind-html-unsafe='item.testimonial' class="slide" ng-repeat="item in testimonials" ng-show="item.visible"></p>
