@@ -13,9 +13,10 @@ $darkRed: red;
 
 // Global styles
 body {
+	max-width: 100%;
 	font-size: 1.4em;
 	background-color: $lightGray;
-	margin: 6em 20%;
+	margin: 4em 5%;
 	color: $darkGray;
 	font-family: sans-serif; // The fallback
 }
@@ -24,7 +25,7 @@ body {
 .tk-museo-sans {font-family: "Museo Sans", sans-serif}
 
 // Include missing font
-.when, .where, .who, .GPA, #elevatorPitch, button, .CTA, .CTAemail {
+.when, .where, .who, .GPA, button, .CTA, .CTAemail {
 	font-family: "museo-sans";
 }
 
@@ -77,12 +78,12 @@ img {
 }
 
 // Reusable div types
-.padding {
-	padding-bottom: 50px;
+.hideMobile {
+	display: none;
 }
 
-.extraPadding {
-	padding-bottom: 100px
+.padding {
+	padding-bottom: 50px;
 }
 
 .paddingTop {
@@ -113,6 +114,9 @@ img {
 	border: 0px;
 	font-size: 1em;
 	cursor: pointer;
+	&.email {
+		padding: 1em 0em;
+	}
 }
 
 // No hover on buttons w/o links, like /portfolio
@@ -129,6 +133,7 @@ a .button {
 
 .red {
 	background-color: $red;
+	// margin-right: 25px;
 	&:hover {
 		background-color: $darkRed !important;
 		color: white;
@@ -208,8 +213,7 @@ a:focus, button:focus, button a:focus, input:focus {
 	text-align: center;
 	display: inline-block;
 	width: 100%;
-	font-size: 1.2em;
-	font-weight: bold;
+	font-size: 1.1em;
 }
 
 
@@ -266,8 +270,9 @@ hr {
 
 // Style the nav dots
 .navDot {
-	font-size: 75px;
-	padding: 0px;
+	font-size: 40px;
+	padding: 0;
+	margin: 0;
 	color: $gray;
 }
 
@@ -306,10 +311,10 @@ hr {
 }
 
 .wide {
-	min-width: 14em;
+	width: 100%;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	width: 100%;
+	// width: 100%;
 }
 
 .footer {
@@ -318,9 +323,13 @@ hr {
 }
 
 // For the CTA on /portfolio:
-.footerWrapper span {
-	padding: 15px;
+.CTA {
+	padding-right: 15px;
+	padding-bottom: 15px;
 }
+// .footerWrapper span {
+// 	padding: 15px;
+// }
 
 /**
  * Resume styles
@@ -398,9 +407,10 @@ hr {
 	img {
 		display: block;
 		margin: 0 auto;
-		padding: 50px;
+		padding: 50px 0px;
+		max-width: 100%;
+		height: auto;
 		max-height: 350px;
-		max-width: 350px;
 	}
 	.button {
 		margin-top: 1.5em;
@@ -455,15 +465,27 @@ ul.socialIcons {
  */
 
  @media (min-width: 700px) {
+ 	body {
+ 		margin-left: 10%;
+ 		margin-right: 10%;
+ 	}
  	.wide {
- 		width: initial;
+ 		width: 15em;
+ 		&.email {
+ 			width: 18em;
+ 		}
+ 	}
+ 	.hideMobile {
+ 		display: block;
  	}
 }
 
 @media (min-width: 1025px) {
 	body {
-		margin-top: 8em;
-		margin-bottom: 8em;
+		margin: 8em 20%;
+	}
+	.extraPadding {
+		padding-bottom: 100px
 	}
 
 	.footerWrapper {
@@ -502,6 +524,7 @@ ul.socialIcons {
 		img {
 			position: absolute;
 			padding: 0px;
+			max-width: 350px;
 		}
 	}
 
@@ -532,9 +555,12 @@ ul.socialIcons {
 	}
 
 	// Only give testimonial dots a hover effect on desktop
-	.navDot:hover {
-		color: $blue;
-		cursor: pointer;
+	.navDot {
+		font-size: 85px;
+		&:hover {
+			color: $blue;
+			cursor: pointer;
+		}
 	}
 
 	.navDot.active:hover {
