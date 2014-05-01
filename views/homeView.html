@@ -8,6 +8,7 @@
         <ul ng-show='skill.bullets'>
             <li ng-repeat='item in skill.bullets' ng-bind-html-unsafe='item.bullet'></li>
         </ul>
+        <p ng-show='skill.cta' ng-bind-html-unsafe='skill.cta'></p>
     </div>
 </div>
 <hr>
@@ -29,7 +30,7 @@
 <div class="downArrow"></div>
 <div class="padding"></div>
 <div slider></div>
-<div class="paddingTop blockWrapper footer">
+<div class="blockWrapper paddingTop footer">
     <div class="footerWrapper">
         <span class="wide">
             <a href="/#/resume">
