@@ -5,7 +5,7 @@
 // Define colors
 $blue: rgb(60, 109, 197);
 $darkBlue: rgb(70,70,150);
-$lightGray: #EEE;
+$lightGray: rgb(230, 230, 240);
 $gray: #AAA;
 $darkGray: rgb(47, 79, 79);
 $red: rgb(255,80,0);
@@ -87,7 +87,7 @@ img {
 }
 
 .paddingTop {
-	padding-top: 7em;
+	padding-top: 80px;
 }
 
 .contentWrapper {
@@ -213,7 +213,7 @@ a:focus, button:focus, button a:focus, input:focus {
 	text-align: center;
 	display: inline-block;
 	width: 100%;
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 
@@ -475,15 +475,15 @@ ul.socialIcons {
  			width: 18em;
  		}
  	}
- 	.hideMobile {
- 		display: block;
- 	}
 }
 
 @media (min-width: 1025px) {
 	body {
-		margin: 8em 20%;
+		margin: 6em 20%;
 	}
+ 	.hideMobile {
+ 		display: block;
+ 	}
 	.extraPadding {
 		padding-bottom: 100px
 	}
