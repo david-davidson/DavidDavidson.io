@@ -34,12 +34,16 @@ module.exports = function(grunt){
                 ],
                 tasks: [
                     'sass', 
+                    'jshint',
                     'concat', 
                     'uglify', 
                     'cssmin', 
                     'livereload'
                 ]
             }
+        },
+        jshint: {
+            files: ['app.js', 'models/*.js', 'controllers/*.js']
         },
         concat: {
             models: {
@@ -83,6 +87,7 @@ module.exports = function(grunt){
     });
 grunt.registerTask('default', [
     'sass', 
+    'jshint',
     'concat', 
     'uglify', 
     'cssmin', 
