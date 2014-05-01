@@ -13,7 +13,7 @@ Portfolio.controller('sliderController',
             // Otherwise, just add one
             $scope.currentIndex ++;
             }
-        };
+        }
         // Fire when someone clicks a nav dot
         $scope.activate = function(index) {
             $scope.currentIndex = index;
@@ -24,7 +24,7 @@ Portfolio.controller('sliderController',
         function newTimer() {
             $scope.timer++;
             $timeout(newTimer, 1000);
-        };
+        }
         // ... and start it
         newTimer();
         // When 15 seconds are up, change slides
