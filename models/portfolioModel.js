@@ -28,8 +28,8 @@ Portfolio.service('portfolioModel',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
                     url: 'test.com'
                 }
-            ]
-        }
+            ];
+        };
         this.getProjects = function() {
             return [           
                 {
@@ -67,7 +67,7 @@ Portfolio.service('portfolioModel',
                     url: 'http://www.bloomyoganw.com/'
                 },
                 {
-                    title: 'SublimeScript/SublimeScript.com',
+                    title: 'SublimeScript / SublimeScript.com',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
                     technologies: [
                         {
@@ -174,7 +174,7 @@ Portfolio.service('portfolioModel',
                 //     image: '../images/Octocat.png',
                 //     url: 'https://github.com/david-davidson'
                 // }
-            ]
-        }
+            ];
+        };
     }
 );
