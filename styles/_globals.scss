@@ -1,0 +1,246 @@
+// Define colors
+$blue: rgb(60, 109, 197);
+$darkBlue: rgb(70,70,150);
+$lightGray: rgb(230, 230, 240);
+$gray: #AAA;
+$darkGray: rgb(47, 79, 79);
+$red: rgb(255,80,0);
+$darkRed: red;
+
+// Global styles
+body {
+    max-width: 100%;
+    font-size: 1.4em;
+    background-color: $lightGray;
+    margin: 4em 5%;
+    color: $darkGray;
+    font-family: sans-serif; // The fallback
+}
+
+// Typekit
+.tk-museo-sans {font-family: "Museo Sans", sans-serif}
+
+// Include missing font
+.when, .where, .who, .GPA, button, .CTA, .CTAemail {
+    font-family: "museo-sans";
+}
+
+// Headers
+h1, h2, h3 {
+    text-align: center;
+}
+
+.resume {
+    h3 {
+        text-align: left;
+    }
+}
+
+h1, h2 {
+    padding-top: 50px;
+}
+
+h3 {
+    padding-top: 40px;
+}
+
+// Links
+a {
+    color: $blue;
+    text-decoration: none;
+    &:hover {
+        color: $darkBlue;
+    }
+    &:visited {
+        color: $blue;
+    }
+    img {
+        border: 0;
+    }
+}
+
+.link {
+    color: $blue;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: $darkBlue;
+}
+
+// Img border? LOL no
+img {
+    border: 0;
+}
+
+// Reusable div types
+.hideMobile {
+    display: none;
+}
+
+.padding {
+    padding-bottom: 50px;
+}
+
+.paddingTop {
+    padding-top: 80px;
+}
+
+.contentWrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.center {
+    text-align: center;
+    margin: 0 auto;
+    float: none !important;
+}
+
+.blockWrapper {
+    display: inline-block;
+    width:100%;
+}
+
+// Buttons
+.button {
+    background-color: $blue;
+    color: white;
+    padding: 1em 2em;
+    border: 0px;
+    font-size: 1em;
+    cursor: pointer;
+    &.email {
+        padding: 1em 0em;
+    }
+}
+
+// No hover on buttons w/o links, like /portfolio
+a .button {
+    &:hover, :active, :focus {
+        background-color: $darkBlue;
+        color: white
+    }
+}
+
+.rightButton {
+    float: right;
+}
+
+.red {
+    background-color: $red;
+    // margin-right: 25px;
+    &:hover {
+        background-color: $darkRed !important;
+        color: white;
+    }
+}
+
+.wide {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+button {
+    border: 0;
+    &:active {
+        border: 0;
+        outline-style: none;
+    }
+}
+
+// Replace the deprecated <nobr>
+.nobr {
+    white-space: nowrap;
+}
+
+// Style the nav
+nav {
+    margin: 0 auto;
+    margin-bottom: 1em;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    li {
+        list-style: none;
+    }
+    .button {
+        width: 100%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-right: 1px solid $lightGray !important;
+    }
+    ul {
+        display: inline-block;
+        width: 100%;
+        -webkit-padding-start: 0px;
+        text-align: center;
+        // The dropdown
+        ul {
+            list-style: none;
+            display: inherit;
+            li {
+                margin-left: 10%;
+                clear:left;
+            }
+        }
+    }
+}
+
+// Style the current page's tab
+.current {
+    background-color: $darkBlue;
+    cursor: default;
+}
+
+a:focus, button:focus, button a:focus, input:focus {
+    outline: none;
+}
+
+// No pointer effect on /portfolio, b/c no link
+.noLink {
+    cursor: default;
+}
+
+// Style the tagline
+#elevatorPitch {
+    margin-bottom: 40px;
+    margin-top: -25px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-size: 1em;
+}
+
+
+// Style the rule/arrow dividers
+hr {
+    background-color: $gray;
+    height: 1px;
+    border: 0;
+    margin-top: 5em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.downArrow {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid $gray;
+    font-size: 0;
+    line-height: 0;
+    display: inline-block;
+    position: absolute;
+    // left: 50% is a little off, because it doesn't account for the width of the arrow itself. So, for old browsers, approximate with 49%...
+    left: 49%;
+    // ... and then get it right for the new browsers
+    left: calc((100% - 20px) / 2);;
+}
+
+.footer {
+    text-align: center;
+    margin: 0 auto;
+}

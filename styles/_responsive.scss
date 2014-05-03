@@ -1,0 +1,131 @@
+/**
+ * Media queries
+ */
+
+ @media (min-width: 700px) {
+    body {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .wide {
+        width: 15em;
+        &.email {
+            width: 18em;
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+        margin: 6em 20%;
+    }
+    .hideMobile {
+        display: block;
+    }
+    .extraPadding {
+        padding-bottom: 100px
+    }
+
+    .footerWrapper {
+        float: right;
+        text-align: center;
+    }
+
+    .footerWrapper span {
+        margin: 0 auto;
+    }
+
+    h3 {
+        text-align: left;
+    }
+
+    // Set bullets at ~ half width
+    .half {
+        width: 45%;
+    }
+
+    .left {
+        float: left;
+        clear: left;
+    }
+
+    .right {
+        float: right;
+        clear: right;
+    }
+
+    .portfolioItem {
+        width: 45%;
+        h3 {
+            text-align: left;
+        }
+        img {
+            position: absolute;
+            padding: 0px;
+            max-width: 350px;
+        }
+    }
+
+    .leftTiered {
+        float: left;
+        clear: right;
+        img {
+            left: 130%;
+        }
+    }
+
+    .rightTiered {
+        float: right;
+        clear: left;
+        img {
+            right: 130%;
+        }
+    }
+
+    .homePara {
+        width: 30%;
+        margin-right: 3.3%;
+        float: left;
+    }
+
+    .homePara p {
+        clear: left;
+    }
+
+    // Only give testimonial dots a hover effect on desktop
+    .navDot {
+        font-size: 85px;
+        &:hover {
+            color: $blue;
+            cursor: pointer;
+        }
+    }
+
+    .navDot.active:hover {
+        color: $darkGray;
+        cursor: default;
+    }
+
+    // Float the nav buttons
+    nav {
+        position: relative;
+        li {
+            float: left;
+            width: 25%;
+        }
+        .button {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        ul {
+            ul {
+                position: absolute; // To keep it from bumping the rest of the page down
+                width:25%; // = the width of one main nav button
+                li {
+                    margin-left: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

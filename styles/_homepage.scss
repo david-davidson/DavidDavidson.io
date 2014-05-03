@@ -1,0 +1,66 @@
+/**
+ * Styles for testimonial directive
+ */
+
+// Make the whole thing relative, to allow for absolute positioning of inner elements
+.slideshow {
+    position: relative;
+    max-width: 100%;
+}
+
+// Absolute position the testimonials on top of an invisible placeholder paragraph, to keep the screen from jerking up and down as testimonials cycle in
+.placeholder {
+    visibility: hidden;
+    height: auto !important;
+}
+
+.slideshow {
+    .slide {
+        position: absolute;
+        &.placeholder {
+            position: relative;
+        }
+    }
+}
+
+// Style the nav dots
+.navDot {
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+    color: $gray;
+}
+
+// Center the nav dots
+.dotWrapper {
+    margin: 0 auto;
+    text-align: center;
+}
+
+// Make active dot darker
+.active {
+    color: rgb(47, 79, 79);
+}
+
+// Keep the text aligned left
+.testimonial {
+    p {
+        text-align: left;
+    }
+}
+
+.leftQuote {
+    font-family: helvetica;
+    font-size: 7em;
+    color: $gray;
+    position: absolute;
+    left: -.55em;
+}
+
+.rightQuote {
+    font-family: helvetica;
+    font-size: 7em;
+    color: $gray;
+    position: absolute;
+    right: -.45em;
+}
