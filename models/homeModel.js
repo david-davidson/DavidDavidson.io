@@ -4,7 +4,7 @@ Portfolio.service('homeModel',
             return [
                 {
                     title: 'Web',
-                    description: 'HTML, CSS/SCSS, JS, Angular, PHP, WP, Laravel, Python, Bash, as well as Git, Grunt.'
+                    description: 'I&rsquo;ve worked with HTML, CSS/SCSS, JavaScript, AngularJS, PHP, WordPress, Laravel, Python, and Bash, as well as tools like Git and Grunt. I&rsquo;m expecially fond of UX and the front&nbsp;end.'
                     // cta: '<a href="/#/portfolio">See what I&rsquo;ve built</a>'
                 },
                 {
