@@ -3,22 +3,22 @@ var portfolioConfig = function($routeProvider) {
     $routeProvider
     .when('/', {
         controller: 'homeController',
-        templateUrl: 'views/homeView.html',
+        templateUrl: 'views/homeView.html'
     })
     .when('/resume', {
         controller: 'resumeController',
-        templateUrl: 'views/resumeView.html',
+        templateUrl: 'views/resumeView.html'
     })
     .when('/copy', {
         controller: 'portfolioController',
-        templateUrl: 'views/copyView.html',
+        templateUrl: 'views/copyView.html'
     })
     .when('/portfolio', {
         controller: 'portfolioController',
-        templateUrl: 'views/portfolioView.html',
+        templateUrl: 'views/portfolioView.html'
     })
     .when('/contact', {
-        templateUrl: 'views/contactView.html',
+        templateUrl: 'views/contactView.html'
     })
     .otherwise({
         redirectTo: '/'
