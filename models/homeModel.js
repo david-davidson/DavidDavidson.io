@@ -5,17 +5,14 @@ Portfolio.service('homeModel',
                 {
                     title: 'Web',
                     description: 'I&rsquo;ve worked with HTML, CSS/SCSS, JavaScript, AngularJS, PHP, WordPress, Laravel, Python, and Bash, as well as tools like Git and Grunt. I&rsquo;m expecially fond of UX and the front&nbsp;end.'
-                    // cta: '<a href="/#/portfolio">See what I&rsquo;ve built</a>'
                 },
                 {
                     title: 'Writing',
-                    description: 'Multiple voices, from scholarly to hard sell; editing, CMOS; resarch, assimilate new info; adapt new voices quickly.'
-                    // cta: '<a href="/#/copy">See what I&rsquo;ve written</a>'
+                    description: 'My experience as a copywriter helps me clarify technical information and communicate across teams. I&rsquo;m equally comfortable in an editorial role, helping others find their voice.'
                 },
                 {
                     title: 'Marketing',
-                    description: 'Email, blog, social, landing pages, ads. Can help your business grow.'
-                    // cta: '<a href="/#/resume">See what I&rsquo;ve done</a>'
+                    description: 'Marketing&mdash;like UX, like copywriting&mdash;is all about understanding the user. I get to know new products, voices, and audiences quickly, and I write everything from emails to landing pages to social.'
                 }
             ];
         };
