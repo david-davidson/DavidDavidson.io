@@ -12,7 +12,7 @@ Portfolio.service('homeModel',
                 },
                 {
                     title: 'Marketing',
-                    description: 'Marketing&mdash;like UX, like copywriting&mdash;is all about understanding the user. I get to know new products, voices, and audiences quickly, and I write everything from emails to landing pages to social.'
+                    description: 'Marketing&mdash;like copywriting, like UX&mdash;is all about understanding the user. I get to know new audiences, products, and voices quickly, and I write everything from emails to landing pages to social.'
                 }
             ];
         };
@@ -20,15 +20,15 @@ Portfolio.service('homeModel',
             return [
                 {
                     title: 'Learning',
-                    description: 'learned lots of things--spanish, editing, marketing. Then I learned code. Takeaway: good at picking up new skills fast.'
+                    description: 'Before I learned to code, I learned lots of other things&mdash;Spanish, editing, marketing. Learning those other skills may not help me'
                 },
                 {
                     title: 'Effort',
-                    description: 'Believe that primary attribute is working hard, etc.'
+                    description: 'My greatest asset is my work ethic, and I&rsquo;m happiest when I can dedicate myself to an interesting task.'
                 },
                 {
                     title: 'Humility',
-                    description: 'Lorem ipsum dolor sit amet. Perferendis, aliquid repellendus nihil veniam cupiditate dignissimos temporibus reprehenderit architecto illo illum nobis commodi placeat fugiat veritatis.'
+                    description: 'I go out of my way to put myself in situations where I&rsquo;m the small fish.'
                 }
             ];
         };
