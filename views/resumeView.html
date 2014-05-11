@@ -12,14 +12,14 @@
             <div class="half left">
                 <ul>
                     <li ng-show='isEven($index)' ng-init='hideDetails.$index = true' ng-repeat='item in job.bullets'>
-                        <div bullets></div>
+                        <dd-bullets></dd-bullets>
                     </li>
                 </ul>
             </div>
             <div class="half right">
                 <ul>
                     <li ng-show='!isEven($index)' ng-init='hideDetails.$index = true' ng-repeat='item in job.bullets'>
-                        <div bullets></div>
+                        <dd-bullets></dd-bullets>
                     </li>
                 </ul>
             </div>

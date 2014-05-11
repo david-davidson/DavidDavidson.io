@@ -29,15 +29,18 @@ var portfolioConfig = function($routeProvider) {
 var Portfolio = angular.module('Portfolio', []).config(portfolioConfig);
 
 // Set up bullet-points directive
-Portfolio.directive('bullets', function() {
+Portfolio.directive('ddBullets', function() {
     return {
+        restrict: 'E', // So we can invoke it as a standalone element
         templateUrl: 'views/bulletsDirective.html'
     };
 });
 
 // Set up the slider directive
-Portfolio.directive('slider', function() {
+Portfolio.directive('ddSlider', function() {
     return {
-        templateUrl: 'views/sliderDirective.html'
+        restrict: 'E', // So we can invoke it as a standalone element
+        templateUrl: 'views/sliderDirective.html',
+        controller: 'sliderController'
     };
 });
