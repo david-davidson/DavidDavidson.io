@@ -32,20 +32,9 @@
                 David M. Davidson
             </h1>
             <div id="elevatorPitch">
-            <p class="center">
-                I&rsquo;m a writer who fell in love with code.
-            </p>
-        <!--    <ul>
-                    <li>
-                        Web development<span class="hideMobile"> |&nbsp;</span>
-                    </li>
-                    <li>
-                        <span class="lowercase">C</span>opywriting<span class="hideMobile"> |&nbsp;</span>
-                    </li>
-                    <li>
-                        <span class="lowercase">M</span>arketing
-                    </li>
-                </ul> -->
+                <p class="center">
+                    I&rsquo;m a writer who fell in love with code.
+                </p>
             </div>
             <nav>
                 <ul>
@@ -63,7 +52,7 @@
                             </button>
                         </a>
                     </li>
-                    <li ng-mouseover='dropdown=true' ng-click='dropdown=true' ng-mouseout='dropdown=false'>
+                    <li ng-mouseover='openDropdown()' ng-click='openDropdown()' ng-mouseout='closeDropdown()'>
                         <button type="button" class="button noLink" ng-class='{current: page == "portfolio" || page == "copy"}'>
                             Portfolio
                         </button>
