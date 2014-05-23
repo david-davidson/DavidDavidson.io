@@ -52,21 +52,21 @@
                             </button>
                         </a>
                     </li>
-                    <li ng-mouseover='openDropdown()' ng-click='openDropdown()' ng-mouseout='closeDropdown()'>
-                        <button type="button" class="button noLink" ng-class='{current: page == "portfolio" || page == "copy"}'>
+                    <li ng-mouseover='openDropdown()' ng-click='openDropdown()' ng-mouseleave='closeDropdown()'>
+                        <button type="button" class="button noLink">
                             Portfolio
                         </button>
-                        <ul ng-cloak ng-show='dropdown'>
+                        <ul ng-cloak ng-show='dropdown || page == "portfolio" || page == "copy"'>
                             <li>
                                 <a href="/#/copy">
-                                    <button type="button" class="button" ng-class='{current: page == "copy"}' ng-click='dropdown=true'>
+                                    <button type="button" class="button" ng-class='{current: page == "copy"}'>
                                         Copy
                                     </button>
                                 </a>
                             </li>
                             <li>
                                 <a href="/#/portfolio">
-                                    <button type="button" class="button" ng-class='{current: page == "portfolio"}' ng-click='dropdown=true'>
+                                    <button type="button" class="button" ng-class='{current: page == "portfolio"}'>
                                         Code
                                     </button>
                                 </a>
