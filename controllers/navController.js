@@ -32,7 +32,7 @@ Portfolio.controller('navController',
         };
         $scope.closeDropdown = function() {
             $scope.dropdownHover = false;
-            $timeout($scope.hideDropdown, 750); // 750ms delay after leaving the dropdown
+            $timeout($scope.hideDropdown, 750);
         };
         $scope.openDropdown = function() {
             $scope.dropdown = true;
