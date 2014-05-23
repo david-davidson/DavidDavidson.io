@@ -40,4 +40,3 @@ Portfolio.controller('navController',
         };
     }
 ]);
-// navController.$inject = ['$scope', '$location'];
