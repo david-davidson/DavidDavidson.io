@@ -129,7 +129,6 @@ a .button {
 
 .red {
     background-color: $red;
-    // margin-right: 25px;
     &:hover {
         background-color: $darkRed !important;
         color: white;
@@ -162,9 +161,6 @@ nav {
     text-align: center;
     display: inline-block;
     width: 100%;
-    li {
-        list-style: none;
-    }
     .button {
         width: 100%;
         padding-top: 1em;
@@ -174,8 +170,12 @@ nav {
     ul {
         display: inline-block;
         width: 100%;
-        -webkit-padding-start: 0px;
+        padding-left: 0;
         text-align: center;
+        li {
+            list-style: none;
+            padding-top: 10px;
+        }
         // The dropdown
         ul {
             list-style: none;

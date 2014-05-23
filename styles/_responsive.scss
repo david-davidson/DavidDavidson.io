@@ -116,6 +116,9 @@
             padding-bottom: 10px;
         }
         ul {
+            li {
+                padding-top: 1px;
+            }
             ul {
                 position: absolute; // To keep it from bumping the rest of the page down
                 width:25%; // = the width of one main nav button
