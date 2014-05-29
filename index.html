@@ -21,13 +21,61 @@
         <script src='grunted/controllers.js'></script>
         <!-- Models -->
         <script src='grunted/models.js'></script>
+        <!-- jQuery -->
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <!-- Meta -->
         <title ng-cloak ng-bind-html-unsafe='title'></title>
         <meta name="viewport" content="width=device-width">
         <meta name="description" content="See my resume, my portfolio, and more.">
     </head>
     <body>
-        <div class="contentWrapper">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/#/">
+                        <button type="button" class="button" ng-class='{current: page == "home"}' ng-click='dropdown=false' >
+                            About
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#/resume">
+                        <button type="button" class="button" ng-class='{current: page == "resume"}' ng-click='dropdown=false'>
+                            R&eacute;sum&eacute;
+                        </button>
+                    </a>
+                </li>
+                <li ng-mouseover='openDropdown()' ng-click='openDropdown()' ng-mouseleave='closeDropdown()'>
+                    <button type="button" class="button noLink">
+                        Portfolio
+                    </button>
+                    <ul ng-cloak ng-show='dropdown || page == "portfolio" || page == "copy"'>
+                        <li>
+                            <a href="/#/copy">
+                                <button type="button" class="button" ng-class='{current: page == "copy"}'>
+                                    Copy
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/#/portfolio">
+                                <button type="button" class="button" ng-class='{current: page == "portfolio"}'>
+                                    Code
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/#/contact">
+                        <button type="button" class="button" ng-class='{current: page == "contact"}' ng-click='dropdown=false'>
+                            Contact
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="heroWrapper">
             <h1>
                 David M. Davidson
             </h1>
@@ -36,55 +84,29 @@
                     I&rsquo;m a writer who fell in love with code.
                 </p>
             </div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/#/">
-                            <button type="button" class="button" ng-class='{current: page == "home"}' ng-click='dropdown=false' >
-                                About
-                            </button>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/#/resume">
-                            <button type="button" class="button" ng-class='{current: page == "resume"}' ng-click='dropdown=false'>
-                                R&eacute;sum&eacute;
-                            </button>
-                        </a>
-                    </li>
-                    <li ng-mouseover='openDropdown()' ng-click='openDropdown()' ng-mouseleave='closeDropdown()'>
-                        <button type="button" class="button noLink">
-                            Portfolio
-                        </button>
-                        <ul ng-cloak ng-show='dropdown || page == "portfolio" || page == "copy"'>
-                            <li>
-                                <a href="/#/copy">
-                                    <button type="button" class="button" ng-class='{current: page == "copy"}'>
-                                        Copy
-                                    </button>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/#/portfolio">
-                                    <button type="button" class="button" ng-class='{current: page == "portfolio"}'>
-                                        Code
-                                    </button>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/#/contact">
-                            <button type="button" class="button" ng-class='{current: page == "contact"}' ng-click='dropdown=false'>
-                                Contact
-                            </button>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div ng-cloak ng-view>
-                <!-- Inject body here at runtime -->
-            </div>
         </div>
+        <div class="contentWrapper" ng-cloak ng-view>
+            <!-- Inject body here at runtime -->
+        </div>
+        <script>
+            function setHeight() {
+                totalHeight = $(window).height();
+                navHeight = $('nav').height();
+                h1Height = $('h1').height();
+                // borderHeight = $('.borderBottom').height();
+                // imageHeight = totalHeight - (navHeight + borderHeight);
+                // if (imageHeight < 300) {
+                //  imageHeight = 300;
+                // }
+                topPaddingHeight = totalHeight / 2.25
+                $('.heroWrapper').css({"height": totalHeight})
+                // $('.header').css({"height": imageHeight});
+                $('.heroWrapper h1').css({"padding-top": topPaddingHeight});
+            }
+            setHeight();
+            $(window).resize(function() {
+                setHeight();
+            });
+        </script>
     </body>
 </html>

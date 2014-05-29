@@ -1,7 +1,7 @@
 @media (min-width: 700px) {
     body {
-        margin-left: 10%;
-        margin-right: 10%;
+        // margin-left: 10%;
+        // margin-right: 10%;
     }
     .wide {
         width: 15em;
@@ -13,7 +13,7 @@
 
 @media (min-width: 1025px) {
     body {
-        margin: 8em 20%;
+        // margin: 0 20%;
     }
 
     .hideMobile {
@@ -106,22 +106,17 @@
 
     // Float the nav buttons
     nav {
-        position: relative;
-        li {
-            float: left;
-            width: 25%;
-        }
-        .button {
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
         ul {
+            position: relative;
+            float: right;
             li {
                 padding-top: 1px;
+                float: left;
+                width: 175px;
             }
             ul {
                 position: absolute; // To keep it from bumping the rest of the page down
-                width: 25%; // = the width of one main nav button
+                width: 175px; // = the width of one main nav button
                 li {
                     margin-left: 0;
                     width: 100%;
