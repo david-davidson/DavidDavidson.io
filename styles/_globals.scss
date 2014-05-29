@@ -8,11 +8,15 @@ $red: rgb(255,80,0);
 $darkRed: red;
 
 // Global styles
+div {
+    padding: 0;
+    margin: 0;
+}
 body {
     max-width: 100%;
     font-size: 1.4em;
     background-color: $lightGray;
-    // margin: 0 5%;
+    margin: 0 auto;
     color: $darkGray;
     font-family: sans-serif; // The fallback
 }
@@ -102,10 +106,17 @@ img {
     width:100%;
 }
 
-// Buttons
+// Baseline buttons
+
+button {
+    border: 0;
+    &:active {
+        border: 0;
+        outline-style: none;
+    }
+}
+
 .button {
-    background-color: white;
-    // color: $blue;
     padding: 1em 2em;
     border: 0px;
     font-size: 1em;
@@ -115,23 +126,15 @@ img {
     }
 }
 
-// No hover on buttons w/o links, like /portfolio
-a .button {
-    &:hover, :active, :focus {
-        background-color: $darkBlue;
-        color: white
-    }
-}
-
 .rightButton {
     float: right;
 }
 
 .red {
     background-color: $red;
+    color: white;
     &:hover {
         background-color: $darkRed !important;
-        color: white;
     }
 }
 
@@ -139,14 +142,6 @@ a .button {
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-}
-
-button {
-    border: 0;
-    &:active {
-        border: 0;
-        outline-style: none;
-    }
 }
 
 // Replace the deprecated <nobr>
@@ -167,20 +162,37 @@ button {
 nav {
     position: fixed;
     background-color: white;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     // margin-bottom: 1em;
     text-align: center;
     display: inline-block;
     width: 100%;
     .button {
+        background-color: white;
+        color: $darkGray;
         width: 100%;
-        padding-top: 1em;
-        padding-bottom: 1em;
-        border-right: 1px solid $lightGray !important;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 1px;
+        border-left: 1px solid $gray;
+        &.current {
+            background-color: $gray;
+            border-left: 1px solid white;
+            color: white;
+        }
+    }
+    // No hover on buttons w/o links, like /portfolio
+    a .button {
+        &:hover, :active, :focus {
+            background-color: $gray;
+            border-left: 1px solid white;
+            color: white
+        }
     }
     ul {
         display: inline-block;
-        width: 100%;
+        // width: 100%;
         padding-left: 0;
         text-align: center;
         margin: 0;
@@ -195,15 +207,23 @@ nav {
             li {
                 margin-left: 10%;
                 clear:left;
+                a {
+                    .button {
+                        &:hover, :active, :focus, {
+                            background-color: $gray;
+                            border-left: 1px solid gray;
+                            color: white
+                        }
+                    }
+                }
+                .button {
+                    &.current {
+                        border-left: 1px solid gray; // Prevents  white border on current dropdown pages
+                    }
+                }
             }
         }
     }
-}
-
-// Style the current page's tab
-.current {
-    background-color: $darkBlue;
-    cursor: default;
 }
 
 a:focus, button:focus, button a:focus, input:focus {
@@ -245,11 +265,10 @@ hr {
     font-size: 0;
     line-height: 0;
     display: inline-block;
-    position: absolute;
     // left: 50% is a little off, because it doesn't account for the width of the arrow itself. So, for old browsers, approximate with 49%...
-    left: 49%;
+    margin-left: 49%;
     // ... and then get it right for the new browsers
-    left: calc((100% - 20px) / 2);;
+    margin-left: calc((100% - 20px) / 2);;
 }
 
 .footer {
