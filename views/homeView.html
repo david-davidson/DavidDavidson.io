@@ -1,43 +1,59 @@
-<div class="blockWrapper">
-    <h2>
-        Skills
-    </h2>
-    <div ng-cloak ng-repeat='skill in skills' class="homePara">
-        <h3 ng-bind-html-unsafe='skill.title'></h3>
-        <p ng-bind-html-unsafe='skill.description'></p>
-        <ul ng-show='skill.bullets'>
-            <li ng-repeat='item in skill.bullets' ng-bind-html-unsafe='item.bullet'></li>
-        </ul>
-        <p ng-show='skill.cta' ng-bind-html-unsafe='skill.cta'></p>
+<div class="heroWrapper">
+    <h1>
+        David M. Davidson
+    </h1>
+    <div id="elevatorPitch">
+        <p class="center">
+            I&rsquo;m a writer who fell in love with code.
+        </p>
+    </div>
+</div>
+<div class="bodyContent">
+    <div class="blockWrapper">
+        <h2 style="background: red;">
+            Skills
+        </h2>
+        <div ng-cloak ng-repeat='skill in skills' class="homePara">
+            <h3 ng-bind-html-unsafe='skill.title'></h3>
+            <p ng-bind-html-unsafe='skill.description'></p>
+            <ul ng-show='skill.bullets'>
+                <li ng-repeat='item in skill.bullets' ng-bind-html-unsafe='item.bullet'></li>
+            </ul>
+            <p ng-show='skill.cta' ng-bind-html-unsafe='skill.cta'></p>
+        </div>
     </div>
 </div>
 <hr>
 <div class="downArrow"></div>
 <div class="padding"></div>
-<div class="blockWrapper">
-    <h2>
-        Values
-    </h2>
-    <div ng-cloak ng-repeat='value in values' class="homePara">
-        <h3 ng-bind-html-unsafe='value.title'></h3>
-        <p ng-bind-html-unsafe='value.description'></p>
-        <ul ng-show='value.bullets'>
-            <li ng-repeat='item in value.bullets' ng-bind-html-unsafe='item.bullet'></li>
-        </ul>
+<div class="bodyContent">
+    <div class="blockWrapper">
+        <h2>
+            Values
+        </h2>
+        <div ng-cloak ng-repeat='value in values' class="homePara">
+            <h3 ng-bind-html-unsafe='value.title'></h3>
+            <p ng-bind-html-unsafe='value.description'></p>
+            <ul ng-show='value.bullets'>
+                <li ng-repeat='item in value.bullets' ng-bind-html-unsafe='item.bullet'></li>
+            </ul>
+        </div>
     </div>
 </div>
 <hr>
 <div class="downArrow"></div>
 <div class="padding"></div>
-<dd-slider></dd-slider>
-<div class="blockWrapper paddingTop footer">
-    <div class="footerWrapper">
-        <span class="wide">
-            <a href="/#/resume">
-                <button type="button" class="button red wide">
-                    See my r&eacute;sum&eacute;
-                </button>
-            </a>
-        </span>
+<div class="bodyContent">
+    <dd-slider></dd-slider>
+    <div class="blockWrapper paddingTop footer">
+        <div class="footerWrapper">
+            <span class="wide">
+                <a href="/#/resume">
+                    <button type="button" class="button red wide">
+                        See my r&eacute;sum&eacute;
+                    </button>
+                </a>
+            </span>
+        </div>
     </div>
 </div>

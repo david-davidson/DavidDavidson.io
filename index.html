@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app='Portfolio' ng-init ng-controller='navController'>
+<html ng-app='Portfolio' ng-init ng-controller='masterController'>
     <head>
         <!-- Typekit fonts -->
         <script type='text/javascript' src='//use.typekit.net/fkv6lkh.js'></script>
@@ -75,38 +75,8 @@
                 </li>
             </ul>
         </nav>
-        <div class="heroWrapper">
-            <h1>
-                David M. Davidson
-            </h1>
-            <div id="elevatorPitch">
-                <p class="center">
-                    I&rsquo;m a writer who fell in love with code.
-                </p>
-            </div>
-        </div>
-        <div class="contentWrapper" ng-cloak ng-view>
+        <div ng-cloak ng-view>
             <!-- Inject body here at runtime -->
         </div>
-        <script>
-            function setHeight() {
-                totalHeight = $(window).height();
-                navHeight = $('nav').height();
-                h1Height = $('h1').height();
-                // borderHeight = $('.borderBottom').height();
-                heroHeight = totalHeight - navHeight;
-                // if (imageHeight < 300) {
-                //  imageHeight = 300;
-                // }
-                topPaddingHeight = totalHeight / 2.25
-                $('.heroWrapper').css({"height": totalHeight})
-                // $('.header').css({"height": imageHeight});
-                $('.heroWrapper h1').css({"padding-top": topPaddingHeight});
-            }
-            setHeight();
-            $(window).resize(function() {
-                setHeight();
-            });
-        </script>
     </body>
 </html>

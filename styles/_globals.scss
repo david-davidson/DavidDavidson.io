@@ -90,7 +90,7 @@ img {
     padding-top: 80px;
 }
 
-.contentWrapper {
+.bodyContent {
     margin: 0 auto;
     max-width: 1000px;
 }
@@ -104,6 +104,7 @@ img {
 .blockWrapper {
     display: inline-block;
     width:100%;
+    max-width: 1000px;
 }
 
 // Baseline buttons

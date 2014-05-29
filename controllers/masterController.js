@@ -1,6 +1,6 @@
-Portfolio.controller('navController',
-    ['$scope', '$location', '$timeout',
-    function ($scope, $location, $timeout) {
+Portfolio.controller('masterController',
+    ['$scope', '$window', '$location', '$timeout',
+    function ($scope, $window, $location, $timeout) {
         $scope.$on('$routeChangeSuccess', function () {
             var currentPage = $location.path();
             if (currentPage == '/resume') {
@@ -23,6 +23,17 @@ Portfolio.controller('navController',
                 $scope.page = 'home';
                 $scope.title = 'David Davidson | web development, copywriting, marketing';
             }
+        });
+        setHeight = function() {
+            totalHeight = $(window).height();
+            navHeight = $('nav').height();
+            h1Height = $('h1').height();
+            topPaddingHeight = totalHeight / 2.25;
+            $('.heroWrapper').css({"height": totalHeight});
+            $('.heroWrapper h1').css({"padding-top": topPaddingHeight});
+        };
+        angular.element($window).bind("resize",function(){
+            setHeight();
         });
         // On its own, ng-mouseout fires closeDropDown() way too readily, so we add one more boolean: $scope.dropdownHover, which (on mouseout) we 1. set to false *before* the timeout and 2. then check again before actually hiding the dropdown
         $scope.hideDropdown = function() {
