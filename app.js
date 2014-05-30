@@ -43,7 +43,7 @@ Portfolio.directive('ddBullets', function() {
 Portfolio.directive('ddArrow', function() {
     return {
         restrict: 'E',
-        templateUrl: 'views/downArrow.html'
+        templateUrl: 'views/arrowDirective.html'
     };
 });
 
