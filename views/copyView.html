@@ -3,30 +3,34 @@
         Things I&rsquo;ve written
     </h2>
 </div>
-<div class="blockWrapper copyItem" ng-repeat='project in copy'>
-    <h3 ng-bind-html-unsafe='project.title'></h3>
-    <p ng-bind-html-unsafe='project.description'></p>
-    <ul ng-show='project.bullets'>
-        <li ng-repeat='item in project.bullets' ng-bind-html-unsafe='item.bullet'>
-        </li>
-    </ul>
-    <a href="{{project.url}}" target="_blank">
-        <button ng-show='project.url' type="button" class="link button">
-            Take a look
-        </button>
-    </a>
-</div>
-<div class="blockWrapper paddingTop footer">
-    <div class="footerWrapper wide">
-        <!-- <span class="CTA">
-            My real passion is web development, though:
-        </span> -->
-        <span class="wide">
-            <a href="/#/portfolio">
-                <button type="button" class="button red wide right">
-                    See my code
+<div class="contentWrapper">
+    <div class="narrow">
+        <div class="copyItem" ng-repeat='project in copy'>
+            <h3 ng-bind-html-unsafe='project.title'></h3>
+            <p ng-bind-html-unsafe='project.description'></p>
+            <ul ng-show='project.bullets'>
+                <li ng-repeat='item in project.bullets' ng-bind-html-unsafe='item.bullet'>
+                </li>
+            </ul>
+            <a href="{{project.url}}" target="_blank">
+                <button ng-show='project.url' type="button" class="link button blue">
+                    Take a look
                 </button>
             </a>
-        </span>
+        </div>
+        <div class="blockWrapper paddingTop footer">
+            <div class="footerWrapper wide">
+                <!-- <span class="CTA">
+                    My real passion is web development, though:
+                </span> -->
+                <span class="wide">
+                    <a href="/#/portfolio">
+                        <button type="button" class="button red wide right">
+                            See my code
+                        </button>
+                    </a>
+                </span>
+            </div>
+        </div>
     </div>
 </div>
