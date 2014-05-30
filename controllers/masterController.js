@@ -24,13 +24,13 @@ Portfolio.controller('masterController',
                 $scope.title = 'David Davidson | web development, copywriting, marketing';
             }
         });
+        $scope.today = new Date();
         setHeight = function() {
             totalHeight = $(window).height();
             navHeight = $('nav').height();
             h1Height = $('h1').height();
             topPadding = totalHeight / 2.5;
-            halfHeight = totalHeight / 2;
-            halfTopPadding = halfHeight / 2;
+            halfTopPadding = topPadding / 2;
             $('.heroWrapper').css({"height": totalHeight});
             $('.heroWrapper h1').css({"padding-top": topPadding});
             $('.heroWrapper h2').css({"padding-top": halfTopPadding});
