@@ -148,7 +148,17 @@ button {
     background-color: $red;
     color: white;
     &:hover {
-        background-color: $darkRed !important;
+        background-color: $darkRed;
+        color: white;
+    }
+}
+
+.blue {
+    background-color: $blue;
+    color: white;
+    &:hover {
+        background-color: $darkBlue;
+        color: white;
     }
 }
 
@@ -179,6 +189,7 @@ button {
 // Style the nav
 nav {
     position: fixed;
+    z-index: 1000;
     background-color: white;
     margin: 0;
     padding: 0;
