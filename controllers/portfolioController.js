@@ -1,7 +1,8 @@
 Portfolio.controller('portfolioController',
-    ['$scope', 'portfolioModel',
-    function ($scope, portfolioModel) {
+    ['$scope', '$window', 'portfolioModel',
+    function ($scope, $window, portfolioModel) {
         $scope.projects = portfolioModel.getProjects();
         $scope.copy = portfolioModel.getCopy();
+        $scope.$on('$viewContentLoaded', setHeight());
     }
 ]);

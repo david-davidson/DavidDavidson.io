@@ -1,7 +1,9 @@
 <div class="resume">
-    <h2 class="blockWrapper">
-        What I&rsquo;ve done
-    </h2>
+    <div class="halfWrapper">
+        <h2 class="blockWrapper">
+            What I&rsquo;ve done
+        </h2>
+    </div>
     <div class="blockWrapper" ng-repeat='job in jobs'>
         <h3 ng-bind-html-unsafe='job.title'></h3>
         <span ng-bind-html-unsafe='job.who' class="who"></span>

@@ -47,7 +47,7 @@ h1, h2 {
 .test {
     color: white;
     margin-top: 0;
-    padding: 50px;
+    padding: 30px;
     background-color: $gray;
 }
 h3 {
@@ -170,6 +170,10 @@ button {
     h1 {
         margin-top: 0;
     }
+}
+
+.halfWrapper {
+    @extend .heroWrapper
 }
 
 // Style the nav

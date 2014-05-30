@@ -18,7 +18,8 @@ var portfolioConfig = function($routeProvider) {
         templateUrl: 'views/portfolioView.html'
     })
     .when('/contact', {
-        templateUrl: 'views/contactView.html'
+        templateUrl: 'views/contactView.html',
+        controller: 'contactController'
     })
     .otherwise({
         redirectTo: '/'
@@ -28,7 +29,9 @@ var portfolioConfig = function($routeProvider) {
 // Set up the Portfolio namespace
 var Portfolio = angular.module('Portfolio', []).config(portfolioConfig);
 
-// Set up bullet-points directive
+// Directives
+
+// Bullet points on /resume
 Portfolio.directive('ddBullets', function() {
     return {
         restrict: 'E', // So we can invoke it as a standalone element
@@ -36,10 +39,18 @@ Portfolio.directive('ddBullets', function() {
     };
 });
 
-// Set up the slider directive
+// Down arrows
+Portfolio.directive('ddArrow', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'views/downArrow.html'
+    };
+});
+
+// Slider
 Portfolio.directive('ddSlider', function() {
     return {
-        restrict: 'E', // So we can invoke it as a standalone element
+        restrict: 'E',
         templateUrl: 'views/sliderDirective.html',
         controller: 'sliderController'
     };
