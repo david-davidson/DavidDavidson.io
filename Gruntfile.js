@@ -30,7 +30,7 @@ module.exports = function(grunt){
                     'styles/*.scss', 
                     'controllers/*', 
                     'models/*', 
-                    'views/*', 
+                    'views/**/*', 
                     'app.js'
                 ],
                 tasks: [
