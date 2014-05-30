@@ -1,26 +1,29 @@
 #contact{
     text-align: center;
     ul {
-        // display: inline-block;
-        padding-left: 0;
         li {
             list-style: none;
-            display: inline-block; // "floats" the icons
-            .whiteCircleHover {
-                border-radius: 100px; // intentionally smaller than the img width
-                width: 100px;
-                height: 100px;
-                display: inline-block;
-                position: relative; // So we can absolute position the image on top
-                margin: 15px; // Just for regular old spacing
-                img {
-                    position: absolute;
-                    left: -15px; // No elegant argument for this: it's just what works
-                    top: -15px;
-                }
-                &:hover {
-                    background-color: white;
-                    cursor: pointer;
+        }
+        &.socialIcons {
+            padding-left: 0;
+            li {
+                display: inline-block; // "floats" the icons
+                .whiteCircleHover {
+                    border-radius: 100px; // intentionally smaller than the img width
+                    width: 100px;
+                    height: 100px;
+                    display: inline-block;
+                    position: relative; // So we can absolute position the image on top
+                    margin: 15px; // Just for regular old spacing
+                    img {
+                        position: absolute;
+                        left: -15px; // Gross, but it works
+                        top: -15px;
+                    }
+                    &:hover {
+                        background-color: white;
+                        cursor: pointer;
+                    }
                 }
             }
         }
