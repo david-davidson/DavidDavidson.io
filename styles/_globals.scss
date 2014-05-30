@@ -183,7 +183,7 @@ button {
 }
 
 .halfWrapper {
-    @extend .heroWrapper
+    @extend .heroWrapper;
     height: 200px;
 }
 
