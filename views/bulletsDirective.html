@@ -1,5 +1,5 @@
-<div ng-bind-html-unsafe='item.bullet' ng-class='{link: item.children && hideDetails.$index}' ng-click='hideDetails.$index=false'>
-</div>
+<span ng-bind-html-unsafe='item.bullet' ng-class='{link: item.children && hideDetails.$index}' ng-click='hideDetails.$index=false'>
+</span>
 <div ng-show='item.children && !hideDetails.$index'>
     <ul>
         <li ng-repeat='anotheritem in item.children' ng-bind-html-unsafe='anotheritem.child'>
