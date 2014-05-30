@@ -28,14 +28,13 @@ Portfolio.controller('masterController',
             totalHeight = $(window).height();
             navHeight = $('nav').height();
             h1Height = $('h1').height();
-            topPadding = totalHeight / 2.25;
+            topPadding = totalHeight / 2.5;
             halfHeight = totalHeight / 2;
-            halfTopPadding = halfHeight / 2.25;
+            halfTopPadding = halfHeight / 2;
             $('.heroWrapper').css({"height": totalHeight});
-            $('.halfWrapper').css({"height": halfHeight});
             $('.heroWrapper h1').css({"padding-top": topPadding});
             $('.heroWrapper h2').css({"padding-top": halfTopPadding});
-            $('.halfWrapper h2').css({"padding-top": halfTopPadding});
+            $('.navPlaceholder').css({"height": navHeight});
         };
         angular.element($window).bind("resize",function(){
             setHeight();
