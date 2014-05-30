@@ -44,6 +44,12 @@ h1, h2 {
     padding-top: 50px;
 }
 
+.test {
+    color: white;
+    margin-top: 0;
+    padding: 50px;
+    background-color: $gray;
+}
 h3 {
     padding-top: 40px;
 }
@@ -90,9 +96,16 @@ img {
     padding-top: 80px;
 }
 
-.bodyContent {
-    margin: 0 auto;
+// .bodyContent {
+//     margin: 0 auto;
+//     // max-width: 1000px;
+// }
+
+.narrow {
     max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 .center {
@@ -104,7 +117,7 @@ img {
 .blockWrapper {
     display: inline-block;
     width:100%;
-    max-width: 1000px;
+    // max-width: 1000px;
 }
 
 // Baseline buttons
