@@ -4,51 +4,53 @@
             What I&rsquo;ve done
         </h2>
     </div>
-    <div class="blockWrapper" ng-repeat='job in jobs'>
-        <h3 ng-bind-html-unsafe='job.title'></h3>
-        <span ng-bind-html-unsafe='job.who' class="who"></span>
-        <span ng-bind-html-unsafe='job.when' class="when"></span>
-        <span ng-bind-html-unsafe='job.where' class="where"></span>
-        <div class="blockWrapper">
-            <!-- Since putting alternating left and right (float) classes on li's still leaves odd whitespace, we divide the bullets into two columns and float the columns instead -->
-            <div class="half left">
-                <ul>
-                    <li ng-show='isEven($index)' ng-init='hideDetails.$index = true' ng-repeat='item in job.bullets'>
-                        <dd-bullets></dd-bullets>
-                    </li>
-                </ul>
+    <div class="contentWrapper">
+        <div class="narrow">
+            <div class="blockWrapper" ng-repeat='job in jobs'>
+                <h3 ng-bind-html-unsafe='job.title'></h3>
+                <span ng-bind-html-unsafe='job.who' class="who"></span>
+                <span ng-bind-html-unsafe='job.when' class="when"></span>
+                <span ng-bind-html-unsafe='job.where' class="where"></span>
+                <div class="blockWrapper">
+                    <!-- Since putting alternating left and right (float) classes on li's still leaves odd whitespace, we divide the bullets into two columns and float the columns instead -->
+                    <div class="half left">
+                        <ul>
+                            <li ng-show='isEven($index)' ng-init='hideDetails.$index = true' ng-repeat='item in job.bullets'>
+                                <dd-bullets></dd-bullets>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="half right">
+                        <ul>
+                            <li ng-show='!isEven($index)' ng-init='hideDetails.$index = true' ng-repeat='item in job.bullets'>
+                                <dd-bullets></dd-bullets>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="half right">
-                <ul>
-                    <li ng-show='!isEven($index)' ng-init='hideDetails.$index = true' ng-repeat='item in job.bullets'>
-                        <dd-bullets></dd-bullets>
-                    </li>
-                </ul>
+            <dd-arrow></dd-arrow>
+            <h2>
+                Education
+            </h2>
+            <div class="blockWrapper" ng-repeat='school in schools'>
+                <h3 ng-bind-html-unsafe='school.title'></h3>
+                <span ng-bind-html-unsafe='school.who' class="who"></span>
+                <span ng-bind-html-unsafe='school.when' class="when"></span>
+                <span ng-bind-html-unsafe='school.where' class="where"></span>
+                <span ng-bind-html-unsafe='school.GPA' ng-show='school.GPA' class="GPA"></span>
+            </div>
+            <div class="paddingTop blockWrapper footer">
+                <div class="footerWrapper">
+                    <span class="wide">
+                        <a href="/#/portfolio">
+                            <button type="button" class="button red wide">
+                                See my portfolio
+                            </button>
+                        </a>
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
-    <hr>
-    <div class="downArrow"></div>
-    <div class="padding"></div>
-    <h2>
-        Education
-    </h2>
-    <div class="blockWrapper" ng-repeat='school in schools'>
-        <h3 ng-bind-html-unsafe='school.title'></h3>
-        <span ng-bind-html-unsafe='school.who' class="who"></span>
-        <span ng-bind-html-unsafe='school.when' class="when"></span>
-        <span ng-bind-html-unsafe='school.where' class="where"></span>
-        <span ng-bind-html-unsafe='school.GPA' ng-show='school.GPA' class="GPA"></span>
-    </div>
-</div>
-<div class="paddingTop blockWrapper footer">
-    <div class="footerWrapper">
-        <span class="wide">
-            <a href="/#/portfolio">
-                <button type="button" class="button red wide">
-                    See my portfolio
-                </button>
-            </a>
-        </span>
     </div>
 </div>

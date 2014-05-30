@@ -96,11 +96,6 @@ img {
     padding-top: 80px;
 }
 
-// .bodyContent {
-//     margin: 0 auto;
-//     // max-width: 1000px;
-// }
-
 .narrow {
     max-width: 1000px;
     display: block;
@@ -112,6 +107,11 @@ img {
     text-align: center;
     margin: 0 auto;
     float: none !important;
+}
+
+.contentWrapper {
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .blockWrapper {
