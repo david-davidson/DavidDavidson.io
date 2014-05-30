@@ -1,10 +1,10 @@
 // Define colors
 $blue: rgb(60, 109, 197);
-$darkBlue: rgb(70,70,150);
+$darkBlue: rgb(70, 70, 150);
 $lightGray: rgb(230, 230, 240);
 $gray: #AAA;
-$darkGray: rgb(47, 79, 79);
-$red: rgb(255,80,0);
+$darkGray: rgb(70, 70, 70);
+$red: rgb(255, 80, 0);
 $darkRed: red;
 
 // Global styles
@@ -96,6 +96,13 @@ img {
     padding-top: 80px;
 }
 
+.paddingBottom80 {
+    padding-bottom: 80px;
+}
+
+.paddingBottom120 {
+    padding-bottom: 120px;
+}
 .narrow {
     max-width: 1000px;
     display: block;
@@ -299,6 +306,7 @@ hr {
 }
 
 .footer {
+    padding-bottom: 100px;
     text-align: center;
     margin: 0 auto;
 }
