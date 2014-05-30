@@ -194,7 +194,6 @@ nav {
     background-color: white;
     margin: 0;
     padding: 0;
-    // margin-bottom: 1em;
     text-align: center;
     display: inline-block;
     width: 100%;
@@ -220,35 +219,30 @@ nav {
             color: white
         }
     }
+    // The top-level list
     ul {
         display: inline-block;
-        // width: 100%;
         padding-left: 0;
-        text-align: center;
         margin: 0;
         li {
             list-style: none;
-            padding-top: 10px;
         }
         // The dropdown
         ul {
             list-style: none;
             display: inherit;
             li {
-                margin-left: 10%;
+                // margin-left: 10%;
                 clear:left;
-                a {
-                    .button {
-                        &:hover, :active, :focus, {
-                            background-color: $gray;
-                            border-left: 1px solid gray;
-                            color: white
-                        }
-                    }
-                }
                 .button {
+                    border-left: 1px solid white;
                     &.current {
-                        border-left: 1px solid gray; // Prevents  white border on current dropdown pages
+                        border-left: 1px solid $gray; // Prevents  white border on current dropdown pages
+                    }
+                    &:hover, :active, :focus, {
+                        background-color: $gray;
+                        border-left: 1px solid $gray;
+                        color: white
                     }
                 }
             }
