@@ -185,6 +185,9 @@ button {
 .halfWrapper {
     @extend .heroWrapper;
     height: 200px;
+    h2 {
+        padding-top: 50px; // Come back to this
+    }
 }
 
 // Style the nav
