@@ -1,4 +1,4 @@
-@media (min-width: 700px) {
+@media (min-width: 725px) {
     .heroWrapper {
         h1 {
             font-size: 50px;
@@ -13,6 +13,66 @@
         &.email {
             width: 18em;
         }
+    }
+    nav {
+        // Fixed position on tablet+
+        position: fixed;
+        z-index: 1000;
+        background: white; // Was blue on mobile
+        // The top-level list
+        ul {
+            position: relative; // To enable absolute in the dropdown
+            float: right;
+            display: inline-block; // Was block on mobile
+            // Nav items
+            li {
+                float: left;
+                width: 175px;
+                margin-bottom: 0;
+                .button {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid white; // Overrides separator from mobile
+                    border-left: 1px solid $gray; // Replaces it
+                    &.current {
+                        border-bottom: 1px solid $gray; // To match background
+                        border-left: 1px solid white; // To separate, say, .current and :active li's that are side by side
+                    }
+                }
+                // Hover, but not on buttons w/o links, like /portfolio
+                a .button {
+                    &:hover, :active, :focus {
+                        border-left: 1px solid white;
+                        border-bottom: 1px solid $gray;
+                        background-color: $gray; // Note that we never set a hover on mobile
+                        color: white;
+                    }
+                }
+                // The dropdown
+                ul {
+                    margin-top: 0; // Overrides 10px from mobile
+                    position: absolute; // To keep it from bumping the rest of the page down
+                    width: 175px; // = the width of one main nav button
+                    li {
+                        padding-top: 1px;
+                        margin-left: 0; // Overrides mobile's margin-left: 10%
+                        width: 100%; //...and corresponding width: 90%
+                        .button {
+                            border-left: 1px solid white; // Overrides parents
+                            &.current {
+                                border-left: 1px solid $gray; // Overrides default white border
+                            }
+                            &:hover, :active, :focus, {
+                                border-left: 1px solid $gray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .navPlaceholder {
+        display: block; // Activate the placeholder: now that the nav is fixed, this lives "underneath" it and helps up make room for other content
     }
 }
 
@@ -108,26 +168,5 @@
     .navDot.active:hover {
         color: $darkGray;
         cursor: default;
-    }
-
-    // Float the nav buttons
-    nav {
-        ul {
-            position: relative;
-            float: right;
-            li {
-                padding-top: 1px;
-                float: left;
-                width: 175px;
-            }
-            ul {
-                position: absolute; // To keep it from bumping the rest of the page down
-                width: 175px; // = the width of one main nav button
-                li {
-                    margin-left: 0;
-                    width: 100%;
-                }
-            }
-        }
     }
 }
