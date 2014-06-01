@@ -30,15 +30,15 @@ Portfolio.controller('masterController',
             navHeight = $('nav').height();
             heroHeight = windowHeight - navHeight;
             topPadding = heroHeight / 2.5;
-            halfTopPadding = topPadding / 2;
-            minContentHeight = 550;
+            halfTopPadding = topPadding / 1.75;
+            minContactHeight = 450;
             $('.heroWrapper').css({'height': heroHeight});
             $('.heroWrapper h1').css({'padding-top': topPadding});
             $('.heroWrapper h2').css({'padding-top': halfTopPadding});
             $('.navPlaceholder').css({'height': navHeight});
             // Don't let the contact view collapse on short screens
-            if (heroHeight < minContentHeight) {
-                $('.heroWrapper.fullPage').css({'height': minContentHeight});
+            if (heroHeight < minContactHeight) {
+                $('.heroWrapper#contact').css({'height': minContactHeight});
             }
         };
         angular.element($window).bind('resize', function(){
