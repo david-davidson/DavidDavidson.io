@@ -9,7 +9,7 @@
             li {
                 display: inline-block; // "floats" the icons
                 .whiteCircleHover {
-                    border-radius: 100px; // intentionally smaller than the img width
+                    border-radius: 50px; // intentionally smaller than the img width
                     width: 100px;
                     height: 100px;
                     display: inline-block;
@@ -35,4 +35,3 @@
         }
     }
 }
-
