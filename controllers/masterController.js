@@ -26,17 +26,22 @@ Portfolio.controller('masterController',
         });
         $scope.today = new Date();
         setHeight = function() {
-            totalHeight = $(window).height();
+            windowHeight = $(window).height();
             navHeight = $('nav').height();
-            heroHeight = totalHeight - navHeight;
+            heroHeight = windowHeight - navHeight;
             topPadding = heroHeight / 2.5;
             halfTopPadding = topPadding / 2;
-            $('.heroWrapper').css({"height": heroHeight});
-            $('.heroWrapper h1').css({"padding-top": topPadding});
-            $('.heroWrapper h2').css({"padding-top": halfTopPadding});
-            $('.navPlaceholder').css({"height": navHeight});
+            minContentHeight = 550;
+            $('.heroWrapper').css({'height': heroHeight});
+            $('.heroWrapper h1').css({'padding-top': topPadding});
+            $('.heroWrapper h2').css({'padding-top': halfTopPadding});
+            $('.navPlaceholder').css({'height': navHeight});
+            // Don't let the contact view collapse on short screens
+            if (heroHeight < minContentHeight) {
+                $('.heroWrapper.fullPage').css({'height': minContentHeight});
+            }
         };
-        angular.element($window).bind("resize",function(){
+        angular.element($window).bind('resize', function(){
             setHeight();
         });
         // On its own, ng-mouseout fires closeDropDown() way too readily, so we add one more boolean: $scope.dropdownHover, which (on mouseout) we 1. set to false *before* the timeout and 2. then check again before actually hiding the dropdown
