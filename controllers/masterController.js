@@ -26,17 +26,26 @@ Portfolio.controller('masterController',
         });
         $scope.today = new Date();
         setHeight = function() {
+            // Set the minimums
+            minContactHeight = 450;
+            minHeroHeight = 250;
+            // Measure some components
             windowHeight = $(window).height();
             navHeight = $('nav').height();
+            // Start calculating heights
             heroHeight = windowHeight - navHeight;
+            // Apply the main hero's minimum
+            if (heroHeight < minHeroHeight) {
+                heroHeight = minHeroHeight;
+            }
             topPadding = heroHeight / 2.5;
             halfTopPadding = topPadding / 1.75;
-            minContactHeight = 450;
+            // Set the heights
             $('.heroWrapper').css({'height': heroHeight});
+            $('.navPlaceholder').css({'height': navHeight});
             $('.heroWrapper h1').css({'padding-top': topPadding});
             $('.heroWrapper h2').css({'padding-top': halfTopPadding});
-            $('.navPlaceholder').css({'height': navHeight});
-            // Don't let the contact view collapse on short screens
+            // Apply the contact background's minimum
             if (heroHeight < minContactHeight) {
                 $('.heroWrapper#contact').css({'height': minContactHeight});
             }
