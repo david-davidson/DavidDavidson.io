@@ -35,7 +35,7 @@ Portfolio.controller('masterController',
             if (heroContentHeight > heroHeight) {
                 heroHeight = heroContentHeight;
             }
-            topMargin = (heroHeight - heroContentHeight) / 2;
+            topMargin = (heroHeight - heroContentHeight) / 2.25;
             // Apply heights
             $('.heroWrapper').css({'height': heroHeight});
             $('.navPlaceholder').css({'height': navHeight});
