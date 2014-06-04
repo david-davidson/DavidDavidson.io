@@ -1,5 +1,5 @@
 // Set up routing
-var portfolioConfig = function($routeProvider) {
+var portfolioConfig = function($routeProvider, $locationProvider) {
     $routeProvider
     .when('/', {
         controller: 'homeController',
@@ -24,6 +24,7 @@ var portfolioConfig = function($routeProvider) {
     .otherwise({
         redirectTo: '/'
     });
+    $locationProvider.html5Mode(true);
 };
 
 // Set up the Portfolio namespace
