@@ -47,29 +47,16 @@ module.exports = function(grunt){
             files: ['app.js', 'models/*.js', 'controllers/*.js']
         },
         concat: {
-            models: {
-                src: [
-                    'models/*'
-                ],
-                dest: 'grunted/models.js'
-            },
-            controllers: {
-                src: [
-                    'controllers/*'
-                ],
-                dest: 'grunted/controllers.js'
+            all: {
+                src: ['app.js', 'models/*', 'controllers/*'],
+                dest: 'grunted/angularComponents.js'
             }
         },
         uglify: {
-            models: {
+            all: {
                 files: {
-                    'grunted/models.js': ['grunted/models.js']
-                },
-            },
-            controllers: {
-                files: {
-                    'grunted/controllers.js': ['grunted/controllers.js']
-                },
+                    'grunted/angularComponents.js': ['grunted/angularComponents.js']
+                }
             }
         },
         cssmin: {

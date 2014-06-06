@@ -28,7 +28,9 @@ var portfolioConfig = function($routeProvider, $locationProvider) {
 };
 
 // Set up the Portfolio namespace
-var Portfolio = angular.module('Portfolio', []).config(portfolioConfig);
+var Portfolio = angular.module('Portfolio', []).config([
+    '$routeProvider', '$locationProvider',
+    portfolioConfig]);
 
 // Directives
 
