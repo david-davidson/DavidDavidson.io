@@ -1,7 +1,7 @@
 Portfolio.controller('masterController',
     ['$scope', '$window', '$location', '$timeout',
     function ($scope, $window, $location, $timeout) {
-        $scope.$on('$routeChangeSuccess', function () {
+        $scope.$on('$routeChangeStart', function () {
             var currentPage = $location.path();
             if (currentPage == '/resume') {
                 $scope.page = 'resume';
