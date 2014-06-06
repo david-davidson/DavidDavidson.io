@@ -286,7 +286,7 @@ hr {
     border-top: 20px solid $gray;
     font-size: 0;
     line-height: 0;
-    display: inline-block;
+    display: block;
     // left: 50% is a little off, because it doesn't account for the width of the arrow itself. So, for old browsers, approximate with 49%...
     margin-left: 49%;
     // ... and then get it right for the new browsers
