@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html ng-app='Portfolio' ng-init ng-controller='masterController'>
     <head>
+        <!-- Favicon -->
+        <link rel="icon" href="images/favicon.gif" type="image/x-icon">
         <!-- Styles -->
-        <link rel="stylesheet" href="grunted/styles.css">
+        <link rel="stylesheet" href="compressed/styles.css">
         <!-- Typekit fonts -->
         <script type='text/javascript' src='//use.typekit.net/fkv6lkh.js'></script>
         <script type='text/javascript'>
@@ -12,17 +14,17 @@
             catch(e) {
             }
         </script>
-        <link rel="icon" href="images/favicon.gif" type="image/x-icon">
         <!-- Angular -->
         <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js'></script>
         <!-- Routing, config, models, and controllers -->
-        <script src='grunted/angularComponents.js'></script>
+        <script src='compressed/scripts.js'></script>
         <!-- jQuery -->
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <!-- Meta -->
         <title ng-cloak ng-bind-html-unsafe='title'></title>
         <meta name="viewport" content="width=device-width">
         <meta name="description" content="See my resume, my portfolio, and more.">
+        <!-- for Angular's HTML5 mode -->
         <base href="/">
     </head>
     <body>
