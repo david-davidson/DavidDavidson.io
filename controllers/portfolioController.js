@@ -1,6 +1,6 @@
 Portfolio.controller('portfolioController',
-    ['$scope', '$window', '$filter', 'portfolioModel',
-    function ($scope, $window, $filter, portfolioModel) {
+    ['$scope', '$window', 'portfolioModel',
+    function ($scope, $window, portfolioModel) {
         $scope.projects = portfolioModel.getProjects();
         $scope.filteredProjects = $scope.projects;
         $scope.copy = portfolioModel.getCopy();
