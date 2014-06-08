@@ -5,8 +5,8 @@ Portfolio.controller('portfolioController',
         $scope.filteredProjects = $scope.projects;
         $scope.copy = portfolioModel.getCopy();
         $scope.$watch('technology', function() {
-            $scope.filteredProjects = [];
             if (typeof $scope.technology != 'undefined') {
+                $scope.filteredProjects = [];
                 angular.forEach($scope.projects, function(project) { 
                     found = false;
                     angular.forEach(project.technologies, function(technologies) {
