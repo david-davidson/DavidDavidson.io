@@ -1,14 +1,14 @@
-<div class="halfWrapper">
+<div class="halfWrapper technologySearch">
     <h2 class="blockWrapper">
         Things I&rsquo;ve built
     </h2>
+    <span>
+        Filter by language or framework:
+    </span>
+    <input type="text" placeholder="e.g., AngularJS" ng-model='technology' />
 </div>
 <div class="contentWrapper">
     <div class="narrow">
-        <div>
-            <h3>Filter by language or platform:</h3>
-            <input type="input" ng-model='technology' />
-        </div>
         <div class="blockWrapper portfolioItem extraPadding" ng-repeat='project in filteredProjects' ng-class-even='"rightTiered"' ng-class-odd='"leftTiered"'>
             <h3 ng-bind-html-unsafe='project.title'></h3>
             <a href="{{project.url}}" target="_blank">
@@ -25,13 +25,13 @@
             </a>
         </div>
         <div ng-show='noContentVisible()'>
-            <h2>
-                Haven&rsquo;t worked with that yet!
-            </h2>
+            <p class="noContentVisible">
+                Haven&rsquo;t worked with that one&mdash;yet. :)
+            </p>
         </div>
         <div class="blockWrapper paddingTop footer">
             <div class="footerWrapper">
-                <span class="CTA">
+                <span ng-hide='noContentVisible()' class="CTA">
                     I&rsquo;d like to build something with you,&nbsp;too.
                 </span>
                 <span class="wide">
