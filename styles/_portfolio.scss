@@ -10,8 +10,11 @@
         width: 150px;
         margin-left: 10px;
     }
-    [placeholder]:focus::-webkit-input-placeholder {
-        color: transparent;
+    [placeholder] {
+        font-family: "museo-sans";
+        &:focus::-webkit-input-placeholder {
+            color: transparent;
+        }
     }
 }
 
