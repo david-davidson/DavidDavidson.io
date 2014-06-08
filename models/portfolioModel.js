@@ -99,6 +99,9 @@ Portfolio.service('portfolioModel',
                         {
                             bullet: 'PHP'
                         },
+                        {
+                            bullet: "Blade"
+                        }
                     ],
                     image: '../images/zipper-square.png',
                     url: 'http://zippercomputer.com/'
