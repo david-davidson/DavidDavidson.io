@@ -49,26 +49,26 @@ module.exports = function(grunt){
         concat: {
             all: {
                 src: ['app.js', 'models/*', 'controllers/*'],
-                dest: 'compressed/scripts.js'
+                dest: 'minified/scripts.js'
             }
         },
         uglify: {
             all: {
                 files: {
-                    'compressed/scripts.js': ['compressed/scripts.js']
+                    'minified/scripts.js': ['minified/scripts.js']
                 }
             }
         },
         cssmin: {
             build: {
-                src: 'compressed/styles.css',
-                dest: 'compressed/styles.css'
+                src: 'minified/styles.css',
+                dest: 'minified/styles.css'
             }
         },
         sass: {
             build: {
                 files: {
-                    'compressed/styles.css': 'styles/styles.scss'
+                    'minified/styles.css': 'styles/styles.scss'
                 }
             }
         }
