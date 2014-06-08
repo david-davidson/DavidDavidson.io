@@ -1,6 +1,6 @@
 Portfolio.controller('contactController',
-    ['$scope', '$window',
-    function ($scope, $window) {
+    ['$scope',
+    function ($scope) {
         $scope.$on('$viewContentLoaded', setHeight());
     }
 ]);
