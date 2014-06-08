@@ -7,10 +7,12 @@ Portfolio.controller('portfolioController',
         $scope.$watch('technology', function() {
             function filterNewProjects() {
                 newProjects = [];
+                escapedTechnology = $scope.technology.replace(/[^\w]/g, '\\$&');
+                console.log(escapedTechnology);
                 angular.forEach($scope.projects, function(project) { 
                     found = false;
                     angular.forEach(project.technologies, function(technologies) {
-                        if (technologies.bullet.toLowerCase().search($scope.technology.toLowerCase()) != -1) {
+                        if (technologies.bullet.toLowerCase().search(escapedTechnology.toLowerCase()) != -1) {
                             found = true;
                         }
                     });
