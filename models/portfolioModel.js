@@ -100,6 +100,9 @@ Portfolio.service('portfolioModel',
                             bullet: 'PHP'
                         },
                         {
+                            bullet: 'JavaScript'
+                        },
+                        {
                             bullet: "Blade"
                         }
                     ],
@@ -140,6 +143,9 @@ Portfolio.service('portfolioModel',
                             bullet: 'AngularJS'
                         },
                         {
+                            bullet: 'JavaScript'
+                        },
+                        {
                             bullet: 'SCSS'
                         }
                     ],
@@ -157,26 +163,6 @@ Portfolio.service('portfolioModel',
                     image: '../images/linktagger.png',
                     url: 'https://github.com/david-davidson/linktagger.py'
                 }
-                // {
-                //     title: 'All my Github projects',
-                //     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
-                //     technologies: [
-                //         {
-                //             bullet: 'Autohotkey_L'
-                //         },
-                //         {
-                //             bullet: 'Bash'
-                //         },
-                //         {
-                //             bullet: 'Python'
-                //         },
-                //         {
-                //             bullet: 'Javascript/AngularJS'
-                //         },
-                //     ],
-                //     image: '../images/Octocat.png',
-                //     url: 'https://github.com/david-davidson'
-                // }
             ];
         };
     }
