@@ -1,6 +1,6 @@
 .technologySearch {
     h2 {
-        margin-bottom: 25px;
+        margin-bottom: 15px;
     }
     input {
         font-size: .9em;
@@ -8,12 +8,26 @@
         color: $darkGray;
         padding: 5px;
         width: 150px;
-        margin-left: 10px;
+        margin: 10px;
+        background-color: $lightGray;
     }
     [placeholder] {
         font-family: "museo-sans";
+        // color: red;
+        &::-webkit-input-placeholder {
+            color: $inputGray;
+        }
         &:focus::-webkit-input-placeholder {
             color: transparent;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            color: $inputGray;  
+        }
+        &::-moz-placeholder {  /* Firefox 19+ */
+            color: $inputGray;  
+        }
+        &:-ms-input-placeholder {  
+            color: $inputGray;  
         }
     }
 }

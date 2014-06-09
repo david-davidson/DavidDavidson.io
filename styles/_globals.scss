@@ -2,6 +2,7 @@
 $blue: rgb(60, 109, 197);
 $darkBlue: rgb(70, 70, 150);
 $lightGray: rgb(230, 230, 240);
+$inputGray: rgb(120,120,120); // A one-off, for the input on /portfolio
 $gray: #AAA;
 $darkGray: rgb(70, 70, 70);
 $red: rgb(255, 80, 0);
@@ -208,10 +209,7 @@ button {
 
 .halfWrapper {
     @extend .heroWrapper;
-    height: 250px;
-    h2 {
-        padding-top: 80px;
-    }
+    min-height: 200px;
 }
 
 .heroContent {
