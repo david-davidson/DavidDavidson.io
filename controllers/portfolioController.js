@@ -11,10 +11,9 @@ Portfolio.controller('portfolioController',
                 escapedTechnology = $scope.technology.replace(/[^\w]/g, '\\$&');
                 angular.forEach($scope.projects, function(project) { 
                     found = false;
-                    angular.forEach(project.technologies, function(technologies) {
-                        if (technologies.bullet.toLowerCase().search(escapedTechnology.toLowerCase()) != -1) {
-                            found = true;
-                        }
+                    // Since we only need one match, let's stop looping after we find it: some, not forEach
+                    found = project.technologies.some(function(technologies) {
+                        return (technologies.bullet.toLowerCase().search(escapedTechnology.toLowerCase()) != -1);
                     });
                     if (found === true) {
                         newProjects.push(project);
