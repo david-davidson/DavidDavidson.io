@@ -8,14 +8,13 @@ Portfolio.controller('portfolioController',
              // To avoid a flicker on slow connections, we build the new array behind the scenes and then switch over all at once, rather than emptying and rebuilding it while it's live in the view.
             function filterNewProjects() {
                 newProjects = [];
-                escapedTechnology = $scope.technology.replace(/[^\w]/g, '\\$&');
                 angular.forEach($scope.projects, function(project) { 
                     found = false;
                     // Since we only need one match, let's stop looping after we find it: some, not forEach
                     found = project.technologies.some(function(technologies) {
-                        return (technologies.bullet.toLowerCase().search(escapedTechnology.toLowerCase()) != -1);
+                        return (technologies.bullet.toLowerCase().indexOf(escapedTechnology.toLowerCase()) != -1);
                     });
-                    if (found === true) {
+                    if (found) {
                         newProjects.push(project);
                     }
                 });
