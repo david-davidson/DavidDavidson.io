@@ -1,7 +1,13 @@
 .technologySearch {
-    h2 {
-        margin-bottom: 5px;
-    }
+    // h2 {
+    //     margin-bottom: 5px;
+    // }
+    background: $gray;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
     input {
         font-size: .9em;
         border: 0;
@@ -9,7 +15,7 @@
         padding: 5px;
         width: 150px;
         margin: 10px;
-        background-color: $lightGray;
+        // background-color: $lightGray;
     }
     [placeholder] {
         font-family: "museo-sans";
