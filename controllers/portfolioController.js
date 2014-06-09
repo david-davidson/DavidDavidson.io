@@ -5,10 +5,10 @@ Portfolio.controller('portfolioController',
         $scope.filteredProjects = $scope.projects;
         $scope.copy = portfolioModel.getCopy();
         $scope.$watch('technology', function() {
+             // To avoid a flicker on slow connections, we build the new array behind the scenes and then switch over all at once, rather than emptying and rebuilding it while it's live in the view.
             function filterNewProjects() {
                 newProjects = [];
                 escapedTechnology = $scope.technology.replace(/[^\w]/g, '\\$&');
-                console.log(escapedTechnology);
                 angular.forEach($scope.projects, function(project) { 
                     found = false;
                     angular.forEach(project.technologies, function(technologies) {
@@ -24,7 +24,7 @@ Portfolio.controller('portfolioController',
             }
             // Don't filter when there's nothing to filter against, just to keep the console happy:
             if (typeof $scope.technology != 'undefined') {
-                $scope.filteredProjects = filterNewProjects(); // To avoid a flicker on slow connections, we build the new array behind the scenes and then switch over all at once, rather than emptying and rebuilding it while it's live in the view
+                $scope.filteredProjects = filterNewProjects();
             }
         });
         $scope.noContentVisible = function() {
