@@ -2,7 +2,7 @@
     // h2 {
     //     margin-bottom: 5px;
     // }
-    background: $gray;
+    background: $darkGray;
     color: white;
     display: inline-block;
     width: 100%;
@@ -15,25 +15,24 @@
         padding: 5px;
         width: 150px;
         margin: 10px;
-        // background-color: $lightGray;
     }
     [placeholder] {
         font-family: "museo-sans";
         // color: red;
         &::-webkit-input-placeholder {
-            color: $inputGray;
+            color: $darkGray;
         }
         &:focus::-webkit-input-placeholder {
             color: transparent;
         }
         &:-moz-placeholder { /* Firefox 18- */
-            color: $inputGray;  
+            color: $darkGray;  
         }
         &::-moz-placeholder {  /* Firefox 19+ */
-            color: $inputGray;  
+            color: $darkGray;  
         }
         &:-ms-input-placeholder {  
-            color: $inputGray;  
+            color: $darkGray;  
         }
     }
 }
