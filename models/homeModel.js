@@ -8,11 +8,11 @@ Portfolio.service('homeModel',
                 },
                 {
                     title: 'Writing',
-                    description: 'I&rsquo;ve written <a href="/copy">everything from websites to blog posts to social</a>. (Writing and editing, by the way, taught me my best programming habits: concision, consistency, structure, a bias toward simplicity.)'
+                    description: 'Writing and editing taught me to clarify complex concepts and communicate them to anybody. They also taught me what to look for in code: readability, structure, concision, consistency.'
                 },
                 {
                     title: 'Marketing',
-                    description: 'Marketing&mdash;like copywriting, like UX&mdash;is all about understanding the user. I get to know new audiences and voices quickly.'
+                    description: 'Marketing, like UX and writing, is all about empathizing with the user. I write for my audience, not myself, and I&rsquo;m comfortable across marketing channels&mdash;ads, email, social, and more.'
                 }
             ];
         };
@@ -20,7 +20,7 @@ Portfolio.service('homeModel',
             return [
                 {
                     title: 'Learning',
-                    description: 'Before I learned to code, I learned lots of other things&mdash;Spanish, editing, marketing. Learning those other skills may not help me'
+                    description: 'Before I learned to build websites, I learned lots of other things&mdash;Spanish, editing, marketing. Learning those other skills may not help me'
                 },
                 {
                     title: 'Effort',
