@@ -11,34 +11,34 @@ Portfolio.service('resumeModel',
                     // summary: 'For the last half-year or so, I&rsquo;ve been building websites for a startup in Seattle'
                     bullets: [
                         {
-                            bullet: 'test'
+                            bullet: 'Built the web-design and growth-consulting views for ZipperComputer.com using Laravel, Foundation, Blade (for templating), and more'
                         },
                         {
                             bullet: 'Built Waycross.com, a pixel-for-pixel WordPress clone of a flat HTML/CSS site'
                         },
                         {
-                            bullet: 'Built BloomYogaNW.com, a WordPress site and custom theme, using Advanced Custom Fields, SCSS, and Foundation'
+                            bullet: 'Built BloomYogaNW.com&mdash;a WordPress site and custom theme&mdash;using Advanced Custom Fields, SCSS, and Foundation'
                         },
                         {
                             bullet: 'Helped style the UI of Waycross&rsquo;s new in-house stock-data web app (written in Yii and AngularJS), mostly using SCSS and JavaScript'
                         },
                         {
-                            bullet: 'Built the web-design and growth-consulting views for ZipperComputer.com, using Laravel, Foundation, Blade (for templating), and more'
+                            bullet: 'test'
                         },
                         {
                             bullet: 'Automated part of the Waycross backend',
                             children: [
                                 {
-                                    child: 'A crontab regularly fires a Bash script, which queries a SQL database to see if a run&rsquo;s scheduled'
+                                    grandchild: 'A crontab regularly fires a Bash script, which queries a SQL database to see if a run&rsquo;s scheduled.'
                                 },
                                 {
-                                    child: 'If one is, the Bash script tells a Windows VM to start a batch script'
+                                    grandchild: 'If one is, the Bash script tells a Windows VM to start a batch script.'
                                 },
                                 {
-                                    child: 'The batch script starts a series of Autohotkey scripts, which download several CSVs&rsquo; worth of stock data'
+                                    grandchild: 'The batch script starts a series of Autohotkey scripts, which download several CSVs&rsquo; worth of stock data.'
                                 },
                                 {
-                                    child: 'The Bash script notices the new files, fires Yii commands to upload them to the web app, marks the run as complete in SQL, and keeps waiting'
+                                    grandchild: 'The Bash script notices the new files, fires Yii commands to upload them to the web app, marks the run as complete in SQL, and keeps waiting&nbsp;.&nbsp;.&nbsp;.'
                                 }
                             ]
                         }

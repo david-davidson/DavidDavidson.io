@@ -2,7 +2,7 @@
 </span>
 <div ng-show='item.children && !hideDetails.$index'>
     <ul>
-        <li ng-repeat='anotheritem in item.children' ng-bind-html-unsafe='anotheritem.child'>
+        <li ng-repeat='child in item.children' ng-bind-html-unsafe='child.grandchild'>
         </li>
     </ul>
     <p class="link" ng-click='hideDetails.$index = true; scrollToParent(job.id)'>Hide</p>
