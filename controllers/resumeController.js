@@ -11,5 +11,6 @@ Portfolio.controller('resumeController',
                 return false;
             }
         };
+        $scope.$on('$viewContentLoaded', setHeight());
     }
 ]);

@@ -32,5 +32,6 @@ Portfolio.controller('portfolioController',
                 return false;
             }
         };
+        $scope.$on('$viewContentLoaded', setHeight());
     }
 ]);
