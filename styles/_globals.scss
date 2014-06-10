@@ -57,7 +57,7 @@ h1, h2, h3 {
 }
 
 h1, h2 {
-    padding-top: 50px;
+    padding-top: 80px;
 }
 
 .test {
@@ -123,7 +123,6 @@ img {
     max-width: 1000px;
     display: block;
     margin: 0 auto;
-    margin-bottom: 50px;
 }
 
 .center {
@@ -208,7 +207,10 @@ button {
 
 .halfWrapper {
     @extend .heroWrapper;
-    min-height: 200px;
+    height: 200px;
+    h2 {
+        padding-top: 50px;
+    }
 }
 
 .heroContent {

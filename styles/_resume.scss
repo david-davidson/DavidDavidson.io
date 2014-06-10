@@ -42,6 +42,9 @@
     margin-top: 0;
     margin-bottom: 0;
     display: inline-block;
+    li {
+        padding-bottom: 5px;
+    }
 }
 
 // Wrapper around individual bullets
