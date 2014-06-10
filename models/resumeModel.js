@@ -7,37 +7,39 @@ Portfolio.service('resumeModel',
                     who: '<a href="http://zippercomputer.com/?utm_source=daviddavidson.io&utm_medium=web&utm_content=resume" target="_blank">Zipper Computer</a>',
                     when: 'October 2013&ndash;ongoing',
                     where: 'Seattle, WA',
+                    id: 'zipper',
+                    // summary: 'For the last half-year or so, I&rsquo;ve been building websites for a startup in Seattle'
                     bullets: [
                         {
-                            bullet: 'Waycross (pixel-for-pixel WP clone built on underscores)'
+                            bullet: 'test'
                         },
                         {
-                            bullet: 'Bloom (new WP theme built on FoundationPress, Advanced Custom Fields, SCSS, Foundation)'
+                            bullet: 'Built Waycross.com, a pixel-for-pixel WordPress clone of a flat HTML/CSS site'
                         },
                         {
-                            bullet: 'Code for products page on GearheadEngines.com?'
+                            bullet: 'Built BloomYogaNW.com, a WordPress site and custom theme, using Advanced Custom Fields, SCSS, and Foundation'
                         },
                         {
-                            bullet: 'SEO\'d Gearhead satellite sites?'
+                            bullet: 'Helped style the UI of Waycross&rsquo;s new in-house stock-data web app (written in Yii and AngularJS), mostly using SCSS and JavaScript'
                         },
                         {
-                            bullet: 'Views for zippercomputer.com (Laravel, SCSS, Foundation)'
+                            bullet: 'Built the web-design and growth-consulting views for ZipperComputer.com, using Laravel, Foundation, Blade (for templating), and more'
                         },
                         {
-                            bullet: 'Waycross automation project',
+                            bullet: 'Automated part of the Waycross backend',
                             children: [
                                 {
-                                    child: 'Crontab fires bash script, which queries SQL database to see to if a run scheduled'
+                                    child: 'A crontab regularly fires a Bash script, which queries a SQL database to see if a run&rsquo;s scheduled'
                                 },
                                 {
-                                    child: 'If run scheduled, script sends command to Windows VM, which starts a batch file, which starts a series of Autohotkey scripts'
+                                    child: 'If one is, the Bash script tells a Windows VM to start a batch script'
                                 },
                                 {
-                                    child: 'Autohotkey scripts automate download of multiple CSVs, put them in shared folder'
+                                    child: 'The batch script starts a series of Autohotkey scripts, which download several CSVs&rsquo; worth of stock data'
                                 },
                                 {
-                                    child: 'Bash script notices that the files have arrived, fires Yii (PHP) command to upload them into SQL table, marks run as complete, keeps waiting'
-                                },
+                                    child: 'The Bash script notices the new files, fires Yii commands to upload them to the web app, marks the run as complete in SQL, and keeps waiting'
+                                }
                             ]
                         }
                     ]

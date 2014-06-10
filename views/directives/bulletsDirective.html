@@ -5,5 +5,5 @@
         <li ng-repeat='anotheritem in item.children' ng-bind-html-unsafe='anotheritem.child'>
         </li>
     </ul>
-    <p class="link" ng-click='hideDetails.$index = true'>Hide</p>
+    <p class="link" ng-click='hideDetails.$index = true; scrollToParent(job.id)'>Hide</p>
 </div>

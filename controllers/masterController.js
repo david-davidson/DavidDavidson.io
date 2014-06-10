@@ -1,6 +1,6 @@
 Portfolio.controller('masterController',
-    ['$scope', '$window', '$location', '$timeout',
-    function ($scope, $window, $location, $timeout) {
+    ['$scope', '$window', '$location', '$timeout', '$anchorScroll',
+    function ($scope, $window, $location, $timeout, $anchorScroll) {
         $scope.$on('$routeChangeStart', function () {
             var currentPage = $location.path();
             if (currentPage == '/resume') {
@@ -57,6 +57,10 @@ Portfolio.controller('masterController',
         $scope.openDropdown = function() {
             $scope.dropdown = true;
             $scope.dropdownHover = true;
+        };
+        $scope.scrollToParent = function(parentId) {
+            $location.hash(parentId);
+            $anchorScroll();
         };
     }
 ]);

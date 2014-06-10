@@ -6,7 +6,7 @@
     </div>
     <div class="contentWrapper">
         <div class="narrow">
-            <div class="blockWrapper" ng-repeat='job in jobs'>
+            <div class="blockWrapper" id="{{job.id}}" ng-repeat='job in jobs'>
                 <h3 ng-bind-html-unsafe='job.title'></h3>
                 <span ng-bind-html-unsafe='job.who' class="who"></span>
                 <span ng-bind-html-unsafe='job.when' class="when"></span>
