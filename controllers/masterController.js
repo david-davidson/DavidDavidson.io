@@ -1,6 +1,6 @@
 Portfolio.controller('masterController',
-    ['$scope', '$window', '$location', '$timeout', '$anchorScroll',
-    function ($scope, $window, $location, $timeout, $anchorScroll) {
+    ['$scope', '$window', '$location', '$timeout',
+    function ($scope, $window, $location, $timeout) {
         $scope.$on('$routeChangeSuccess', function () {
             var currentPage = $location.path();
             if (currentPage == '/resume') {
@@ -25,6 +25,24 @@ Portfolio.controller('masterController',
             }
         });
         $scope.today = new Date();
+        // On its own, ng-mouseout fires closeDropDown() way too readily, so we add one more boolean: $scope.dropdownHover, which (on mouseout) we 1. set to false *before* the timeout and 2. then check again before actually hiding the dropdown
+        $scope.hideDropdown = function() {
+            if ($scope.dropdownHover === false) {
+                $scope.dropdown = false;
+            }
+        };
+        $scope.closeDropdown = function() {
+            $scope.dropdownHover = false;
+            $timeout($scope.hideDropdown, 750);
+        };
+        $scope.openDropdown = function() {
+            $scope.dropdown = true;
+            $scope.dropdownHover = true;
+        };
+        // Angular wrappers around some handy jQuery
+        $scope.scrollToParent = function(parentId) {
+            $('html, body').animate({scrollTop:$('#' + parentId).offset().top}, 500);
+        };
         setHeight = function() {
             // Measure components
             windowHeight = $(window).height();
@@ -41,25 +59,8 @@ Portfolio.controller('masterController',
             $('.navPlaceholder').css({'height': navHeight});
             $('.heroContent').css({'margin-top': topMargin});
         };
-        angular.element($window).bind('resize', function(){
-            setHeight();
+        angular.element($window).bind('resize', function() {
+            setHeight(); // Takes care of resizing for *all* views, though individual controllers make the call for initial sizing
         });
-        // On its own, ng-mouseout fires closeDropDown() way too readily, so we add one more boolean: $scope.dropdownHover, which (on mouseout) we 1. set to false *before* the timeout and 2. then check again before actually hiding the dropdown
-        $scope.hideDropdown = function() {
-            if ($scope.dropdownHover === false) {
-                $scope.dropdown = false;
-            }
-        };
-        $scope.closeDropdown = function() {
-            $scope.dropdownHover = false;
-            $timeout($scope.hideDropdown, 750);
-        };
-        $scope.openDropdown = function() {
-            $scope.dropdown = true;
-            $scope.dropdownHover = true;
-        };
-        $scope.scrollToParent = function(parentId) {
-            $('html,body').animate({scrollTop:$('#' + parentId).offset().top}, 400);
-        };
     }
 ]);
