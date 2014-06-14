@@ -20,19 +20,19 @@
         font-family: "museo-sans";
         // color: red;
         &::-webkit-input-placeholder {
-            color: $darkGray;
+            color: $gray;
         }
         &:focus::-webkit-input-placeholder {
             color: transparent;
         }
         &:-moz-placeholder { /* Firefox 18- */
-            color: $darkGray;  
+            color: $gray;  
         }
         &::-moz-placeholder {  /* Firefox 19+ */
-            color: $darkGray;  
+            color: $gray;  
         }
         &:-ms-input-placeholder {  
-            color: $darkGray;  
+            color: $gray;  
         }
     }
 }
