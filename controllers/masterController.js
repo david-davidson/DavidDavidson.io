@@ -2,20 +2,19 @@ Portfolio.controller('masterController',
     ['$scope', '$window', '$location', '$timeout',
     function ($scope, $window, $location, $timeout) {
         $scope.$on('$routeChangeSuccess', function () {
-            var currentPage = $location.path();
-            if (currentPage == '/resume') {
+            if ($location.path() == '/resume') {
                 $scope.page = 'resume';
                 $scope.title = 'R&eacute;sum&eacute; | David Davidson';
             }
-            else if (currentPage == '/copy') {
+            else if ($location.path() == '/copy') {
                 $scope.page = 'copy';
                 $scope.title = 'Portfolio | David Davidson';
             }
-            else if (currentPage == '/portfolio') {
+            else if ($location.path() == '/portfolio') {
                 $scope.page = 'portfolio';
                 $scope.title = 'Portfolio | David Davidson';
             }
-            else if (currentPage == '/contact') {
+            else if ($location.path() == '/contact') {
                 $scope.page = 'contact';
                 $scope.title = 'Contact | David Davidson';
             }
