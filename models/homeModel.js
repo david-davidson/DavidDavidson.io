@@ -12,7 +12,7 @@ Portfolio.service('homeModel',
                 },
                 {
                     title: 'Marketing',
-                    description: 'Marketing, like UX and writing, is all about empathizing with the user. I write for my audience, not myself, and I&rsquo;m comfortable across marketing channels&mdash;ads, email, social, and more.'
+                    description: 'Marketing, like UX and writing, is all about empathizing with the user. I write for my audience, not myself, and I&rsquo;m comfortable across marketing channels&mdash;ads, email, social, and&nbsp;more.'
                 }
             ];
         };
@@ -20,15 +20,15 @@ Portfolio.service('homeModel',
             return [
                 {
                     title: 'Learning',
-                    description: 'Before I learned to build websites, I learned lots of other things&mdash;Spanish, editing, marketing. Learning those other skills may not help me'
+                    description: 'I&rsquo;ve picked up a range of <span class="nobr">skills&mdash;</span>Spanish, copyediting, <span class="nobr">marketing&mdash;</span>and, in the process, learned to master new ones quickly. I try keep learning every&nbsp;day.'
                 },
                 {
                     title: 'Effort',
-                    description: 'My greatest asset is my work ethic, and I&rsquo;m happiest when I can dedicate myself to an interesting task.'
+                    description: 'My greatest asset isn&rsquo;t talent; it&rsquo;s my work ethic. I&rsquo;m happiest when I can dedicate myself to an interesting task, and I&rsquo;ll happily go above and beyond to get a job&nbsp;done.'
                 },
                 {
                     title: 'Humility',
-                    description: 'I go out of my way to put myself in situations where I&rsquo;m the small fish.'
+                    description: 'As an editor, I believe in the importance of feedback; as a writer, I know I need it as much as anyone. I try to put myself in situations where I&rsquo;m the small&nbsp;fish.'
                 }
             ];
         };
