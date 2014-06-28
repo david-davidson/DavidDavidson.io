@@ -4,26 +4,22 @@ module.exports = function(grunt){
     require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        connect: {
+        express: {
             all: {
                 options: {
                     port: 9000,
-                    hostname: "localhost",
-                    middleware: function(connect, options) {
-                        return [
-                            require('grunt-contrib-livereload/lib/utils').livereloadSnippet,
-                            connect.static(options.base)
-                        ];
-                    }
+                    hostname: 'localhost',
+                    livereload: true,
+                    bases: './'
                 }
             }
         },
         open: {
             all: {
-                path: 'http://localhost:<%= connect.all.options.port%>'
+                path: 'http://localhost:<%= express.all.options.port%>'
             }
         },
-        regarde: {
+        watch: {
             all: {
                 files: [
                     'index.html', 
@@ -38,9 +34,11 @@ module.exports = function(grunt){
                     'jshint',
                     'concat', 
                     'uglify', 
-                    'cssmin', 
-                    'livereload'
-                ]
+                    'cssmin'
+                ],
+                options: {
+                    livereload: true
+                }
             }
         },
         jshint: {
@@ -79,9 +77,8 @@ grunt.registerTask('default', [
     'concat', 
     'uglify', 
     'cssmin', 
-    'livereload-start', 
-    'connect', 
+    'express',
     'open', 
-    'regarde'
+    'watch'
     ]);
 };
