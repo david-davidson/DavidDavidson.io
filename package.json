@@ -13,10 +13,8 @@
         "grunt-contrib-concat": "*",
         "grunt-contrib-watch": "*",
         "grunt-cssc": "*",
-        "grunt-express-server": "*",
-        "grunt-contrib-livereload": "*",
+        "grunt-express": "*",
         "matchdep": "*",
-        "grunt-contrib-connect": "*",
         "grunt-open": "*"
     }
 }
