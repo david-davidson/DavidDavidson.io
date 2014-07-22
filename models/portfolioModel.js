@@ -3,30 +3,78 @@ Portfolio.service('portfolioModel',
         this.getCopy = function() {
             return [
                 {
+                    title: 'Noet.com',
+                    description: ' * Noet is Logos for the classics. That&rsquo;s a weird position, b/c Christian audience doesn&rsquo;t like Noet, secular audience doesn&rsquo;t like presence of Christian parent company. So we gave Noet its own site, most of which I wrote, especially, the Home, About, etc., 404 pages. (Oh, and a much larger new site on the way, too!)',
+                    url: 'http://noet.com/'
+                },
+                {
                     title: 'Posts on blog.logos.com',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, perspiciatis, nobis saepe officiis unde neque rerum blanditiis at. Nobis, quam, sint unde facilis maxime dolore voluptate officia libero excepturi cupiditate ipsum vitae repudiandae temporibus tempora a porro cumque. Omnis nulla blanditiis aut architecto suscipit exercitationem quae accusamus sunt optio praesentium.',
+                    description: '* Have written lots of stuff on the blog&mdash;long-form content, hard-sell marketing copy, promotion of both core Logos product and&mdash;personal fave&mdash;secular Noet offshoot.',
                     bullets: [
                         {
-                            bullet: '<a href="test.com">Greek math</a>: this one was sweet',
-                            url: 'test.com',
-                            description: 'test'
+                            title: 'Why You Should Care about Math',
+                            url: 'http://blog.logos.com/2013/11/greek-math-pythagoras-plato-zeno-aristotle/',
+                            bullets: [
+                                {
+                                    bullet: 'Evergreen Big Content'
+                                },
+                                {
+                                    bullet: 'Do Longtail right: obscure topic, devoted readers, deep research'
+                                },
+                                {
+                                    bullet: 'Why successful? Achieved its immediate goal, was tweeted out by AMSI'
+                                }
+                            ]
                         },
                         {
-                            bullet: 'Another post',
-                            url: 'test.com',
-                            description: 'test'
-                        }
+                            title: 'Last Chance! Don&rsquo;t Miss Your Introductory Savings on Noet Bundles',
+                            url: 'http://blog.logos.com/2014/01/noet-bundles-last-chance-introductory-savings/',
+                            bullets: [
+                                {
+                                    bullet: 'Hard sell at close of promotional period: not trying to build brand, trying to make money today.'
+                                },
+                                {
+                                    bullet: 'Picked out customer pain points, addressed them'
+                                },
+                                {
+                                    bullet: 'Made money'
+                                }
+                            ]
+                            // description: ' * Hard sell at close of promotional period: not trying to build brand, trying to make money today. * Picked out customer pain points, addressed them * Made money'
+                        },
+                        {
+                            title: 'Why Philosophy Matters',
+                            url: 'http://blog.logos.com/2013/10/why-philosophy-matters/',
+                            bullets: [
+                                {
+                                    bullet: 'Like first one, evergreen brand-builder'
+                                },
+                                {
+                                    bullet: 'Additional challenge tho: demonstrate to Christian audience that philosophy safe; demonstrate to secular readers that this brand not TOO christian.'
+                                },
+                                {
+                                    bullet: 'success: voice toed that line, strong results for SEO (link to search results)'
+                                }
+                            ]
+                            // description: ' * Like first one, evergreen brand-builder * Additional challenge tho: demonstrate to Christian audience that philosophy safe; demonstrate to secular readers that this brand not TOO christian. * success: voice toed that line, strong results for SEO (link to search results) '
+                        },
                     ]
                 },                
                 {
-                    title: 'Noet.com',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, assumenda, nam, quae, fuga ab debitis nisi consequuntur commodi eum natus nesciunt repellat nihil minima et beatae! Saepe, aliquid, dolorum expedita in consectetur blanditiis vitae sit pariatur earum tenetur id esse voluptatibus autem libero praesentium molestiae cumque aliquam excepturi nulla impedit!',
-                    url: 'test.com'
-                },
-                {
                     title: 'Copyanswers.com',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
-                    url: 'test.com'
+                    description: ' * Way back when, produced series of training docs for coworkers; put them online (just a WP site) for reference. Note that I treat marketing style /  CMOS as authoritative: know that we&rsquo;re not really talking rite and rong here.',
+                    bullets: [
+                        {
+                            bullet: 'one'
+                        },
+                        {
+                            bullet: 'two'
+                        },
+                        {
+                            bullet: 'three'
+                        }
+                    ],
+                    url: 'http://www.copyanswers.com/'
                 }
             ];
         };
@@ -62,6 +110,9 @@ Portfolio.service('portfolioModel',
                         {
                             bullet: 'PHP'
                         },
+                        {
+                            bullet: 'Advanced Custom Fields'
+                        }
                     ],
                     image: '../images/bloom-square.png',
                     url: 'http://www.bloomyoganw.com/'

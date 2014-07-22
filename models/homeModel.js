@@ -35,12 +35,12 @@ Portfolio.service('homeModel',
         this.getTestimonials = function() {
             return [
                 {
-                    testimonial: '[David&rsquo;s] meticulous attention to detail, tireless work ethic, and vigilance [set] him ahead of the pack. But what really sets David apart is his demeanor. His easy-going nature and genuine kindness make working with him unbelievably easy. <strong>In my professional career, there [have] only been a couple people who have felt irreplaceable, and David is one of&nbsp;them</strong>.',
-                    from: 'MarCom team lead, Logos Research Systems'
-                },
-                {
                     testimonial: 'There are simply not enough David Davidsons in the world. I&rsquo;ve never met a kinder spirit&nbsp;.&nbsp;.&nbsp;. He makes those around him better, and he is an incredible asset to everyone he works with. You won&rsquo;t find anyone more dedicated. In my review, when asked to rate my dedication to my work, <strong>my boss asked me to rate it &lsquo;on a scale of 1 to David Davidson&rsquo; (true&nbsp;story)</strong>.',
                     from: 'Promotions coordinator at Logos'
+                },
+                {
+                    testimonial: '[David&rsquo;s] meticulous attention to detail, tireless work ethic, and vigilance [set] him ahead of the pack. But what really sets David apart is his demeanor. His easy-going nature and genuine kindness make working with him unbelievably easy. <strong>In my professional career, there [have] only been a couple people who have felt irreplaceable, and David is one of&nbsp;them</strong>.',
+                    from: 'MarCom team lead, Logos Research Systems'
                 },
                 {
                     testimonial: 'David&rsquo;s an incredible learner, always seeking growth and developing new skills. <strong>His breadth of knowledge and ability to learn quickly and efficiently never cease to amaze me</strong>.&nbsp;.&nbsp;.&nbsp;. He&rsquo;s not just smart, a learner, a teacher, and an expert in his field. If you surround David with the most intelligent people, he&rsquo;ll quickly distinguish himself with&nbsp;kindness.',
@@ -49,6 +49,10 @@ Portfolio.service('homeModel',
                 {
                     testimonial: 'David contributes an extraordinary amount of value to every project he is [part] of. His copy writing and editing skills are unmatched by anyone I&rsquo;ve ever worked with. <strong>He continues to impress me with his tenacious appetite to improve</strong> in areas such as graphic design, HTML, and social&nbsp;media.',
                     from: 'Social media coordinator at&nbsp;Logos'
+                },
+                {
+                    testimonial: 'As a freelance writer and marketer, I&rsquo;ve been edited by a lot of people, but I have never been edited by anyone better than David.&nbsp;.&nbsp;.&nbsp;. I love his unmatched attention to detail: no matter how closely I watched my copy, no matter how &ldquo;perfectly&rdquo; written, David always found ways to repair and improve it without affecting my voice and style.&nbsp;.&nbsp;.&nbsp;. David&rsquo;s knowledge of grammar, style, punctuation, and even typography seems encyclopedic.',
+                    from: 'Community manager at visionSynergy'
                 },
                 {
                     testimonial: 'David is one of the most precise individuals that I have ever met. He is a one-man editing machine and has become an indispensable part of our marketing efforts. Above all else, <strong>David has an amazing thirst for knowledge and seeks every opportunity to become a better version of himself, all with a humble attitude and&nbsp;spirit</strong>.',
