@@ -21,12 +21,12 @@ module.exports = function(grunt){
         watch: {
             all: {
                 files: [
-                    'index.html', 
+                    'dist/index.html', 
                     'styles/*.scss', 
                     'controllers/*', 
                     'models/*', 
-                    'views/**/*', 
-                    'app.js'
+                    'dist/views/**/*', 
+                    'dist/app.js'
                 ],
                 tasks: [
                     'sass', 
@@ -36,36 +36,36 @@ module.exports = function(grunt){
                     'cssmin'
                 ],
                 options: {
-                    livereload: true
+                    livereload: false
                 }
             }
         },
         jshint: {
-            files: ['app.js', 'models/*.js', 'controllers/*.js']
+            files: ['dist/app.js', 'models/*.js', 'controllers/*.js']
         },
         concat: {
             all: {
-                src: ['app.js', 'models/*', 'controllers/*'],
-                dest: 'minified/scripts.js'
+                src: ['dist/app.js', 'models/*', 'controllers/*'],
+                dest: 'dist/scripts.js'
             }
         },
         uglify: {
             all: {
                 files: {
-                    'minified/scripts.js': ['minified/scripts.js']
+                    'dist/scripts.js': ['dist/scripts.js']
                 }
             }
         },
         cssmin: {
             build: {
-                src: 'minified/styles.css',
-                dest: 'minified/styles.css'
+                src: 'dist/styles.css',
+                dest: 'dist/styles.css'
             }
         },
         sass: {
             build: {
                 files: {
-                    'minified/styles.css': 'styles/styles.scss'
+                    'dist/styles.css': 'styles/styles.scss'
                 }
             }
         }
@@ -75,9 +75,9 @@ grunt.registerTask('default', [
     'jshint',
     'concat', 
     'uglify', 
-    'cssmin', 
-    'express',
-    'open', 
-    'watch'
+    'cssmin'
+    // 'express',
+    // 'open', 
+    // 'watch'
     ]);
 };

@@ -1,20 +1,22 @@
 {
-    "name" : "gruntConfig",
-    "version" : "0.1.0",
-    "author" : "David Davidson",
-    "private" : true,
-
-    "devDependencies" : {
-        "grunt": "*",
-        "grunt-contrib-cssmin": "*",
-        "grunt-contrib-sass": "*",
-        "grunt-contrib-uglify": "*",
-        "grunt-contrib-jshint": "*",
-        "grunt-contrib-concat": "*",
-        "grunt-contrib-watch": "*",
-        "grunt-cssc": "*",
-        "grunt-express": "*",
-        "matchdep": "*",
-        "grunt-open": "*"
-    }
+  "name": "gruntConfig",
+  "version": "0.1.0",
+  "author": "David Davidson",
+  "private": true,
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-cssc": "*",
+    "grunt-express": "*",
+    "matchdep": "*",
+    "grunt-open": "*"
+  },
+  "dependencies": {
+    "express": "^4.8.2"
+  }
 }
