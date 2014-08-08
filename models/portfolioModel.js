@@ -4,7 +4,7 @@ Portfolio.service('portfolioModel',
             return [
                 {
                     title: 'Noet.com',
-                    description: ' * Noet is Logos for the classics. That&rsquo;s a weird position, b/c Christian audience doesn&rsquo;t like Noet, secular audience doesn&rsquo;t like presence of Christian parent company. So we gave Noet its own site, most of which I wrote, especially, the Home, About, etc., 404 pages. (Oh, and a much larger new site on the way, too!)',
+                    description: ' * Noet is Logos for the classics',
                     url: 'http://noet.com/'
                 },
                 {
