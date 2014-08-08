@@ -42,7 +42,7 @@ Portfolio.controller('masterController',
         $scope.scrollToParent = function(parentId) {
             $('html, body').animate({scrollTop:$('#' + parentId).offset().top}, 500);
         };
-        function setHeight() {
+        var setHeight() = function {
             // Measure components
             var windowHeight = $(window).height();
             var navHeight = $('nav').height();
