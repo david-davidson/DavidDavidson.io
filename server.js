@@ -2,14 +2,25 @@
 
 var http = require('http');
 var express = require('express');
+// var url = require('url');
 var app = express();
 
 app.use(express.static(__dirname + '/dist'));
 
-// app.get('/', function(req, res) {
-// 	res.write('sup');
-// 	res.end();
-// })
+app.get('/:path', function(req, res) {
+	res.redirect(301, '/#/' + req.params.path);
+	// var url = __dirname + req.params.path;
+	// console.log(url);
+	// request.params.
+	// res.write('sup');
+	// res.end();
+})
+// app.use(function(request, response, next) {
+//    if(request.url.charAt(0) == '/' && request.url.length > 1)
+//        response.redirect(301, request.url.slice(0, -1));
+//    else
+//        next();
+// });
 
 var server = http.createServer(app);
 
