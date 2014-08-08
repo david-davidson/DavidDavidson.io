@@ -42,7 +42,7 @@ Portfolio.controller('masterController',
         $scope.scrollToParent = function(parentId) {
             $('html, body').animate({scrollTop:$('#' + parentId).offset().top}, 500);
         };
-        var setHeight = function() {
+        setHeight = function() { // Needs to be global!
             // Measure components
             var windowHeight = $(window).height();
             var navHeight = $('nav').height();
@@ -57,7 +57,7 @@ Portfolio.controller('masterController',
             $('.heroWrapper').css({'height': heroHeight});
             $('.navPlaceholder').css({'height': navHeight});
             $('.heroContent').css({'margin-top': topMargin});
-        }
+        };
         angular.element($window).bind('resize', function() {
             setHeight(); // Takes care of resizing for *all* views, though individual controllers make the call for initial sizing
         });
