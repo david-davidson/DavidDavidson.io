@@ -25,20 +25,20 @@
         <meta name="viewport" content="width=device-width">
         <meta name="description" content="See my resume, my portfolio, and more.">
         <!-- for Angular's HTML5 mode -->
-        <!-- <base href="/"> -->
+        <base href="/">
     </head>
     <body>
         <nav>
             <ul>
                 <li>
-                    <a href="/#/">
+                    <a href="/">
                         <button type="button" class="button" ng-class='{current: page == "home"}' ng-click='dropdown=false' >
                             About
                         </button>
                     </a>
                 </li>
                 <li>
-                    <a href="/#/resume">
+                    <a href="/resume">
                         <button type="button" class="button" ng-class='{current: page == "resume"}' ng-click='dropdown=false'>
                             R&eacute;sum&eacute;
                         </button>
@@ -50,14 +50,14 @@
                     </button>
                     <ul ng-cloak ng-show='dropdown'>
                         <li>
-                            <a href="/#/copy">
+                            <a href="/copy">
                                 <button type="button" class="button" ng-class='{current: page == "copy"}'>
                                     Copy
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a href="/#/portfolio">
+                            <a href="/portfolio">
                                 <button type="button" class="button" ng-class='{current: page == "portfolio"}'>
                                     Code
                                 </button>
@@ -66,7 +66,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/#/contact">
+                    <a href="/contact">
                         <button type="button" class="button" ng-class='{current: page == "contact"}' ng-click='dropdown=false'>
                             Contact
                         </button>
