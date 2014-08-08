@@ -3,21 +3,21 @@ module.exports = function(grunt){
     require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        express: {
-            all: {
-                options: {
-                    port: 9000,
-                    hostname: 'localhost',
-                    livereload: true,
-                    bases: './'
-                }
-            }
-        },
-        open: {
-            all: {
-                path: 'http://localhost:<%= express.all.options.port%>'
-            }
-        },
+        // express: {
+        //     all: {
+        //         options: {
+        //             port: 9000,
+        //             hostname: 'localhost',
+        //             livereload: true,
+        //             bases: './'
+        //         }
+        //     }
+        // },
+        // open: {
+        //     all: {
+        //         path: 'http://localhost:<%= express.all.options.port%>'
+        //     }
+        // },
         watch: {
             all: {
                 files: [
@@ -30,13 +30,13 @@ module.exports = function(grunt){
                 ],
                 tasks: [
                     'sass', 
+                    'cssmin',
                     'jshint',
                     'concat', 
-                    'uglify', 
-                    'cssmin'
+                    'uglify' 
                 ],
                 options: {
-                    livereload: false
+                    livereload: false // true if using express/open
                 }
             }
         },
@@ -72,12 +72,10 @@ module.exports = function(grunt){
     });
 grunt.registerTask('default', [
     'sass', 
+    'cssmin',
     'jshint',
     'concat', 
     'uglify', 
-    'cssmin'
-    // 'express',
-    // 'open', 
-    // 'watch'
+    'watch'
     ]);
 };
