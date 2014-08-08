@@ -42,17 +42,17 @@ Portfolio.controller('masterController',
         $scope.scrollToParent = function(parentId) {
             $('html, body').animate({scrollTop:$('#' + parentId).offset().top}, 500);
         };
-        setHeight = function() {
+        function setHeight() {
             // Measure components
-            windowHeight = $(window).height();
-            navHeight = $('nav').height();
-            heroContentHeight = $('.heroContent').height();
+            var windowHeight = $(window).height();
+            var navHeight = $('nav').height();
+            var heroContentHeight = $('.heroContent').height();
             // Calculate heights
-            heroHeight = windowHeight - navHeight;
+            var heroHeight = windowHeight - navHeight;
             if (heroContentHeight > heroHeight) {
                 heroHeight = heroContentHeight;
             }
-            topMargin = (heroHeight - heroContentHeight) / 2.25; // Dividing by 2 exactly makes the content look just a little too low
+            var topMargin = (heroHeight - heroContentHeight) / 2.25; // Dividing by 2 exactly makes the content look just a little too low
             // Apply heights
             $('.heroWrapper').css({'height': heroHeight});
             $('.navPlaceholder').css({'height': navHeight});
