@@ -1,5 +1,0 @@
-RewriteEngine On    # Turn on the rewriting engine
-RewriteRule    ^resume/?$    #/resume    [NC,L]
-RewriteRule    ^copy/?$    #/copy    [NC,L]
-RewriteRule    ^portfolio/?$    #/portfolio    [NC,L]
-RewriteRule    ^contact/?$    #/contact    [NC,L]
