@@ -3,11 +3,11 @@ module.exports = function(grunt){
     require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        // open: {
-        //     all: {
-        //         path: 'http://localhost:<%= express.all.options.port%>'
-        //     }
-        // },
+        open: {
+            all: {
+                path: 'http://localhost:<%= express.all.options.port%>'
+            }
+        },
         nodemon: {
             dev: {
                 script: 'server.js'
@@ -72,13 +72,6 @@ module.exports = function(grunt){
                 file:['tests/casperjs/**/*.js']
             },
         },
-        browserify: {
-            dist: {
-                files: {
-                    'dist/test.js': ['dist/app.js', 'models/*.js', 'controllers/*.js']
-                }
-            }
-        },
         concurrent: {
             options: {
                 logConcurrentOutput: true
@@ -92,7 +85,6 @@ grunt.registerTask('default', [
     'jshint',
     'concat', 
     'uglify',
-    // 'browserify',
     'concurrent'//, // Opens server
     // 'casperjs'
     // 'watch'
