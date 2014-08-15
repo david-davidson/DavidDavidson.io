@@ -135,7 +135,7 @@ Portfolio.service('resumeModel',
                     details: 'May&nbsp;2013, Bellingham, WA',
                 },
                 {
-                    title: 'MAT (M&aacute;ster en ense&ntilde;anza de la lengua, literatura, y cultura en el mundo&nbsp;hisp&aacute;nico)',
+                    title: 'MAT (M&aacute;ster en ense&ntilde;anza de la lengua, literatura y cultura en el mundo&nbsp;hisp&aacute;nico)',
                     who: '<a href="http://www.institutofranklin.net/" target="_blank">Instituto Franklin, Universidad de Alcal&aacute; de Henares</a>',
                     details: 'June 2011, Alcal&aacute; de Henares, Madrid, Spain, <strong>4.0 GPA</strong>'
                 },
