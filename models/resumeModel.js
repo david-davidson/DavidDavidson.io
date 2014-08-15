@@ -57,10 +57,10 @@ Portfolio.service('resumeModel',
                             bullet: 'Wrote for <a href="http://noet.com/" target="_blank">Logos&rsquo; philosophy/classics&nbsp;division</a>'
                         },
                         {
-                            bullet: 'Checked links, names, prices, dates, and everything else that can go&nbsp;wrong'
+                            bullet: 'Help optimize email subject&nbsp;lines'
                         },
                         {
-                            bullet: 'Help optimize email subject&nbsp;lines'
+                            bullet: 'Checked links, names, prices, dates, and everything else that can go&nbsp;wrong'
                         },
                         {
                             bullet: 'Researched and wrote marketing style guide (based on <em>The Chicago Manual of&nbsp;Style</em>)'
