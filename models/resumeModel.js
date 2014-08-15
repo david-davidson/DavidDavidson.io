@@ -23,7 +23,7 @@ Portfolio.service('resumeModel',
                             bullet: 'Helped style the UI of Waycross&rsquo;s new in-house stock-data web app (written in Yii and AngularJS), mostly using SCSS and JavaScript'
                         },
                         {
-                            bullet: 'test'
+                            bullet: 'FPO'
                         },
                         {
                             bullet: 'Automated part of the Waycross backend',
@@ -51,25 +51,19 @@ Portfolio.service('resumeModel',
                     where: 'Bellingham, WA&nbsp;/<br />Seattle, WA (working from&nbsp;home)',
                     bullets: [
                         {
-                            bullet: 'Edit blog posts, emails, ads, and more for a company on the <a href="http://www.deloitte.com/assets/Dcom-UnitedStates/Local%20Assets/Documents/TMT_us_tmt/us_tmt_fast500_rankings_111212.pdf" target="_blank">2012 Technology Fast 500</a>&nbsp;list'
+                            bullet: 'Edited blog posts, emails, ads, and more for a company on the <a href="http://www.deloitte.com/assets/Dcom-UnitedStates/Local%20Assets/Documents/TMT_us_tmt/us_tmt_fast500_rankings_111212.pdf" target="_blank">2012 Technology Fast 500</a>&nbsp;list'
                         },
                         {
-                            bullet: 'Write for <a href="http://noet.com/" target="_blank">our philosophy/classics&nbsp;division</a>'
+                            bullet: 'Wrote for <a href="http://noet.com/" target="_blank">Logos&rsquo; philosophy/classics&nbsp;division</a>'
                         },
                         {
-                            bullet: 'Check links, names, prices, dates, and everything else that can go&nbsp;wrong'
-                        },
-                        {
-                            bullet: 'Make some edits directly using HTML/CSS (email) and WordPress&nbsp;(blog)'
+                            bullet: 'Checked links, names, prices, dates, and everything else that can go&nbsp;wrong'
                         },
                         {
                             bullet: 'Help optimize email subject&nbsp;lines'
                         },
                         {
                             bullet: 'Researched and wrote marketing style guide (based on <em>The Chicago Manual of&nbsp;Style</em>)'
-                        },
-                        {
-                            bullet: 'Quickly learned audience&rsquo;s language and habits (I&rsquo;m not&nbsp;Christian)'
                         },
                         {
                             bullet: 'Won company-wide peer-nominated Elegance and Service&nbsp;awards'
