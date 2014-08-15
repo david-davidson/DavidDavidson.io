@@ -1,42 +1,15 @@
-.who, .details {
+.details {
     float: left;
     clear: left;
     text-align: left;
-    // width: 48%;
     margin-right: 2%;
     padding-bottom: 1em;
 }
 
 .who {
+    @extend .details;
     font-weight: bold;
-}
-
-// .details {
-//     float: left;
-//     clear: left;
-//     text-align: left;
-//     width: 48%;
-//     margin-right: 2%;
-// }
-
-// .where {
-//     float: right;
-//     clear: right;
-//     text-align: right;
-//     width: 48%;
-//     margin-left: 2%;
-//     margin-bottom: .5em;
-// }
-
-.GPA {
-    float: left;
-    clear: left;
-    text-align: left;
-    width: 48%;
-    margin-right: 2%;
-    text-indent: 1em;
-    font-weight: bold;
-    font-size: 1.1em;
+    padding-bottom: .25em;
 }
 
 // Div around all the bullets
