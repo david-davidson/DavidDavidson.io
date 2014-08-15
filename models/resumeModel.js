@@ -5,13 +5,12 @@ Portfolio.service('resumeModel',
                 {
                     title: 'Web development intern',
                     who: '<a href="http://zippercomputer.com/?utm_source=daviddavidson.io&utm_medium=web&utm_content=resume" target="_blank">Zipper Computer</a>',
-                    when: 'October 2013&ndash;ongoing',
-                    where: 'Seattle, WA',
+                    when: 'October 2013&ndash;June 2014, Seattle, WA',
                     id: 'zipper',
                     // summary: 'For the last half-year or so, I&rsquo;ve been building websites for a startup in Seattle'
                     bullets: [
                         {
-                            bullet: 'Built the web-design and growth-consulting views for ZipperComputer.com using Laravel, Foundation, Blade (for templating), and more'
+                            bullet: 'Built the web-design and growth-consulting views for ZipperComputer.com using Laravel, Foundation, Blade, and more'
                         },
                         {
                             bullet: 'Built Waycross.com, a pixel-for-pixel WordPress clone of a flat HTML/CSS site'
@@ -47,8 +46,7 @@ Portfolio.service('resumeModel',
                 {
                     title: 'Marketing communications editor &amp; associate&nbsp;copywriter',
                     who: 'Logos Research Systems<br>(d.b.a. <a href="http://www.logos.com" target="_blank">Logos Bible Software</a>)',
-                    when: 'May 2012&ndash;ongoing',
-                    where: 'Bellingham, WA&nbsp;/<br />Seattle, WA (working from&nbsp;home)',
+                    when: 'May 2012&ndash;August 2014, Bellingham and Seattle, WA',
                     bullets: [
                         {
                             bullet: 'Edited blog posts, emails, ads, and more for a company on the <a href="http://www.deloitte.com/assets/Dcom-UnitedStates/Local%20Assets/Documents/TMT_us_tmt/us_tmt_fast500_rankings_111212.pdf" target="_blank">2012 Technology Fast 500</a>&nbsp;list'
@@ -57,10 +55,10 @@ Portfolio.service('resumeModel',
                             bullet: 'Wrote for <a href="http://noet.com/" target="_blank">Logos&rsquo; philosophy/classics&nbsp;division</a>'
                         },
                         {
-                            bullet: 'Checked links, names, prices, dates, and everything else that can go&nbsp;wrong'
+                            bullet: 'Helped optimize email subject lines for higher open&nbsp;rates'
                         },
                         {
-                            bullet: 'Help optimize email subject&nbsp;lines'
+                            bullet: 'Checked links, names, prices, dates, and everything else that can go&nbsp;wrong'
                         },
                         {
                             bullet: 'Researched and wrote marketing style guide (based on <em>The Chicago Manual of&nbsp;Style</em>)'
@@ -76,11 +74,10 @@ Portfolio.service('resumeModel',
                 {
                     title: 'Proofreader (freelance)',
                     who: '<a href="http://www.brenn-white.com/" target="_blank">The Brenn-White Group</a>',
-                    when: 'November 2011&ndash;April&nbsp;2012',
-                    where: 'Brooklyn, NY (working from&nbsp;home)',
+                    when: 'November 2011&ndash;April&nbsp;2012, Brooklyn, NY (remote)',
                     bullets: [
                         {
-                            bullet: 'Proofread marketing copy (already translated into English) for German colleges and universities'
+                            bullet: 'Proofread translated marketing copy for German colleges and universities'
                         },
                         {
                             bullet: 'Checked facts, names, links,&nbsp;etc.'
@@ -89,15 +86,14 @@ Portfolio.service('resumeModel',
                             bullet: 'Guaranteed compliance with the Brenn-White style&nbsp;guide'
                         },
                         {
-                            bullet: 'Maintained an appealing prose style in, depending on the audience, British or American&nbsp;English'
+                            bullet: 'Maintained an appealing prose style in British or American&nbsp;English'
                         }
                     ]
                 },
                 {
                     title: 'Assistant instructor of English (<em>auxiliar de&nbsp;conversaci&oacute;n</em>)',
                     who: '<a href="http://www.safamadrid.com/" target="_blank">Colegio Sagrada Familia</a>',
-                    when: 'September 2010&ndash;June&nbsp;2011',
-                    where: 'Madrid, Spain',
+                    when: 'September 2010&ndash;June&nbsp;2011, Madrid, Spain',
                     bullets: [
                         {
                             bullet: 'Created and delivered lessons in British and American English for students ages 7&ndash;17'
@@ -113,8 +109,7 @@ Portfolio.service('resumeModel',
                 {
                     title: 'Writing consultant',
                     who: '<a href="http://www.willamette.edu/dept/wcenter/index.html" target="_blank">Willamette University Writing Center</a>',
-                    when: 'August 2009&ndash;May&nbsp;2010',
-                    where: 'Salem, OR',
+                    when: 'August 2009&ndash;May&nbsp;2010, Salem, OR',
                     bullets: [
                         {
                             bullet: 'Edited fellow students&rsquo; academic papers and grant&nbsp;proposals'
@@ -137,21 +132,18 @@ Portfolio.service('resumeModel',
                 {
                     title: 'Certificate in web design&nbsp;&amp; development',
                     who: '<a href="http://www.acadweb.wwu.edu/eesp/template/home_webdesign.shtml" target="_blank">Western Washington University</a>',
-                    when: 'May&nbsp;2013',
-                    where: 'Bellingham, WA'
+                    when: 'May&nbsp;2013, Bellingham, WA',
                 },
                 {
                     title: 'MAT (M&aacute;ster en ense&ntilde;anza de la lengua, literatura, y cultura en el mundo&nbsp;hisp&aacute;nico)',
                     who: '<a href="http://www.institutofranklin.net/" target="_blank">Instituto Franklin, Universidad de Alcal&aacute; de Henares</a>',
-                    when: 'June 2011',
-                    where: 'Alcal&aacute; de Henares, Madrid, Spain',
+                    when: 'June 2011, Alcal&aacute; de Henares, Madrid, Spain',
                     GPA: '4.0 GPA'
                 },
                 {
                     title: 'BA, English &amp; Spanish double&nbsp;major',
                     who: '<a href="http://www.willamette.edu/" target="_blank">Willamette University</a>',
-                    when: 'May 2010',
-                    where: 'Salem, OR'
+                    when: 'May 2010, Salem, OR',
                 }
             ];
         };

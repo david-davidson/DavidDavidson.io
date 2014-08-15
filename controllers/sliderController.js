@@ -10,8 +10,8 @@ Portfolio.controller('sliderController',
                 $scope.currentIndex = 0;
             }
             else {
-            // Otherwise, just add one
-            $scope.currentIndex ++;
+                // Otherwise, just add one
+                $scope.currentIndex++;
             }
         }
         // Fire when someone clicks a nav dot

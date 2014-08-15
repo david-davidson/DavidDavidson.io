@@ -92,7 +92,7 @@ grunt.registerTask('default', [
     'jshint',
     'concat', 
     'uglify',
-    'browserify',
+    // 'browserify',
     'concurrent'//, // Opens server
     // 'casperjs'
     // 'watch'
