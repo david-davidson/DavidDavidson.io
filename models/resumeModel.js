@@ -5,13 +5,13 @@ Portfolio.service('resumeModel',
                 {
                     title: 'Web development intern',
                     who: '<a href="http://zippercomputer.com/?utm_source=daviddavidson.io&utm_medium=web&utm_content=resume" target="_blank">Zipper Computer</a>',
-                    when: 'October 2013&ndash;ongoing',
+                    when: 'October 2013&ndash;June 2014',
                     where: 'Seattle, WA',
                     id: 'zipper',
                     // summary: 'For the last half-year or so, I&rsquo;ve been building websites for a startup in Seattle'
                     bullets: [
                         {
-                            bullet: 'Built the web-design and growth-consulting views for ZipperComputer.com using Laravel, Foundation, Blade (for templating), and more'
+                            bullet: 'Built the web-design and growth-consulting views for ZipperComputer.com using Laravel, Foundation, Blade, and more'
                         },
                         {
                             bullet: 'Built Waycross.com, a pixel-for-pixel WordPress clone of a flat HTML/CSS site'
@@ -47,7 +47,7 @@ Portfolio.service('resumeModel',
                 {
                     title: 'Marketing communications editor &amp; associate&nbsp;copywriter',
                     who: 'Logos Research Systems<br>(d.b.a. <a href="http://www.logos.com" target="_blank">Logos Bible Software</a>)',
-                    when: 'May 2012&ndash;ongoing',
+                    when: 'May 2012&ndash;August 2014',
                     where: 'Bellingham, WA&nbsp;/<br />Seattle, WA (working from&nbsp;home)',
                     bullets: [
                         {
@@ -57,7 +57,7 @@ Portfolio.service('resumeModel',
                             bullet: 'Wrote for <a href="http://noet.com/" target="_blank">Logos&rsquo; philosophy/classics&nbsp;division</a>'
                         },
                         {
-                            bullet: 'Help optimize email subject&nbsp;lines'
+                            bullet: 'Helped optimize email subject lines for higher open&nbsp;rates'
                         },
                         {
                             bullet: 'Checked links, names, prices, dates, and everything else that can go&nbsp;wrong'
@@ -80,7 +80,7 @@ Portfolio.service('resumeModel',
                     where: 'Brooklyn, NY (working from&nbsp;home)',
                     bullets: [
                         {
-                            bullet: 'Proofread marketing copy (already translated into English) for German colleges and universities'
+                            bullet: 'Proofread translated marketing copy for German colleges and universities'
                         },
                         {
                             bullet: 'Checked facts, names, links,&nbsp;etc.'
@@ -89,7 +89,7 @@ Portfolio.service('resumeModel',
                             bullet: 'Guaranteed compliance with the Brenn-White style&nbsp;guide'
                         },
                         {
-                            bullet: 'Maintained an appealing prose style in, depending on the audience, British or American&nbsp;English'
+                            bullet: 'Maintained an appealing prose style in British or American&nbsp;English'
                         }
                     ]
                 },
