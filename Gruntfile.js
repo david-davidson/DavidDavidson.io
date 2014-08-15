@@ -3,21 +3,16 @@ module.exports = function(grunt){
     require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        // express: {
-        //     all: {
-        //         options: {
-        //             port: 9000,
-        //             hostname: 'localhost',
-        //             livereload: true,
-        //             bases: './'
-        //         }
-        //     }
-        // },
-        // open: {
-        //     all: {
-        //         path: 'http://localhost:<%= express.all.options.port%>'
-        //     }
-        // },
+        open: {
+            all: {
+                path: 'http://localhost:<%= express.all.options.port%>'
+            }
+        },
+        nodemon: {
+            dev: {
+                script: 'server.js'
+            }
+        },
         watch: {
             all: {
                 files: [
@@ -34,7 +29,8 @@ module.exports = function(grunt){
                     'cssmin',
                     'jshint',
                     'concat', 
-                    'uglify' 
+                    'uglify'//,
+                    // 'nodemon' 
                 ],
                 options: {
                     livereload: false // true if using express/open
@@ -69,6 +65,18 @@ module.exports = function(grunt){
                     'dist/styles.css': 'styles/styles.scss'
                 }
             }
+        },
+        casperjs: {
+            options: {},
+            files: {
+                file:['tests/casperjs/**/*.js']
+            },
+        },
+        concurrent: {
+            options: {
+                logConcurrentOutput: true
+            },
+            tasks: ['nodemon', 'watch']
         }
     });
 grunt.registerTask('default', [
@@ -76,7 +84,9 @@ grunt.registerTask('default', [
     'cssmin',
     'jshint',
     'concat', 
-    'uglify', 
-    'watch'
+    'uglify',
+    'concurrent'//, // Opens server
+    // 'casperjs'
+    // 'watch'
     ]);
 };

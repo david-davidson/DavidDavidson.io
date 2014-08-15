@@ -5,16 +5,20 @@
   "private": true,
   "devDependencies": {
     "grunt": "*",
+    "grunt-casperjs-plugin": "^1.0.3",
+    "grunt-concurrent": "^0.5.0",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "*",
     "grunt-contrib-sass": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-concat": "*",
     "grunt-contrib-watch": "*",
     "grunt-cssc": "*",
     "grunt-express": "*",
-    "matchdep": "*",
-    "grunt-open": "*"
+    "grunt-nodemon": "*",
+    "grunt-open": "*",
+    "matchdep": "*"
   },
   "dependencies": {
     "express": "^4.8.2"
