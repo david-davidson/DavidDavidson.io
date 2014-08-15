@@ -1,27 +1,32 @@
-.who {
+.who, .details {
     float: left;
     clear: left;
     text-align: left;
-    width: 48%;
+    // width: 48%;
     margin-right: 2%;
+    padding-bottom: 1em;
 }
 
-.when {
-    float: right;
-    clear: right;
-    text-align: right;
-    width: 48%;
-    margin-left: 2%;
+.who {
+    font-weight: bold;
 }
 
-.where {
-    float: right;
-    clear: right;
-    text-align: right;
-    width: 48%;
-    margin-left: 2%;
-    margin-bottom: .5em;
-}
+// .details {
+//     float: left;
+//     clear: left;
+//     text-align: left;
+//     width: 48%;
+//     margin-right: 2%;
+// }
+
+// .where {
+//     float: right;
+//     clear: right;
+//     text-align: right;
+//     width: 48%;
+//     margin-left: 2%;
+//     margin-bottom: .5em;
+// }
 
 .GPA {
     float: left;

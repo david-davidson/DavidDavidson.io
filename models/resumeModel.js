@@ -5,7 +5,7 @@ Portfolio.service('resumeModel',
                 {
                     title: 'Web development intern',
                     who: '<a href="http://zippercomputer.com/?utm_source=daviddavidson.io&utm_medium=web&utm_content=resume" target="_blank">Zipper Computer</a>',
-                    when: 'October 2013&ndash;June 2014, Seattle, WA',
+                    details: 'October 2013&ndash;June 2014, Seattle, WA',
                     id: 'zipper',
                     // summary: 'For the last half-year or so, I&rsquo;ve been building websites for a startup in Seattle'
                     bullets: [
@@ -45,8 +45,8 @@ Portfolio.service('resumeModel',
                 },
                 {
                     title: 'Marketing communications editor &amp; associate&nbsp;copywriter',
-                    who: 'Logos Research Systems<br>(d.b.a. <a href="http://www.logos.com" target="_blank">Logos Bible Software</a>)',
-                    when: 'May 2012&ndash;August 2014, Bellingham and Seattle, WA',
+                    who: '<a href="http://www.logos.com" target="_blank">Logos Bible Software</a>',
+                    details: 'May 2012&ndash;August 2014, Bellingham and Seattle, WA',
                     bullets: [
                         {
                             bullet: 'Edited blog posts, emails, ads, and more for a company on the <a href="http://www.deloitte.com/assets/Dcom-UnitedStates/Local%20Assets/Documents/TMT_us_tmt/us_tmt_fast500_rankings_111212.pdf" target="_blank">2012 Technology Fast 500</a>&nbsp;list'
@@ -74,7 +74,7 @@ Portfolio.service('resumeModel',
                 {
                     title: 'Proofreader (freelance)',
                     who: '<a href="http://www.brenn-white.com/" target="_blank">The Brenn-White Group</a>',
-                    when: 'November 2011&ndash;April&nbsp;2012, Brooklyn, NY (remote)',
+                    details: 'November 2011&ndash;April&nbsp;2012, Brooklyn, NY (remote)',
                     bullets: [
                         {
                             bullet: 'Proofread translated marketing copy for German colleges and universities'
@@ -93,7 +93,7 @@ Portfolio.service('resumeModel',
                 {
                     title: 'Assistant instructor of English (<em>auxiliar de&nbsp;conversaci&oacute;n</em>)',
                     who: '<a href="http://www.safamadrid.com/" target="_blank">Colegio Sagrada Familia</a>',
-                    when: 'September 2010&ndash;June&nbsp;2011, Madrid, Spain',
+                    details: 'September 2010&ndash;June&nbsp;2011, Madrid, Spain',
                     bullets: [
                         {
                             bullet: 'Created and delivered lessons in British and American English for students ages 7&ndash;17'
@@ -109,7 +109,7 @@ Portfolio.service('resumeModel',
                 {
                     title: 'Writing consultant',
                     who: '<a href="http://www.willamette.edu/dept/wcenter/index.html" target="_blank">Willamette University Writing Center</a>',
-                    when: 'August 2009&ndash;May&nbsp;2010, Salem, OR',
+                    details: 'August 2009&ndash;May&nbsp;2010, Salem, OR',
                     bullets: [
                         {
                             bullet: 'Edited fellow students&rsquo; academic papers and grant&nbsp;proposals'
@@ -132,18 +132,17 @@ Portfolio.service('resumeModel',
                 {
                     title: 'Certificate in web design&nbsp;&amp; development',
                     who: '<a href="http://www.acadweb.wwu.edu/eesp/template/home_webdesign.shtml" target="_blank">Western Washington University</a>',
-                    when: 'May&nbsp;2013, Bellingham, WA',
+                    details: 'May&nbsp;2013, Bellingham, WA',
                 },
                 {
                     title: 'MAT (M&aacute;ster en ense&ntilde;anza de la lengua, literatura, y cultura en el mundo&nbsp;hisp&aacute;nico)',
                     who: '<a href="http://www.institutofranklin.net/" target="_blank">Instituto Franklin, Universidad de Alcal&aacute; de Henares</a>',
-                    when: 'June 2011, Alcal&aacute; de Henares, Madrid, Spain',
-                    GPA: '4.0 GPA'
+                    details: 'June 2011, Alcal&aacute; de Henares, Madrid, Spain, <strong>4.0 GPA</strong>'
                 },
                 {
                     title: 'BA, English &amp; Spanish double&nbsp;major',
                     who: '<a href="http://www.willamette.edu/" target="_blank">Willamette University</a>',
-                    when: 'May 2010, Salem, OR',
+                    details: 'May 2010, Salem, OR',
                 }
             ];
         };
