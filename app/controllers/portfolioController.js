@@ -8,7 +8,7 @@ Portfolio.controller('portfolioController',
              // To avoid a flicker on slow connections, we build the new array behind the scenes and then switch over all at once, rather than emptying and rebuilding it while it's live in the view.
             function filterNewProjects() {
                 var newProjects = [];
-                angular.forEach($scope.projects, function(project) { 
+                angular.forEach($scope.projects, function(project) {
                     var found = false;
                     // Since we only need one match, let's stop looping after we find it: some, not forEach
                     found = project.technologies.some(function(technologies) {

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app='Portfolio' ng-init ng-controller='masterController'>
+    <head>
+        <!-- Favicon -->
+        <link rel="icon" href="images/favicon.gif" type="image/x-icon">
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- Typekit fonts -->
+        <script src='//use.typekit.net/fkv6lkh.js'></script>
+        <script>
+            try {
+                Typekit.load();
+            }
+            catch(e) {
+            }
+        </script>
+        <!-- Angular -->
+        <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js'></script>
+        <!-- Routing, config, models, and controllers -->
+        <script src='scripts.js'></script>
+        <!-- jQuery -->
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <!-- Meta -->
+        <title ng-cloak ng-bind-html-unsafe='title'></title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="See my resume, my portfolio, and more.">
+        <!-- for Angular's HTML5 mode -->
+        <base href="/">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">
+                        <button type="button" class="button" ng-class='{current: page == "home"}' ng-click='dropdown=false' >
+                            About
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="/resume">
+                        <button type="button" class="button" ng-class='{current: page == "resume"}' ng-click='dropdown=false'>
+                            R&eacute;sum&eacute;
+                        </button>
+                    </a>
+                </li>
+                <li ng-mouseover='openDropdown()' ng-click='openDropdown()' ng-mouseleave='closeDropdown()'>
+                    <button type="button" class="button noLink" ng-class='{current: page == "copy" || page == "portfolio"}'>
+                        Portfolio
+                    </button>
+                    <ul ng-cloak ng-show='dropdown'>
+                        <li>
+                            <a href="/copy">
+                                <button type="button" class="button" ng-class='{current: page == "copy"}'>
+                                    Copy
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/portfolio">
+                                <button type="button" class="button" ng-class='{current: page == "portfolio"}'>
+                                    Code
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/contact">
+                        <button type="button" class="button" ng-class='{current: page == "contact"}' ng-click='dropdown=false'>
+                            Contact
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="navPlaceholder">
+        </div>
+        <div ng-cloak ng-view class="view">
+            <!-- Inject body here at runtime -->
+        </div>
+        <footer>
+            <p>&copy; {{today | date: 'yyyy'}} David Davidson</p>
+        </footer>
+    </body>
+</html>

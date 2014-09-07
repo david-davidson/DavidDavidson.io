@@ -1,0 +1,49 @@
+<div class="halfWrapper">
+    <h2 class="blockWrapper">
+        What I&rsquo;ve built
+    </h2>
+</div>
+<div class="technologySearch">
+    <span>
+        Hate reading? Filter by language or framework:
+    </span>
+    <input type="text" placeholder="e.g., AngularJS" ng-model='technology' />
+</div>
+<div class="contentWrapper">
+    <div class="narrow">
+        <div class="blockWrapper portfolioItem extraPadding" ng-repeat='project in filteredProjects' ng-class-even='"rightTiered"' ng-class-odd='"leftTiered"'>
+            <h3 ng-bind-html-unsafe='project.title'></h3>
+            <a href="{{project.url}}" target="_blank">
+                <img ng-show='project.image' ng-src='{{project.image}}'>
+            </a>
+            <p ng-bind-html-unsafe='project.description'></p>
+            <ul>
+                <li ng-repeat='item in project.technologies' ng-bind-html-unsafe='item.bullet'></li>
+            </ul>
+            <a href="{{project.url}}" target="_blank">
+                <button type="button" class="link button blue">
+                    Take a look
+                </button>
+            </a>
+        </div>
+        <div ng-show='noContentVisible()'>
+            <p class="noContentVisible">
+                I haven&rsquo;t worked with that one&mdash;yet. :)
+            </p>
+        </div>
+        <div class="blockWrapper paddingTop footer">
+            <div class="footerWrapper">
+                <span ng-hide='noContentVisible()' class="CTA">
+                    I&rsquo;d like to build something with you,&nbsp;too.
+                </span>
+                <span class="wide">
+                    <a href="/contact">
+                        <button type="button" class="button red wide">
+                            Get in touch
+                        </button>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,34 +3,42 @@ module.exports = function(grunt){
     require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        open: {
-            all: {
-                path: 'http://localhost:<%= express.all.options.port%>'
-            }
+        clean: {
+            src: [
+              'dist/'
+            ]
         },
-        nodemon: {
-            dev: {
-                script: 'server.js'
+        copy: {
+            all: {
+                expand: true,
+                cwd: 'app/',
+                src: [
+                    '*.html',
+                    'views/*',
+                    'images/*'
+                    ],
+                dest: 'dist/',
+                filter: 'isFile'
             }
         },
         watch: {
             all: {
                 files: [
-                    'dist/index.html', 
-                    'styles/*.scss', 
-                    'controllers/*', 
-                    'models/*', 
-                    'dist/views/**/*', 
-                    'dist/app.js',
-                    'server.js'
+                    'server.js',
+                    'app/app.js',
+                    'app/index.html',
+                    'app/controllers/*.js',
+                    'app/models/*.js',
+                    'app/views/**/*.html',
+                    'app/views/styles/*.scss'
                 ],
                 tasks: [
-                    'sass', 
+                    'clean',
+                    'sass',
                     'cssmin',
                     'jshint',
-                    'concat', 
-                    'uglify'//,
-                    // 'nodemon' 
+                    'concat',
+                    'uglify'
                 ],
                 options: {
                     livereload: false // true if using express/open
@@ -38,11 +46,19 @@ module.exports = function(grunt){
             }
         },
         jshint: {
-            files: ['dist/app.js', 'models/*.js', 'controllers/*.js', 'server.js']
+            files: [
+                'server.js',
+                'app/app.js',
+                'app/models/*.js',
+                'app/controllers/*.js'
+            ]
         },
         concat: {
             all: {
-                src: ['dist/app.js', 'models/*', 'controllers/*'],
+                src: [
+                    'app/app.js',
+                    'app/models/*',
+                    'app/controllers/*'],
                 dest: 'dist/scripts.js'
             }
         },
@@ -62,31 +78,19 @@ module.exports = function(grunt){
         sass: {
             build: {
                 files: {
-                    'dist/styles.css': 'styles/styles.scss'
+                    'dist/styles.css': 'app/views/styles/styles.scss'
                 }
             }
         },
-        casperjs: {
-            options: {},
-            files: {
-                file:['tests/casperjs/**/*.js']
-            },
-        },
-        concurrent: {
-            options: {
-                logConcurrentOutput: true
-            },
-            tasks: ['nodemon', 'watch']
-        }
     });
 grunt.registerTask('default', [
-    'sass', 
+    'clean',
+    'copy',
+    'sass',
     'cssmin',
     'jshint',
-    'concat', 
+    'concat',
     'uglify',
-    'concurrent'//, // Opens server
-    // 'casperjs'
-    // 'watch'
+    'watch'
     ]);
 };
