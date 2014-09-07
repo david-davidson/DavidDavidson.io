@@ -1,9 +1,10 @@
-Portfolio.controller('sliderController', 
+Portfolio.controller('sliderController',
     ['$scope', '$timeout', 'homeModel',
     function ($scope, $timeout, homeModel) {
         // Get the testimonials
+        console.log('slider controller fired');
         $scope.testimonials = homeModel.getTestimonials();
-        $scope.currentIndex = 0; 
+        $scope.currentIndex = 0;
         function next() {
             if ($scope.currentIndex == $scope.testimonials.length - 1) {
                 // From final slide, tick over to first
@@ -37,10 +38,10 @@ Portfolio.controller('sliderController',
         // Hide all the testimonials as default
         $scope.$watch('currentIndex', function() {
             $scope.testimonials.forEach(function(item) {
-                item.visible = false; 
+                item.visible = false;
             });
             // Then show the current testimonial
-            $scope.testimonials[$scope.currentIndex].visible = true; 
+            $scope.testimonials[$scope.currentIndex].visible = true;
         });
     }
 ]);

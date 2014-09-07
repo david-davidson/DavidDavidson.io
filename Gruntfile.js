@@ -4,9 +4,11 @@ module.exports = function(grunt){
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: {
-            src: [
-              'dist/'
-            ]
+            all: {
+                src: [
+                  'dist/'
+                ]
+            }
         },
         copy: {
             all: {
@@ -57,8 +59,8 @@ module.exports = function(grunt){
             all: {
                 src: [
                     'app/app.js',
-                    'app/models/*',
-                    'app/controllers/*'],
+                    'app/models/*.js',
+                    'app/controllers/*.js'],
                 dest: 'dist/scripts.js'
             }
         },
@@ -90,7 +92,7 @@ grunt.registerTask('default', [
     'cssmin',
     'jshint',
     'concat',
-    'uglify',
+    // 'uglify',
     'watch'
     ]);
 };
