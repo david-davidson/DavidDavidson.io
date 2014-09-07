@@ -1,6 +1,7 @@
 Portfolio.controller('portfolioController',
     ['$scope', 'portfolioModel',
     function ($scope, portfolioModel) {
+        console.log('portfolio controller fired');
         $scope.projects = portfolioModel.getProjects();
         $scope.filteredProjects = $scope.projects;
         $scope.copy = portfolioModel.getCopy();
