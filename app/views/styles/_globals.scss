@@ -66,9 +66,9 @@ h1, h2 {
     padding: 30px;
     background-color: $gray;
 }
-h3 {
-    padding-top: 40px;
-}
+// h3 {
+//     padding-top: 40px;
+// }
 
 // Links
 a {
@@ -134,6 +134,7 @@ img {
 .contentWrapper {
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 40px;
 }
 
 .blockWrapper {
@@ -288,7 +289,7 @@ hr {
     background-color: $gray;
     height: 1px;
     border: 0;
-    margin-top: 5em;
+    margin-top: 3em;
     margin-bottom: 0;
     padding-bottom: 0;
 }
