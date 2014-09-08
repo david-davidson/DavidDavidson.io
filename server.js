@@ -13,5 +13,5 @@ var server = http.createServer(app);
 var port = process.env.PORT || 3000;
 
 server.listen(port, function() {
-	console.log('Lookin legit on port ' + port);
+	console.log('Lookin legit on port %d', port);
 });
