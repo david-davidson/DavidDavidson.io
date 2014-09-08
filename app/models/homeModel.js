@@ -3,15 +3,16 @@ Portfolio.service('homeModel',
         this.getSkills = function() {
             return [
                 {
-                    title: 'Web',
-                    description: 'I&rsquo;ve worked with HTML, CSS/SCSS, JavaScript, AngularJS, PHP, WordPress, Laravel, Python, and Bash, as well as tools like Git and Grunt. I&rsquo;m especially fond of UX and the front&nbsp;end.'
+                    title: 'Front end',
+                    description: 'I&rsquo;ve worked with AngularJS, Backbone (beginner), jQuery, and Sass/SCSS. I&rsquo;m especially interested in UX: the intersection between copy, code, and design.'
                 },
                 {
-                    title: 'Writing',
-                    description: 'Writing and editing taught me to clarify complex concepts and communicate them to anybody. They also taught me what to look for in code: readability, structure, concision, consistency.'
+                    title: 'Back end',
+                    description: 'I&rsquo;m comfortable with Node.js, Express, and REST APIs. I&rsquo;m getting to know MongoDB, and I&rsquo;m fascinated by algorithms and data structures.'
                 },
                 {
-                    title: 'Marketing',
+// Grunt, TDD: Mocha, Chai, Git,
+                    title: 'More',
                     description: 'Marketing, like UX and writing, is all about empathizing with the user. I write for my audience, not myself, and I&rsquo;m comfortable across marketing channels&mdash;ads, email, social, and&nbsp;more.'
                 }
             ];
