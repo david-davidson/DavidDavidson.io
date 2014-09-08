@@ -34,14 +34,6 @@ var Portfolio = angular.module('Portfolio', []).config([
 
 // Directives
 
-// Bullet points on /resume
-Portfolio.directive('ddBullets', function() {
-    return {
-        restrict: 'E', // So we can invoke it as a standalone element
-        templateUrl: 'views/directives/bullets.html'
-    };
-});
-
 // Down arrows
 Portfolio.directive('ddArrow', function() {
     return {

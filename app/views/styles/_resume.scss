@@ -12,28 +12,11 @@
     padding-bottom: .25em;
 }
 
-// Div around all the bullets
-
-.half, .half ul {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    display: inline-block;
-    li {
-        padding-bottom: 5px;
+ul {
+    &.bullets {
+        margin-bottom: 0;
+        li {
+            padding-bottom: 5px;
+        }
     }
-}
-
-// Wrapper around individual bullets
-.bulletWrapper {
-    ul {
-        margin: 0;
-        display: inline-block;
-    }
-}
-
-// Bullet text
-.bullet {
-    text-align: left;
 }
