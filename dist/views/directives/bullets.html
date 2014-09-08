@@ -1,9 +1,0 @@
-<span ng-bind-html-unsafe='item.bullet' ng-class='{link: item.children && hideDetails.$index}' ng-click='hideDetails.$index=false'>
-</span>
-<div ng-show='item.children && !hideDetails.$index'>
-    <ul>
-        <li ng-repeat='child in item.children' ng-bind-html-unsafe='child.grandchild'>
-        </li>
-    </ul>
-    <p class="link" ng-click='hideDetails.$index = true; scrollToParent(job.id)'>Hide</p>
-</div>
