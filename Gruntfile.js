@@ -16,6 +16,7 @@ module.exports = function(grunt){
                 cwd: 'app/',
                 src: [
                     '*.html',
+                    'views/directives/*',
                     'views/*',
                     'images/*'
                     ],
@@ -36,6 +37,7 @@ module.exports = function(grunt){
                 ],
                 tasks: [
                     'clean',
+                    'copy',
                     'sass',
                     'cssmin',
                     'jshint',
@@ -71,12 +73,6 @@ module.exports = function(grunt){
                 }
             }
         },
-        cssmin: {
-            build: {
-                src: 'dist/styles.css',
-                dest: 'dist/styles.css'
-            }
-        },
         sass: {
             build: {
                 files: {
@@ -84,6 +80,12 @@ module.exports = function(grunt){
                 }
             }
         },
+        cssmin: {
+            build: {
+                src: 'dist/styles.css',
+                dest: 'dist/styles.css'
+            }
+        }
     });
 grunt.registerTask('default', [
     'clean',
@@ -92,7 +94,7 @@ grunt.registerTask('default', [
     'cssmin',
     'jshint',
     'concat',
-    // 'uglify',
+    'uglify',
     'watch'
     ]);
 };
