@@ -7,10 +7,9 @@ Portfolio.service('resumeModel',
                     who: '<a href="http://zippercomputer.com/?utm_source=daviddavidson.io&utm_medium=web&utm_content=resume" target="_blank">Zipper Computer</a>',
                     details: 'October 2013&ndash;June 2014, Seattle, WA',
                     id: 'zipper',
-                    // summary: 'For the last half-year or so, I&rsquo;ve been building websites for a startup in Seattle'
                     bullets: [
                         {
-                            bullet: 'Built ZipperComputer.com&rsquo;s web-design and growth-consulting views using Laravel, Foundation, Blade, and more'
+                            bullet: 'Built ZipperComputer.com&rsquo;s web-design and growth-consulting views using Laravel, Foundation, Blade, and&nbsp;more'
                         },
                         {
                             bullet: 'Helped style the UI of Waycross&rsquo;s new in-house stock-data web app (written in Yii and AngularJS), mostly using SCSS and JavaScript'
@@ -19,27 +18,10 @@ Portfolio.service('resumeModel',
                             bullet: 'Built BloomYogaNW.com&mdash;a WordPress site and custom theme&mdash;using Advanced Custom Fields, SCSS, and Foundation'
                         },
                         {
-                            bullet: 'Built Waycross.com, a pixel-for-pixel WordPress clone of a flat HTML/CSS site'
+                            bullet: 'Built Waycross.com, a pixel-for-pixel WordPress clone of a flat HTML/CSS&nbsp;site'
                         },
                         {
-                            bullet: 'FPO'
-                        },
-                        {
-                            bullet: 'Automated part of the Waycross app&rsquo;s backend using Cron, Bash, PHP, SQL, and more',
-                            children: [
-                                {
-                                    grandchild: 'A crontab regularly fires a Bash script, which queries a SQL database to see if a run&rsquo;s scheduled.'
-                                },
-                                {
-                                    grandchild: 'If one is, the Bash script tells a Windows VM to start a batch script.'
-                                },
-                                {
-                                    grandchild: 'The batch script starts a series of Autohotkey scripts, which download several CSVs&rsquo; worth of stock data.'
-                                },
-                                {
-                                    grandchild: 'The Bash script notices the new files, fires Yii commands to upload them to the web app, marks the run as complete in SQL, and keeps waiting&nbsp;.&nbsp;.&nbsp;.'
-                                }
-                            ]
+                            bullet: 'Automated part of the Waycross app&rsquo;s back end using Cron, Bash, PHP, SQL, and&nbsp;more'//,
                         }
                     ]
                 },
@@ -112,6 +94,11 @@ Portfolio.service('resumeModel',
         this.getSchools = function() {
             return [
                 {
+                    title: 'Development accelerator in full-stack JavaScript engineering',
+                    who: '<a href="http://www.codefellows.org/full-stack-javascript-development-accelerator" target="_blank">Code Fellows</a>',
+                    details: 'Anticipated September&nbsp;2014, Seattle, WA',
+                },
+                {
                     title: 'Certificate in web design&nbsp;&amp; development',
                     who: '<a href="http://www.acadweb.wwu.edu/eesp/template/home_webdesign.shtml" target="_blank">Western Washington University</a>',
                     details: 'May&nbsp;2013, Bellingham, WA',
@@ -119,7 +106,7 @@ Portfolio.service('resumeModel',
                 {
                     title: 'MAT (M&aacute;ster en ense&ntilde;anza de la lengua, literatura y cultura en el mundo&nbsp;hisp&aacute;nico)',
                     who: '<a href="http://www.institutofranklin.net/" target="_blank">Instituto Franklin, Universidad de Alcal&aacute; de Henares</a>',
-                    details: 'June 2011, Alcal&aacute; de Henares, Madrid, Spain, <strong>4.0 GPA</strong>'
+                    details: 'June 2011, Alcal&aacute; de Henares, Madrid, Spain | <strong>4.0 GPA</strong>'
                 },
                 {
                     title: 'BA, English &amp; Spanish double&nbsp;major',
