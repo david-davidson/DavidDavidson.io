@@ -38,7 +38,7 @@ var Portfolio = angular.module('Portfolio', []).config([
 Portfolio.directive('ddBullets', function() {
     return {
         restrict: 'E', // So we can invoke it as a standalone element
-        templateUrl: 'views/directives/bulletsDirective.html'
+        templateUrl: 'views/directives/bullets.html'
     };
 });
 
@@ -46,7 +46,7 @@ Portfolio.directive('ddBullets', function() {
 Portfolio.directive('ddArrow', function() {
     return {
         restrict: 'E',
-        templateUrl: 'views/directives/arrowDirective.html'
+        templateUrl: 'views/directives/arrow.html'
     };
 });
 
@@ -54,7 +54,7 @@ Portfolio.directive('ddArrow', function() {
 Portfolio.directive('ddSlider', function() {
     return {
         restrict: 'E',
-        templateUrl: 'views/directives/sliderDirective.html',
+        templateUrl: 'views/directives/slider.html',
         controller: 'sliderController'
     };
 });
