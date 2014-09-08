@@ -2,7 +2,6 @@ Portfolio.controller('sliderController',
     ['$scope', '$timeout', 'homeModel',
     function ($scope, $timeout, homeModel) {
         // Get the testimonials
-        console.log('slider controller fired');
         $scope.testimonials = homeModel.getTestimonials();
         $scope.currentIndex = 0;
         function next() {

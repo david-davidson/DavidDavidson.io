@@ -1,7 +1,6 @@
 Portfolio.controller('masterController',
     ['$scope', '$window', '$location', '$timeout',
     function ($scope, $window, $location, $timeout) {
-        console.log('master controller fired!');
         $scope.$on('$routeChangeSuccess', function () {
             if ($location.path() == '/resume') {
                 $scope.page = 'resume';
