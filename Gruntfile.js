@@ -36,11 +36,11 @@ module.exports = function(grunt){
                     'app/views/styles/*.scss'
                 ],
                 tasks: [
+                    'jshint',
                     'clean',
                     'copy',
                     'sass',
                     'cssmin',
-                    'jshint',
                     'concat',
                     'uglify'
                 ],
@@ -88,11 +88,11 @@ module.exports = function(grunt){
         }
     });
 grunt.registerTask('default', [
+    'jshint',
     'clean',
     'copy',
     'sass',
     'cssmin',
-    'jshint',
     'concat',
     'uglify',
     'watch'
