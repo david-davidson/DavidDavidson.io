@@ -48,7 +48,10 @@ Portfolio.service('portfolioModel',
                             bullet: 'Node.js'
                         },
                         {
-                            bullet: 'SCSS'
+                            bullet: 'Sass/SCSS'
+                        },
+                        {
+                            bullet: 'Grunt'
                         },
                         {
                             bullet: 'Heroku'
@@ -58,8 +61,41 @@ Portfolio.service('portfolioModel',
                     url: 'https://github.com/david-davidson/DavidDavidson.io'
                 },
                 {
+                    title: 'Along the Way',
+                    description: 'This was a five-day group project in Code Fellows&rsquo; full-stack-JS accelerator. It&rsquo;s a minimal Backbone app that takes start and end points, uses the Google Maps API to build a route, uses the Yelp API to find points of interest along it, and renders a map that shows both your route and the possible places to visit along the way.',
+                    technologies: [
+                        {
+                            bullet: 'Backbone'
+                        },
+                        {
+                            bullet: 'Node.js'
+                        },
+                        {
+                            bullet: 'Express'
+                        },
+                        {
+                            bullet: 'Google Maps and Yelp APIs'
+                        },
+                        {
+                            bullet: 'Sass/SCSS'
+                        },
+                        {
+                            bullet: 'Grunt'
+                        },
+                        {
+                            bullet: 'Browserify'
+                        },
+                        {
+                            bullet: 'Heroku'
+                        }
+
+                    ],
+                    image: '../images/alongTheWay.png',
+                    url: 'https://github.com/Localhost3000/along-the-way'
+                },
+                {
                     title: 'ZipperComputer.com views',
-                    description: 'When Zipper Computer outgrew our boring old WordPress site, we decided to build an awesome replacement using the PHP framework Laravel. I helped build the new <a href="http://zippercomputer.com/enterprise-web-design" target="_blank">web-design</a> and <a href="http://zippercomputer.com/growth-web-consulting" target="_blank">growth-consulting</a> views. We leaned pretty heavily on Foundation and jQuery for responsive design, with Blade for templating.',
+                    description: 'When Zipper Computer outgrew our boring old WordPress site, we decided to build an awesome replacement using the PHP framework Laravel. I helped design the new site, and then helped build the new <a href="http://zippercomputer.com/enterprise-web-design" target="_blank">web-design</a> and <a href="http://zippercomputer.com/growth-web-consulting" target="_blank">growth-consulting</a> views. We leaned pretty heavily on Foundation and jQuery for responsive design, with Blade for templating.',
                     technologies: [
                         {
                             bullet: 'Laravel'
@@ -68,7 +104,7 @@ Portfolio.service('portfolioModel',
                             bullet: 'Foundation'
                         },
                         {
-                            bullet: 'SCSS'
+                            bullet: 'Sass/SCSS'
                         },
                         {
                             bullet: 'PHP'
@@ -84,6 +120,20 @@ Portfolio.service('portfolioModel',
                     url: 'http://zippercomputer.com/'
                 },
                 {
+                    title: 'linktagger.py',
+                    description: 'This was a hobby project to 1.) learn some Python and 2.) automate one of the boring parts of my previous work in marketing: Google link tagging. It uses regular expressions to build tagged links automatically, all at once.',
+                    technologies: [
+                        {
+                            bullet: 'Python'
+                        },
+                        {
+                            bullet: 'Regular expressions'
+                        }
+                    ],
+                    image: '../images/linktagger.png',
+                    url: 'https://github.com/david-davidson/linktagger.py'
+                },
+                {
                     title: 'Bible Search Chrome extension',
                     description: 'This is the project that won my team the Shipping prize at Logos Bible Software&rsquo;s staff hackathon, summer &rsquo;13&mdash;it&rsquo;s a Chrome-extension wrapper for Logos&rsquo;s Biblia.com API. It was an early project for me, so I worked exclusively on the front end: HTML and CSS. (I also got my first taste of Git!)',
                     technologies: [
@@ -97,37 +147,23 @@ Portfolio.service('portfolioModel',
                     image: '../images/bibleSearch.png',
                     url: 'https://chrome.google.com/webstore/detail/bible-search/enlaminhpdcdeemcnfnecpjbafhhajff?hl=en-US'
                 },
-                {
-                    title: 'linktagger.py',
-                    description: 'This was a hobby project to 1.) learn some Python and 2.) automate one of the boring parts of my work in marketing: Google link tagging. It uses regular expressions to build tagged links automatically, all at once.',
-                    technologies: [
-                        {
-                            bullet: 'Python'
-                        },
-                        {
-                            bullet: 'Regular expressions'
-                        }
-                    ],
-                    image: '../images/linktagger.png',
-                    url: 'https://github.com/david-davidson/linktagger.py'
-                },
-                {
-                    title: 'Waycross.com',
-                    description: 'Waycross.com is a pixel-for-pixel WordPress clone of a flat HTML/CSS site. I started with Underscores, a minimal starter theme, and built it into a fully editable site with separate menus and headers for separate pages, a custom blog template, and more.',
-                    technologies: [
-                        {
-                            bullet: 'WordPress'
-                        },
-                        {
-                            bullet: 'Underscores'
-                        },
-                        {
-                            bullet: 'PHP'
-                        }
-                    ],
-                    image: '../images/waycross-square.png',
-                    url: 'http://waycross.com/',
-                },
+                // {
+                //     title: 'Waycross.com',
+                //     description: 'Waycross.com is a pixel-for-pixel WordPress clone of a flat HTML/CSS site. I started with Underscores, a minimal starter theme, and built it into a fully editable site with separate menus and headers for separate pages, a custom blog template, and more.',
+                //     technologies: [
+                //         {
+                //             bullet: 'WordPress'
+                //         },
+                //         {
+                //             bullet: 'Underscores'
+                //         },
+                //         {
+                //             bullet: 'PHP'
+                //         }
+                //     ],
+                //     image: '../images/waycross-square.png',
+                //     url: 'http://waycross.com/',
+                // },
                 // {
                 //     title: 'BloomYogaNW.com',
                 //     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
@@ -139,7 +175,7 @@ Portfolio.service('portfolioModel',
                 //             bullet: 'Foundation'
                 //         },
                 //         {
-                //             bullet: 'SCSS'
+                //             bullet: 'Sass/SCSS'
                 //         },
                 //         {
                 //             bullet: 'PHP'
@@ -151,23 +187,17 @@ Portfolio.service('portfolioModel',
                 //     image: '../images/bloom-square.png',
                 //     url: 'http://www.bloomyoganw.com/'
                 // },
-                // {
-                //     title: 'SublimeScript / SublimeScript.com',
-                //     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
-                //     technologies: [
-                //         {
-                //             bullet: 'HTML/CSS'
-                //         },
-                //         {
-                //             bullet: 'PHP'
-                //         },
-                //         {
-                //             bullet: 'Autohotkey_L'
-                //         }
-                //     ],
-                //     image: '../images/sublimeScript.png',
-                //     url: 'http://sublimescript.com/'
-                // }
+                {
+                    title: 'SublimeScript',
+                    description: 'SublimeScript is an Autohotkey_L script (Windows only) that runs in the background and gives Sublime Text some of hotkeys you know from Microsoft Word&mdash;Ctrl-B for bold (&lt;strong&gt;), Ctrl-I for italics (&lt;em&gt;), plus much more. I include it here not because it&rsquo;s a terribly impressive project, but because it&rsquo;s where I taught myself to code. :)',
+                    technologies: [
+                        {
+                            bullet: 'Autohotkey_L'
+                        }
+                    ],
+                    image: '../images/sublimeScript.png',
+                    url: 'https://github.com/david-davidson/SublimeScript'
+                }
             ];
         };
     }

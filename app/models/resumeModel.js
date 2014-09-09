@@ -9,16 +9,16 @@ Portfolio.service('resumeModel',
                     id: 'zipper',
                     bullets: [
                         {
-                            bullet: 'Built ZipperComputer.com&rsquo;s web-design and growth-consulting views using Laravel, Foundation, Blade, and&nbsp;more'
+                            bullet: 'Built ZipperComputer.com&rsquo;s <a href="http://zippercomputer.com/enterprise-web-design" target="_blank">web-design</a> and <a href="http://zippercomputer.com/growth-web-consulting" target="_blank">growth-consulting</a> views using Laravel, Foundation, Blade, and&nbsp;more'
                         },
                         {
                             bullet: 'Helped style the UI of Waycross&rsquo;s new in-house stock-data web app (written in Yii and AngularJS), mostly using SCSS and JavaScript'
                         },
                         {
-                            bullet: 'Built BloomYogaNW.com&mdash;a WordPress site and custom theme&mdash;using Advanced Custom Fields, SCSS, and Foundation'
+                            bullet: 'Built <a href="http://www.bloomyoganw.com/" target="_blank">BloomYogaNW.com</a>&mdash;a WordPress site and custom theme&mdash;using Advanced Custom Fields, SCSS, and Foundation'
                         },
                         {
-                            bullet: 'Built Waycross.com, a pixel-for-pixel WordPress clone of a flat HTML/CSS&nbsp;site'
+                            bullet: 'Built <a href="http://waycross.com/" target="_blank">Waycross.com</a>, a pixel-for-pixel WordPress clone of a flat HTML/CSS&nbsp;site'
                         },
                         {
                             bullet: 'Automated part of the Waycross app&rsquo;s back end using Cron, Bash, PHP, SQL, and&nbsp;more'//,
