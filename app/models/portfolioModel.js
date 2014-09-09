@@ -77,6 +77,9 @@ Portfolio.service('portfolioModel',
                             bullet: 'Google Maps and Yelp APIs'
                         },
                         {
+                            bullet: 'Mocha and Sinon'
+                        },
+                        {
                             bullet: 'Sass/SCSS'
                         },
                         {
