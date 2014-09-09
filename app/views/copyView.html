@@ -5,28 +5,28 @@
 </div>
 <div class="contentWrapper">
     <div class="narrow">
-        <div class="copyItem" ng-repeat='project in copy'>
-            <h3 ng-bind-html-unsafe='project.title'></h3>
-            <p ng-bind-html-unsafe='project.description'></p>
-            <ul ng-show='project.bullets'>
-                <li ng-repeat='item in project.bullets'>
+        <div class="copyItem" data-ng-repeat='project in copy'>
+            <!-- Title -->
+            <h3 data-ng-bind-html-unsafe='project.title'></h3>
+            <!-- Description -->
+            <p data-ng-bind-html-unsafe='project.description'></p>
+            <!-- (Optional) bullets -->
+            <ul data-ng-show='project.bullets'>
+                <li data-ng-repeat='item in project.bullets'>
                     <a href="{{item.url}}" target="_blank">
-                        <h4 ng-bind-html-unsafe='item.title'></h4>
+                        <h4 data-ng-bind-html-unsafe='item.title'></h4>
                     </a>
-                    <div ng-show='item.description' ng-bind-html-unsafe='item.description'></div>
-                    <ul ng-show='item.bullets'>
-                        <li ng-repeat='item in item.bullets' ng-bind-html-unsafe='item.bullet'></li>
-                    </ul>
-                    
-<!--                     <a href="{{item.url}}" target="_blank">
-                        <button ng-show='item.url' type="button" class="link button blue">
+                    <div data-ng-show='item.description' data-ng-bind-html-unsafe='item.description'></div>
+                    <a href="{{item.url}}" target="_blank">
+                        <button data-ng-show='item.url' type="button" class="link button blue">
                             Read it
                         </button>
-                    </a> -->
+                    </a>
                 </li>
             </ul>
-            <a href="{{project.url}}" target="_blank">
-                <button ng-show='project.url' type="button" class="link button blue">
+            <!-- (Optional) button -->
+            <a href="{{project.url}}" target="_blank" ng-show='project.url'>
+                <button data-ng-show='project.url' type="button" class="link button blue">
                     Take a look
                 </button>
             </a>
@@ -34,12 +34,12 @@
         <div class="blockWrapper paddingTop footer">
             <div class="footerWrapper">
                 <span class="CTA">
-                    Something about code:
+                    Development portfolio:
                 </span>
                 <span class="wide">
                     <a href="/portfolio">
                         <button type="button" class="button red wide">
-                            See my projects
+                            See my dev projects
                         </button>
                     </a>
                 </span>
