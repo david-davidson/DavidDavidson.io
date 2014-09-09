@@ -16,6 +16,7 @@ module.exports = function(grunt){
                 cwd: 'app/',
                 src: [
                     '*.html',
+                    '*.pdf', // For the PDF resume
                     'views/directives/*',
                     'views/*',
                     'images/*'
