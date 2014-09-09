@@ -4,139 +4,62 @@ Portfolio.service('portfolioModel',
             return [
                 {
                     title: 'Noet.com',
-                    description: ' * Noet is Logos for the classics',
+                    description: 'Noet, Logos Bible Software&rsquo;s philosophy/classics division, is a suite of interlinked tools and texts for better scholarship in the humanities. I wrote almost all of Noet.com&mdash;its <a href="http://noet.com/" target="_blank">home</a> and <a href="http://noet.com/about/" target="_blank">about</a> pages, the <a href="http://noet.com/404" target="_blank">404</a>, and&nbsp;more.',
                     url: 'http://noet.com/'
                 },
                 {
-                    title: 'Posts on blog.logos.com',
-                    description: '* Have written lots of stuff on the blog&mdash;long-form content, hard-sell marketing copy, promotion of both core Logos product and&mdash;personal fave&mdash;secular Noet offshoot.',
+                    title: 'Posts on Blog.Logos.com',
+                    description: 'I&rsquo;ve written around <a href="http://blog.logos.com/author/david-davidson/" target="_blank">50 posts</a> on the Logos blog: evergreen content, hard-sell marketing copy, promotion of both Noet and the core Logos product, and more. Here are a few&nbsp;favorites:',
                     bullets: [
                         {
                             title: 'Why You Should Care about Math',
-                            url: 'http://blog.logos.com/2013/11/greek-math-pythagoras-plato-zeno-aristotle/',
-                            bullets: [
-                                {
-                                    bullet: 'Evergreen Big Content'
-                                },
-                                {
-                                    bullet: 'Do Longtail right: obscure topic, devoted readers, deep research'
-                                },
-                                {
-                                    bullet: 'Why successful? Achieved its immediate goal, was tweeted out by AMSI'
-                                }
-                            ]
+                            description: 'Tasked with promoting Noet&rsquo;s fairly obscure <a href="https://www.logos.com/product/34182/greek-mathematical-works-collection" target="_blank">Greek Mathematical Works Collection</a>, I opted for a content- and research-heavy approach that would bore casual readers but appeal to the truly passionate. The gamble paid off: the post exceeded its revenue goals, got better-than-average social traction (18 tweets, 44 likes), and was even <a href="https://twitter.com/DiscoverAMSI/status/407676230134407168" target="_blank">tweeted out by the Australian Mathematical Sciences Institute</a>.',
+                            url: 'http://blog.logos.com/2013/11/greek-math-pythagoras-plato-zeno-aristotle/'
                         },
                         {
                             title: 'Last Chance! Don&rsquo;t Miss Your Introductory Savings on Noet Bundles',
-                            url: 'http://blog.logos.com/2014/01/noet-bundles-last-chance-introductory-savings/',
-                            bullets: [
-                                {
-                                    bullet: 'Hard sell at close of promotional period: not trying to build brand, trying to make money today.'
-                                },
-                                {
-                                    bullet: 'Picked out customer pain points, addressed them'
-                                },
-                                {
-                                    bullet: 'Made money'
-                                }
-                            ]
-                            // description: ' * Hard sell at close of promotional period: not trying to build brand, trying to make money today. * Picked out customer pain points, addressed them * Made money'
+                            description: 'This was a hard-sell post at the end of an introductory promotional period. As such, its only goal was to make money <em>today</em>. Since I&rsquo;d already exhausted the core features and benefits, I used this last post as an opportunity to address objections&nbsp;head-on.',
+                            url: 'http://blog.logos.com/2014/01/noet-bundles-last-chance-introductory-savings/'
                         },
                         {
                             title: 'Why Philosophy Matters',
-                            url: 'http://blog.logos.com/2013/10/why-philosophy-matters/',
-                            bullets: [
-                                {
-                                    bullet: 'Like first one, evergreen brand-builder'
-                                },
-                                {
-                                    bullet: 'Additional challenge tho: demonstrate to Christian audience that philosophy safe; demonstrate to secular readers that this brand not TOO christian.'
-                                },
-                                {
-                                    bullet: 'success: voice toed that line, strong results for SEO (link to search results)'
-                                }
-                            ]
-                            // description: ' * Like first one, evergreen brand-builder * Additional challenge tho: demonstrate to Christian audience that philosophy safe; demonstrate to secular readers that this brand not TOO christian. * success: voice toed that line, strong results for SEO (link to search results) '
-                        },
-                    ]
-                },                
-                {
-                    title: 'Copyanswers.com',
-                    description: ' * Way back when, produced series of training docs for coworkers; put them online (just a WP site) for reference. Note that I treat marketing style /  CMOS as authoritative: know that we&rsquo;re not really talking rite and rong here.',
-                    bullets: [
-                        {
-                            bullet: 'one'
-                        },
-                        {
-                            bullet: 'two'
-                        },
-                        {
-                            bullet: 'three'
+                            description: 'Like the first post, this was an evergreen brand-builder. The challenge was to 1.) demonstrate to a Christian audience that secular philosophy is legitimately interesting, and 2.) not alarm non-Christian readers with a too-heavy Christian voice. The post succeeded in keeping everyone happy, and it also owned the #1 Google ranking for &ldquo;Why philosophy matters&rdquo; for half a year. (It&rsquo;s still top&nbsp;three.)',
+                            url: 'http://blog.logos.com/2013/10/why-philosophy-matters/'
                         }
-                    ],
+                    ]
+                },
+                {
+                    title: 'CopyAnswers.com',
+                    description: 'A year or two ago, I wrote a series of training posts for fellow marketers at Logos; for reference, I put them online. These posts sum up my editorial philosophy, which is heavily influenced by Bryan Garner. (Note, by the way, that I treat Logos&rsquo;s style guide and <em>The Chicago Manual of Style</em> as authoritative, though I know we&rsquo;re not really talking about right and wrong&nbsp;here.)',
                     url: 'http://www.copyanswers.com/'
                 }
             ];
         };
         this.getProjects = function() {
-            return [           
+            return [
                 {
-                    title: 'Waycross.com',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
+                    title: 'DavidDavidson.io',
+                    description: 'This is the source of the site you&rsquo;re reading right now&mdash;it&rsquo;s an Angular app running on Node, deployed to Heroku. I&rsquo;ve tried to incorporate best practices: models, views, and controllers live in app/, a Grunt task builds dist/, etc. <a href="https://github.com/david-davidson/DavidDavidson.io" target="_blank">Take a look!</a>',
                     technologies: [
                         {
-                            bullet: 'WordPress'
+                            bullet: 'AngularJS'
                         },
                         {
-                            bullet: 'PHP'
-                        }
-                    ],
-                    image: '../images/waycross-square.png',
-                    url: 'http://waycross.com/',
-                },
-                {
-                    title: 'BloomYogaNW.com',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
-                    technologies: [
-                        {
-                            bullet: 'WordPress'
-                        },
-                        {
-                            bullet: 'Foundation'
+                            bullet: 'Node.js'
                         },
                         {
                             bullet: 'SCSS'
                         },
                         {
-                            bullet: 'PHP'
-                        },
-                        {
-                            bullet: 'Advanced Custom Fields'
+                            bullet: 'Heroku'
                         }
                     ],
-                    image: '../images/bloom-square.png',
-                    url: 'http://www.bloomyoganw.com/'
-                },
-                {
-                    title: 'SublimeScript / SublimeScript.com',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
-                    technologies: [
-                        {
-                            bullet: 'HTML/CSS'
-                        },
-                        {
-                            bullet: 'PHP'
-                        },
-                        {
-                            bullet: 'Autohotkey_L'
-                        }
-                    ],
-                    image: '../images/sublimeScript.png',
-                    url: 'http://sublimescript.com/'
+                    image: '../images/site.png',
+                    url: 'https://github.com/david-davidson/DavidDavidson.io'
                 },
                 {
                     title: 'ZipperComputer.com views',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
+                    description: 'When Zipper Computer outgrew our boring old WordPress site, we decided to build an awesome replacement using the PHP framework Laravel. I helped build the new <a href="http://zippercomputer.com/enterprise-web-design" target="_blank">web-design</a> and <a href="http://zippercomputer.com/growth-web-consulting" target="_blank">growth-consulting</a> views. We leaned pretty heavily on Foundation and jQuery for responsive design, with Blade for templating.',
                     technologies: [
                         {
                             bullet: 'Laravel'
@@ -151,7 +74,7 @@ Portfolio.service('portfolioModel',
                             bullet: 'PHP'
                         },
                         {
-                            bullet: 'JavaScript'
+                            bullet: 'jQuery'
                         },
                         {
                             bullet: "Blade"
@@ -159,61 +82,92 @@ Portfolio.service('portfolioModel',
                     ],
                     image: '../images/zipper-square.png',
                     url: 'http://zippercomputer.com/'
-                },     
-                // Maybe restore this once you can have 10 total, not 8?
-                // {
-                //     title: 'OverviewBible.com',
-                //     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
-                //     technologies: [
-                //         {
-                //             bullet: 'WordPress'
-                //         },
-                //         {
-                //             bullet: 'PHP'
-                //         }
-                //     ],
-                //     image: '',
-                //     url: 'http://overviewbible.com/',
-                // },      
+                },
                 {
                     title: 'Bible Search Chrome extension',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
+                    description: 'This is the project that won my team the Shipping prize at Logos Bible Software&rsquo;s staff hackathon, summer &rsquo;13&mdash;it&rsquo;s a Chrome-extension wrapper for Logos&rsquo;s Biblia.com API. It was an early project for me, so I worked exclusively on the front end: HTML and CSS. (I also got my first taste of Git!)',
                     technologies: [
                         {
-                            bullet: 'HTML/CSS'
+                            bullet: 'HTML'
+                        },
+                        {
+                            bullet: 'CSS'
                         }
                     ],
                     image: '../images/bibleSearch.png',
                     url: 'https://chrome.google.com/webstore/detail/bible-search/enlaminhpdcdeemcnfnecpjbafhhajff?hl=en-US'
                 },
                 {
-                    title: 'DavidDavidson.io',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
-                    technologies: [
-                        {
-                            bullet: 'AngularJS'
-                        },
-                        {
-                            bullet: 'JavaScript'
-                        },
-                        {
-                            bullet: 'SCSS'
-                        }
-                    ],
-                    image: '../images/site.png',
-                    url: 'https://github.com/david-davidson/DavidDavidson.io'
-                },
-                {
                     title: 'linktagger.py',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
+                    description: 'This was a hobby project to 1.) learn some Python and 2.) automate one of the boring parts of my work in marketing: Google link tagging. It uses regular expressions to build tagged links automatically, all at once.',
                     technologies: [
                         {
                             bullet: 'Python'
+                        },
+                        {
+                            bullet: 'Regular expressions'
                         }
                     ],
                     image: '../images/linktagger.png',
                     url: 'https://github.com/david-davidson/linktagger.py'
-                }
+                },
+                {
+                    title: 'Waycross.com',
+                    description: 'Waycross.com is a pixel-for-pixel WordPress clone of a flat HTML/CSS site. I started with Underscores, a minimal starter theme, and built it into a fully editable site with separate menus and headers for separate pages, a custom blog template, and more.',
+                    technologies: [
+                        {
+                            bullet: 'WordPress'
+                        },
+                        {
+                            bullet: 'Underscores'
+                        },
+                        {
+                            bullet: 'PHP'
+                        }
+                    ],
+                    image: '../images/waycross-square.png',
+                    url: 'http://waycross.com/',
+                },
+                // {
+                //     title: 'BloomYogaNW.com',
+                //     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
+                //     technologies: [
+                //         {
+                //             bullet: 'WordPress'
+                //         },
+                //         {
+                //             bullet: 'Foundation'
+                //         },
+                //         {
+                //             bullet: 'SCSS'
+                //         },
+                //         {
+                //             bullet: 'PHP'
+                //         },
+                //         {
+                //             bullet: 'Advanced Custom Fields'
+                //         }
+                //     ],
+                //     image: '../images/bloom-square.png',
+                //     url: 'http://www.bloomyoganw.com/'
+                // },
+                // {
+                //     title: 'SublimeScript / SublimeScript.com',
+                //     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, veniam, quod voluptatibus iure magnam eum nemo veritatis atque totam officiis. Dignissimos, voluptatum, sapiente reiciendis nemo beatae facilis fuga sed aliquam ab repellat deserunt debitis laborum numquam ut eaque ea inventore facere nesciunt eligendi unde minima animi pariatur! Delectus, error, velit?',
+                //     technologies: [
+                //         {
+                //             bullet: 'HTML/CSS'
+                //         },
+                //         {
+                //             bullet: 'PHP'
+                //         },
+                //         {
+                //             bullet: 'Autohotkey_L'
+                //         }
+                //     ],
+                //     image: '../images/sublimeScript.png',
+                //     url: 'http://sublimescript.com/'
+                // }
             ];
         };
     }

@@ -19,12 +19,12 @@ Portfolio.service('homeModel',
         this.getTestimonials = function() {
             return [
                 {
-                    testimonial: 'There are simply not enough David Davidsons in the world. I&rsquo;ve never met a kinder spirit&nbsp;.&nbsp;.&nbsp;. He makes those around him better, and he is an incredible asset to everyone he works with. You won&rsquo;t find anyone more dedicated. In my review, when asked to rate my dedication to my work, <strong>my boss asked me to rate it &lsquo;on a scale of 1 to David Davidson&rsquo; (true&nbsp;story)</strong>.',
-                    from: 'Promotions coordinator at Logos'
+                    testimonial: '[David&rsquo;s] meticulous attention to detail, tireless work ethic, and vigilance [set] him ahead of the pack. But what really sets David apart is his demeanor. His easy-going nature and genuine kindness make working with him unbelievably easy. <strong>In my professional career, there [have] only been a couple people who have felt irreplaceable, and David is one of&nbsp;them</strong>.',
+                    from: 'MarCom team lead, Logos Bible Software'
                 },
                 {
-                    testimonial: '[David&rsquo;s] meticulous attention to detail, tireless work ethic, and vigilance [set] him ahead of the pack. But what really sets David apart is his demeanor. His easy-going nature and genuine kindness make working with him unbelievably easy. <strong>In my professional career, there [have] only been a couple people who have felt irreplaceable, and David is one of&nbsp;them</strong>.',
-                    from: 'MarCom team lead, Logos Research Systems'
+                    testimonial: 'There are simply not enough David Davidsons in the world. I&rsquo;ve never met a kinder spirit&nbsp;.&nbsp;.&nbsp;. He makes those around him better, and he is an incredible asset to everyone he works with. You won&rsquo;t find anyone more dedicated. In my review, when asked to rate my dedication to my work, <strong>my boss asked me to rate it &lsquo;on a scale of 1 to David Davidson&rsquo; (true&nbsp;story)</strong>.',
+                    from: 'Promotions coordinator at Logos'
                 },
                 {
                     testimonial: 'David&rsquo;s an incredible learner, always seeking growth and developing new skills. <strong>His breadth of knowledge and ability to learn quickly and efficiently never cease to amaze me</strong>.&nbsp;.&nbsp;.&nbsp;. He&rsquo;s not just smart, a learner, a teacher, and an expert in his field. If you surround David with the most intelligent people, he&rsquo;ll quickly distinguish himself with&nbsp;kindness.',
@@ -51,21 +51,21 @@ Portfolio.service('homeModel',
                     from: 'Special projects manager at&nbsp;Logos'
                 },
                 {
+                    testimonial: '<strong>David contributes an extraordinary amount of value to every project he is [part] of</strong>. His copy writing and editing skills are unmatched by anyone I&rsquo;ve ever worked with. He continues to impress me with his tenacious appetite to improve in areas such as graphic design, HTML, and social&nbsp;media.',
+                    from: 'Social media coordinator at&nbsp;Logos'
+                },
+                {
                     testimonial: 'David exceeds my expectations every time I work with him. He does more than proof, edit or write. He looks at the underlying strategy and identifies ways to make the copy more effectively hit the mark. As a marketer, <strong>I&rsquo;ve worked with many staff and freelance copywriters and David has quickly become my top pick</strong>.',
                     from: 'Lead special projects manager at&nbsp;Logos'
                 },
-                {
-                    testimonial: 'David contributes an extraordinary amount of value to every project he is [part] of. His copy writing and editing skills are unmatched by anyone I&rsquo;ve ever worked with. <strong>He continues to impress me with his tenacious appetite to improve</strong> in areas such as graphic design, HTML, and social&nbsp;media.',
-                    from: 'Social media coordinator at&nbsp;Logos'
-                }
                 // {
                 //     testimonial: 'David Davidson is an incisive editor and writer. From copywriting to developmental and copy editing to proofreading, David does it all. He has quickly become an essential part of [Logos&rsquo;s] marketing efforts. He&rsquo;s also incredibly gracious and pleasant to work with. <strong>I would trust him with any prose or project</strong>.',
                 //     from: 'Noet product manager at&nbsp;Logos'
                 // },
-                // {
-                //     testimonial: 'As long as you don&rsquo;t mind people eating tinned fish&nbsp;.&nbsp;.&nbsp;. David Davidson is a perfect hire.<br><br>Skills include: corny hashtags&nbsp;.&nbsp;.&nbsp;. disgusting green smoothies&nbsp;.&nbsp;.&nbsp;.&nbsp;HTML.',
-                //     from: 'Irreverent coworkers at&nbsp;Logos'
-                // }
+                {
+                    testimonial: 'As long as you don&rsquo;t mind people eating tinned fish&nbsp;.&nbsp;.&nbsp;. David Davidson is a perfect hire.<br><br>Skills include: corny hashtags&nbsp;.&nbsp;.&nbsp;. disgusting green smoothies&nbsp;.&nbsp;.&nbsp;.&nbsp;HTML.',
+                    from: 'Irreverent coworkers at&nbsp;Logos'
+                }
             ];
         };
     }
