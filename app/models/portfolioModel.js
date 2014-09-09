@@ -4,16 +4,16 @@ Portfolio.service('portfolioModel',
             return [
                 {
                     title: 'Noet.com',
-                    description: 'Noet, Logos Bible Software&rsquo;s philosophy/classics division, is a suite of interlinked tools and texts for better scholarship in the humanities. I wrote almost all of Noet.com&mdash;its <a href="http://noet.com/" target="_blank">home</a> and <a href="http://noet.com/about/" target="_blank">about</a> pages, the <a href="http://noet.com/404" target="_blank">404</a>, and&nbsp;more.',
+                    description: 'Noet, Logos Bible Software&rsquo;s philosophy/classics division, is a suite of tools and texts for better scholarship in the humanities. I wrote almost all of Noet.com&mdash;its <a href="http://noet.com/" target="_blank">home</a> and <a href="http://noet.com/about/" target="_blank">about</a> pages, the <a href="http://noet.com/404" target="_blank">404</a>, and&nbsp;more.',
                     url: 'http://noet.com/'
                 },
                 {
                     title: 'Posts on Blog.Logos.com',
-                    description: 'I&rsquo;ve written around <a href="http://blog.logos.com/author/david-davidson/" target="_blank">50 posts</a> on the Logos blog: evergreen content, hard-sell marketing copy, promotion of both Noet and the core Logos product, and more. Here are a few&nbsp;favorites:',
+                    description: 'I&rsquo;ve written <a href="http://blog.logos.com/author/david-davidson/" target="_blank">around 50 posts</a> on the Logos blog: evergreen content, hard-sell marketing copy, promotion of both Noet and the core Logos product, and more. Here are a few&nbsp;favorites:',
                     bullets: [
                         {
                             title: 'Why You Should Care about Math',
-                            description: 'Tasked with promoting Noet&rsquo;s fairly obscure <a href="https://www.logos.com/product/34182/greek-mathematical-works-collection" target="_blank">Greek Mathematical Works Collection</a>, I opted for a content- and research-heavy approach that would bore casual readers but appeal to the truly passionate. The gamble paid off: the post exceeded its revenue goals, got better-than-average social traction (18 tweets, 44 likes), and was even <a href="https://twitter.com/DiscoverAMSI/status/407676230134407168" target="_blank">tweeted out by the Australian Mathematical Sciences Institute</a>.',
+                            description: 'Tasked with promoting Noet&rsquo;s fairly obscure <a href="https://www.logos.com/product/34182/greek-mathematical-works-collection" target="_blank">Greek Mathematical Works Collection</a>, I opted for a content- and research-heavy approach that would bore casual readers but appeal to the truly passionate. The gamble paid off: the post exceeded its revenue goals, got strong social traction (18 tweets, 44 likes), and was even <a href="https://twitter.com/DiscoverAMSI/status/407676230134407168" target="_blank">tweeted out by the Australian Mathematical Sciences Institute</a>!',
                             url: 'http://blog.logos.com/2013/11/greek-math-pythagoras-plato-zeno-aristotle/'
                         },
                         {
@@ -23,14 +23,14 @@ Portfolio.service('portfolioModel',
                         },
                         {
                             title: 'Why Philosophy Matters',
-                            description: 'Like the first post, this was an evergreen brand-builder. The challenge was to 1.) demonstrate to a Christian audience that secular philosophy is legitimately interesting, and 2.) not alarm non-Christian readers with a too-heavy Christian voice. The post succeeded in keeping everyone happy, and it also owned the #1 Google ranking for &ldquo;Why philosophy matters&rdquo; for half a year. (It&rsquo;s still top&nbsp;three.)',
+                            description: 'Like the first post, this was an evergreen brand-builder. The challenge was to 1.) demonstrate to Logos&rsquo;s Christian audience that secular philosophy is legitimately interesting, and 2.) not alarm non-Christian readers (Noet&rsquo;s eventual target market) with an overly Christian voice. The post succeeded in keeping everyone happy, and it also owned the #1 Google ranking for &ldquo;Why philosophy matters&rdquo; for at least half a year.',
                             url: 'http://blog.logos.com/2013/10/why-philosophy-matters/'
                         }
                     ]
                 },
                 {
                     title: 'CopyAnswers.com',
-                    description: 'A year or two ago, I wrote a series of training posts for fellow marketers at Logos; for reference, I put them online. These posts sum up my editorial philosophy, which is heavily influenced by Bryan Garner. (Note, by the way, that I treat Logos&rsquo;s style guide and <em>The Chicago Manual of Style</em> as authoritative, though I know we&rsquo;re not really talking about right and wrong&nbsp;here.)',
+                    description: 'A year or two ago, I wrote a series of training posts for fellow marketers at Logos; for reference, I put them online. These posts sum up my editorial philosophy, which emphasizes clarity, simplicity, and concision.',
                     url: 'http://www.copyanswers.com/'
                 }
             ];
