@@ -62,7 +62,7 @@ Portfolio.service('portfolioModel',
                 },
                 {
                     title: 'Along the Way',
-                    description: 'This was a five-day group project in Code Fellows&rsquo; full-stack-JS accelerator. It&rsquo;s a minimal Backbone app that takes start and end points, uses the Google Maps API to build a route, uses the Yelp API to find points of interest along it, and renders a map that shows both your route and the possible places to visit along the way.',
+                    description: 'This was a five-day group project in Code Fellows&rsquo; full-stack-JS accelerator. It&rsquo;s a minimal Backbone app that takes start and end points, uses the Google Maps API to build a route, uses the Yelp API to find points of interest along it, and renders a map that shows both your route and the possible places to visit along the way. (<a href="http://localhost-3000.herokuapp.com/" target="_blank">Give it a try</a>.)',
                     technologies: [
                         {
                             bullet: 'Backbone'
