@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app='Portfolio' ng-init ng-controller='masterController'>
+<html data-ng-app='Portfolio' data-ng-init data-ng-controller='masterController'>
     <head>
         <!-- Favicon -->
         <link rel="icon" href="images/favicon.gif" type="image/x-icon">
@@ -21,7 +21,7 @@
         <!-- jQuery -->
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <!-- Meta -->
-        <title ng-cloak ng-bind-html-unsafe='title'></title>
+        <title data-ng-cloak data-ng-bind-html-unsafe='title'></title>
         <meta name="viewport" content="width=device-width">
         <meta name="description" content="See my resume, my portfolio, and more.">
         <!-- for Angular's HTML5 mode -->
@@ -32,33 +32,33 @@
             <ul>
                 <li>
                     <a href="/">
-                        <button type="button" class="button" ng-class='{current: page == "home"}' ng-click='dropdown=false' >
+                        <button type="button" class="button" data-ng-class='{current: page == "home"}' data-ng-click='dropdown=false' >
                             About
                         </button>
                     </a>
                 </li>
                 <li>
                     <a href="/resume">
-                        <button type="button" class="button" ng-class='{current: page == "resume"}' ng-click='dropdown=false'>
+                        <button type="button" class="button" data-ng-class='{current: page == "resume"}' data-ng-click='dropdown=false'>
                             R&eacute;sum&eacute;
                         </button>
                     </a>
                 </li>
-                <li ng-mouseover='openDropdown()' ng-click='openDropdown()' ng-mouseleave='closeDropdown()'>
-                    <button type="button" class="button noLink" ng-class='{current: page == "copy" || page == "portfolio"}'>
+                <li data-ng-mouseover='openDropdown()' data-ng-click='openDropdown()' data-ng-mouseleave='closeDropdown()'>
+                    <button type="button" class="button noLink" data-ng-class='{current: page == "copy" || page == "portfolio"}'>
                         Portfolio
                     </button>
-                    <ul ng-cloak ng-show='dropdown'>
+                    <ul data-ng-cloak data-ng-show='dropdown'>
                         <li>
                             <a href="/copy">
-                                <button type="button" class="button" ng-class='{current: page == "copy"}'>
+                                <button type="button" class="button" data-ng-class='{current: page == "copy"}'>
                                     Copy
                                 </button>
                             </a>
                         </li>
                         <li>
                             <a href="/portfolio">
-                                <button type="button" class="button" ng-class='{current: page == "portfolio"}'>
+                                <button type="button" class="button" data-ng-class='{current: page == "portfolio"}'>
                                     Code
                                 </button>
                             </a>
@@ -67,7 +67,7 @@
                 </li>
                 <li>
                     <a href="/contact">
-                        <button type="button" class="button" ng-class='{current: page == "contact"}' ng-click='dropdown=false'>
+                        <button type="button" class="button" data-ng-class='{current: page == "contact"}' data-ng-click='dropdown=false'>
                             Contact
                         </button>
                     </a>
@@ -76,7 +76,7 @@
         </nav>
         <div class="navPlaceholder">
         </div>
-        <div ng-cloak ng-view class="view">
+        <div data-ng-cloak data-ng-view class="view">
             <!-- Inject body here at runtime -->
         </div>
         <footer>

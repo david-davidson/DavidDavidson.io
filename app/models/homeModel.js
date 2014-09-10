@@ -16,6 +16,7 @@ Portfolio.service('homeModel',
                 }
             ];
         };
+
         this.getTestimonials = function() {
             return [
                 {

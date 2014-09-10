@@ -1,5 +1,8 @@
+var portfolioConfig,
+    Portfolio,
+
 // Set up routing
-var portfolioConfig = function($routeProvider, $locationProvider) {
+portfolioConfig = function($routeProvider, $locationProvider) {
     $routeProvider
     .when('/', {
         controller: 'homeController',
@@ -28,9 +31,9 @@ var portfolioConfig = function($routeProvider, $locationProvider) {
 };
 
 // Set up the Portfolio namespace
-var Portfolio = angular.module('Portfolio', []).config([
+Portfolio = angular.module('Portfolio', []).config([
     '$routeProvider', '$locationProvider',
-    portfolioConfig]);
+    portfolioConfig ]);
 
 // Directives
 

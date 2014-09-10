@@ -35,6 +35,7 @@ Portfolio.service('portfolioModel',
                 }
             ];
         };
+
         this.getProjects = function() {
             return [
                 {
