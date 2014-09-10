@@ -6,8 +6,6 @@
   "devDependencies": {
     "grunt": "*",
     "grunt-browserify": "^2.1.4",
-    "grunt-casperjs-plugin": "^1.0.3",
-    "grunt-concurrent": "^0.5.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "*",
     "grunt-contrib-copy": "^0.5.0",
@@ -17,9 +15,8 @@
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-cssc": "*",
-    "grunt-express": "*",
-    "grunt-nodemon": "*",
-    "grunt-open": "*",
+    "grunt-express-server": "^0.4.19",
+    "grunt-jscs": "^0.7.1",
     "matchdep": "*"
   },
   "dependencies": {
