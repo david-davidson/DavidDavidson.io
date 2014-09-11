@@ -3,8 +3,10 @@
     <head>
         <!-- Favicon -->
         <link rel="icon" href="images/favicon.gif" type="image/x-icon">
+
         <!-- Styles -->
         <link rel="stylesheet" href="styles.css">
+
         <!-- Typekit fonts -->
         <script src='//use.typekit.net/fkv6lkh.js'></script>
         <script>
@@ -14,16 +16,15 @@
             catch(e) {
             }
         </script>
-        <!-- Angular -->
-        <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js'></script>
-        <!-- Routing, config, models, and controllers -->
+
+        <!-- Browserified app, plus the Angular and jQuery source -->
         <script src='scripts.js'></script>
-        <!-- jQuery -->
-        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
         <!-- Meta -->
-        <title data-ng-cloak data-ng-bind-html-unsafe='title'></title>
+        <title data-ng-cloak data-ng-bind-html='title | toHTML'></title>
         <meta name="viewport" content="width=device-width">
         <meta name="description" content="See my resume, my portfolio, and more.">
+
         <!-- for Angular's HTML5 mode -->
         <base href="/">
     </head>
@@ -37,6 +38,7 @@
                         </button>
                     </a>
                 </li>
+
                 <li>
                     <a href="/resume">
                         <button type="button" class="button" data-ng-class='{current: page == "resume"}' data-ng-click='dropdown=false'>
@@ -44,10 +46,12 @@
                         </button>
                     </a>
                 </li>
+
                 <li data-ng-mouseover='openDropdown()' data-ng-click='openDropdown()' data-ng-mouseleave='closeDropdown()'>
                     <button type="button" class="button noLink" data-ng-class='{current: page == "copy" || page == "portfolio"}'>
                         Portfolio
                     </button>
+
                     <ul data-ng-cloak data-ng-show='dropdown'>
                         <li>
                             <a href="/copy">
@@ -64,7 +68,9 @@
                             </a>
                         </li>
                     </ul>
+
                 </li>
+
                 <li>
                     <a href="/contact">
                         <button type="button" class="button" data-ng-class='{current: page == "contact"}' data-ng-click='dropdown=false'>
@@ -72,15 +78,21 @@
                         </button>
                     </a>
                 </li>
+
             </ul>
         </nav>
+
+        <!-- Handles gap for fixed-position header -->
         <div class="navPlaceholder">
         </div>
+
         <div data-ng-cloak data-ng-view class="view">
             <!-- Inject body here at runtime -->
         </div>
+
         <footer>
             <p>&copy; {{today | date: 'yyyy'}} David Davidson</p>
         </footer>
+
     </body>
 </html>

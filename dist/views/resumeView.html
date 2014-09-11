@@ -4,36 +4,41 @@
             What I&rsquo;ve done
         </h2>
     </div>
+
     <div class="contentWrapper">
-<!--         <p>
+        <!-- <p>
             <a href="resume-DavidDavidson.pdf">
                 PDF r&eacute;sum&eacute; available
             </a>
         </p> -->
         <div class="narrow">
             <div class="blockWrapper" id="{{job.id}}" data-ng-repeat='job in jobs'>
-                <h3 data-ng-bind-html-unsafe='job.title'></h3>
-                <span data-ng-bind-html-unsafe='job.who' class="who"></span>
-                <span data-ng-bind-html-unsafe='job.details' class="details"></span>
+                <h3 data-ng-bind-html='job.title | toHTML'></h3>
+                <span data-ng-bind-html='job.who | toHTML' class="who"></span>
+                <span data-ng-bind-html='job.details | toHTML' class="details"></span>
                 <div class="blockWrapper">
                     <ul class="bullets">
-                        <li data-ng-repeat='item in job.bullets' data-ng-bind-html-unsafe='item.bullet'></li>
+                        <li data-ng-repeat='item in job.bullets' data-ng-bind-html='item.bullet | toHTML'></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
     <dd-arrow></dd-arrow>
+
     <div class="contentWrapper">
         <div class="narrow">
             <h2>
                 Education
             </h2>
+
             <div class="blockWrapper" data-ng-repeat='school in schools'>
-                <h3 data-ng-bind-html-unsafe='school.title'></h3>
-                <span data-ng-bind-html-unsafe='school.who' class="who"></span>
-                <span data-ng-bind-html-unsafe='school.details' class="details"></span>
+                <h3 data-ng-bind-html='school.title | toHTML'></h3>
+                <span data-ng-bind-html='school.who | toHTML' class="who"></span>
+                <span data-ng-bind-html='school.details | toHTML' class="details"></span>
             </div>
+
             <div class="paddingTop blockWrapper footer">
                 <div class="footerWrapper">
                     <span class="wide">
@@ -45,6 +50,7 @@
                     </span>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
