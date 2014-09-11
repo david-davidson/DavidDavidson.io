@@ -12,26 +12,33 @@
 <div class="contentWrapper">
     <div class="narrow">
         <div class="blockWrapper portfolioItem extraPadding" data-ng-repeat='project in filteredProjects' data-ng-class-even='"rightTiered"' data-ng-class-odd='"leftTiered"'>
-            <h3 data-ng-bind-html-unsafe='project.title'></h3>
+
+            <h3 data-ng-bind-html='project.title | toHTML'></h3>
+
             <a href="{{project.url}}" target="_blank">
                 <img data-ng-show='project.image' data-ng-src='{{project.image}}'>
             </a>
-            <p data-ng-bind-html-unsafe='project.description'></p>
+
+            <p data-ng-bind-html='project.description | toHTML'></p>
+
             <p>Technologies:</p>
             <ul>
-                <li data-ng-repeat='item in project.technologies' data-ng-bind-html-unsafe='item.bullet'></li>
+                <li data-ng-repeat='item in project.technologies' data-ng-bind-html='item.bullet | toHTML'></li>
             </ul>
+
             <a href="{{project.url}}" target="_blank">
                 <button type="button" class="link button blue">
                     Take a look
                 </button>
             </a>
         </div>
+
         <div data-ng-show='noContentVisible()'>
             <p class="noContentVisible">
                 I haven&rsquo;t worked with that one&mdash;yet. :)
             </p>
         </div>
+
         <div class="blockWrapper paddingTop footer">
             <div class="footerWrapper">
                 <span data-ng-hide='noContentVisible()' class="CTA">
@@ -46,5 +53,6 @@
                 </span>
             </div>
         </div>
+
     </div>
 </div>

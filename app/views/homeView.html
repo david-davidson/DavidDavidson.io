@@ -18,12 +18,12 @@
             Skills
         </h2>
         <div data-ng-cloak data-ng-repeat='skill in skills' class="homePara">
-            <h3 data-ng-bind-html-unsafe='skill.title'></h3>
-            <p data-ng-bind-html-unsafe='skill.description'></p>
-            <ul data-ng-show='skill.bullets'>
-                <li data-ng-repeat='item in skill.bullets' data-ng-bind-html-unsafe='item.bullet'></li>
+            <h3 data-ng-bind-html='skill.title | toHTML'></h3>
+            <p data-ng-bind-html='skill.description | toHTML'></p>
+            <ul data-ng-show='skill.bullets | toHTML'>
+                <li data-ng-repeat='item in skill.bullets' data-ng-bind-html='item.bullet | toHTML'></li>
             </ul>
-            <p data-ng-show='skill.cta' data-ng-bind-html-unsafe='skill.cta'></p>
+            <p data-ng-show='skill.cta' data-ng-bind-html='skill.cta | toHTML'></p>
         </div>
     </div>
 </div>

@@ -15,8 +15,8 @@
         &rdquo;
     </span>
     <div class="slide" data-ng-repeat="item in testimonials" data-ng-show="item.visible">
-        <p data-ng-bind-html-unsafe='item.testimonial'></p>
-        <p>&mdash;<span data-ng-bind-html-unsafe='item.from'></span></p>
+        <p data-ng-bind-html='item.testimonial | toHTML'></p>
+        <p>&mdash;<span data-ng-bind-html='item.from | toHTML'></span></p>
     </div>
     <!-- The testimonials are, naturally, of inconsistent width, so--on their own--they jerk the screen up and down as they cycle in. To avoid that, I absolute position them on top of placeholder text, which doesn't cycle and which keeps the right-size gap open no matter the screen width. -->
     <div class="slide placeholder">

@@ -6,17 +6,17 @@
 <div class="contentWrapper">
     <div class="narrow">
         <div class="copyItem" data-ng-repeat='project in copy'>
-            <!-- Title -->
-            <h3 data-ng-bind-html-unsafe='project.title'></h3>
-            <!-- Description -->
-            <p data-ng-bind-html-unsafe='project.description'></p>
-            <!-- (Optional) bullets -->
+
+            <h3 data-ng-bind-html='project.title | toHTML'></h3>
+
+            <p data-ng-bind-html='project.description | toHTML'></p>
+
             <ul data-ng-show='project.bullets'>
                 <li data-ng-repeat='item in project.bullets'>
                     <a href="{{item.url}}" target="_blank">
-                        <h4 data-ng-bind-html-unsafe='item.title'></h4>
+                        <h4 data-ng-bind-html='item.title | toHTML'></h4>
                     </a>
-                    <div data-ng-show='item.description' data-ng-bind-html-unsafe='item.description'></div>
+                    <div data-ng-show='item.description' data-ng-bind-html='item.description | toHTML'></div>
                     <a href="{{item.url}}" target="_blank">
                         <button data-ng-show='item.url' type="button" class="link button blue">
                             Read it
@@ -24,13 +24,15 @@
                     </a>
                 </li>
             </ul>
-            <!-- (Optional) button -->
+
             <a href="{{project.url}}" target="_blank" data-ng-show='project.url'>
                 <button data-ng-show='project.url' type="button" class="link button blue">
                     Take a look
                 </button>
             </a>
+
         </div>
+
         <div class="blockWrapper paddingTop footer">
             <div class="footerWrapper">
                 <span class="CTA">
@@ -45,5 +47,6 @@
                 </span>
             </div>
         </div>
+
     </div>
 </div>
