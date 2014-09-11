@@ -6,16 +6,19 @@ module.exports = function(grunt) {
         // Check code
         jshint: {
             files: [
-                'server.js',
-                'app/app.js',
-                'app/models/*.js',
-                'app/controllers/*.js'
-            ]
+                '*.js',
+                'app/*.js',
+                'app/**/*.js'
+            ],
+            options: {
+                jshintrc: true
+            }
         },
         jscs: {
             src: [
-                'app/**/*.js',
-                '*.js'
+                '*.js',
+                'app/*.js',
+                'app/**/*.js'
             ],
             options: {
                 config: '.jscsrc'
@@ -28,6 +31,20 @@ module.exports = function(grunt) {
                 src: [
                   'dist/'
                 ]
+            }
+        },
+        browserify: {
+            dev: {
+                options: {
+                    transform: [
+                        'debowerify'
+                    ],
+                    debug: true
+                },
+                src: [
+                    'app/**/*.js'
+                ],
+                dest: 'dist/scripts.js'
             }
         },
         copy: {
@@ -56,16 +73,6 @@ module.exports = function(grunt) {
             build: {
                 src: 'dist/styles.css',
                 dest: 'dist/styles.css'
-            }
-        },
-        concat: {
-            all: {
-                src: [
-                    'app/app.js',
-                    'app/models/*.js',
-                    'app/controllers/*.js'
-                ],
-                dest: 'dist/scripts.js'
             }
         },
         uglify: {
@@ -102,10 +109,10 @@ module.exports = function(grunt) {
                     'jshint',
                     'jscs',
                     'clean',
+                    'browserify:dev',
                     'copy',
                     'sass',
                     'cssmin',
-                    'concat',
                     'uglify',
                     'express:dev'
                 ]
@@ -116,10 +123,10 @@ grunt.registerTask('default', [
     'jshint',
     'jscs',
     'clean',
+    'browserify:dev',
     'copy',
     'sass',
     'cssmin',
-    'concat',
     'uglify',
     'express:dev',
     'watch'
