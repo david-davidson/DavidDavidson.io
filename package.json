@@ -4,10 +4,10 @@
   "author": "David Davidson",
   "private": true,
   "devDependencies": {
+    "debowerify": "^0.8.1",
     "grunt": "*",
     "grunt-browserify": "^2.1.4",
     "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-concat": "*",
     "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-jshint": "*",
