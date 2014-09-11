@@ -1,16 +1,21 @@
-Portfolio.controller('resumeController',
-    [ '$scope', 'resumeModel',
-    function($scope, resumeModel) {
-        $scope.jobs = resumeModel.getJobs();
-        $scope.schools = resumeModel.getSchools();
+'use strict';
 
-        $scope.isEven = function(index) {
-            if (index % 2 === 0) {
-                return true;
-            } else {
-                return false;
-            }
-        };
-        $scope.$on('$viewContentLoaded', setHeight());
-    }
-]);
+module.exports = function(app) {
+    app.controller('resumeController',
+        [ '$scope', 'resumeModel',
+        function($scope, resumeModel) {
+            $scope.jobs = resumeModel.getJobs();
+            $scope.schools = resumeModel.getSchools();
+
+            $scope.isEven = function(index) {
+                if (index % 2 === 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            };
+
+            $scope.$on('$viewContentLoaded', app.setHeight());
+        }
+    ]);
+};

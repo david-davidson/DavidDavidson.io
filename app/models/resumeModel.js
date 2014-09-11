@@ -1,5 +1,7 @@
-Portfolio.service('resumeModel',
-    function() {
+'use strict';
+
+module.exports = function(app) {
+    app.service('resumeModel', function() {
         this.getJobs = function() {
             return [
                 {
@@ -115,5 +117,5 @@ Portfolio.service('resumeModel',
                 }
             ];
         };
-    }
-);
+    });
+};

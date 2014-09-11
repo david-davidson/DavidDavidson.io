@@ -1,5 +1,7 @@
-Portfolio.service('portfolioModel',
-    function() {
+'use strict';
+
+module.exports = function(app) {
+    app.service('portfolioModel', function() {
         this.getCopy = function() {
             return [
                 {
@@ -73,6 +75,9 @@ Portfolio.service('portfolioModel',
                         },
                         {
                             bullet: 'Express'
+                        },
+                        {
+                            bullet: 'Handlebars'
                         },
                         {
                             bullet: 'Google Maps and Yelp APIs'
@@ -204,5 +209,5 @@ Portfolio.service('portfolioModel',
                 }
             ];
         };
-    }
-);
+    });
+};

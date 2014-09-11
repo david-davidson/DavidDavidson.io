@@ -1,5 +1,7 @@
-Portfolio.service('homeModel',
-    function() {
+'use strict';
+
+module.exports = function(app) {
+    app.service('homeModel', function() {
         this.getSkills = function() {
             return [
                 {
@@ -69,5 +71,5 @@ Portfolio.service('homeModel',
                 }
             ];
         };
-    }
-);
+    });
+};
