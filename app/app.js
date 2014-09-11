@@ -29,7 +29,7 @@
     require('./directives/slider')(Portfolio);
 
     // Routes
-    Portfolio.config([ '$routeProvider', function($routeProvider) {
+    Portfolio.config([ '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
         $routeProvider
         .when('/', {
             controller: 'homeController',
@@ -54,7 +54,8 @@
         .otherwise({
             redirectTo: '/'
         });
-        // $locationProvider.html5Mode(true);
+
+        $locationProvider.html5Mode(true);
     } ]);
 
 }());
