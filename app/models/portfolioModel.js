@@ -42,13 +42,16 @@ module.exports = function(app) {
             return [
                 {
                     title: 'DavidDavidson.io',
-                    description: 'This is the source of the site you&rsquo;re reading right now&mdash;it&rsquo;s an Angular app running on Node, deployed to Heroku. I&rsquo;ve tried to incorporate best practices: models, views, and controllers live in app/, a Grunt task builds dist/, etc. <a href="https://github.com/david-davidson/DavidDavidson.io" target="_blank">Take a look!</a>',
+                    description: 'This is the source of the site you&rsquo;re reading right now&mdash;it&rsquo;s an Angular app running on Node, deployed to Heroku. I&rsquo;ve tried to incorporate best practices: CommonJS-style modular code, MVC, etc. <a href="https://github.com/david-davidson/DavidDavidson.io" target="_blank">Take a look!</a>',
                     technologies: [
                         {
                             bullet: 'AngularJS'
                         },
                         {
                             bullet: 'Node.js'
+                        },
+                        {
+                            bullet: 'Browserify / modular design'
                         },
                         {
                             bullet: 'Sass/SCSS'
