@@ -1,7 +1,5 @@
 'use strict';
 
-var $ = require('jquery');
-
 module.exports = function(app) {
     app.controller('masterController',
         [ '$scope', '$window', '$location', '$timeout', 'setWindowHeight',
@@ -44,13 +42,9 @@ module.exports = function(app) {
                 $scope.dropdownHover = true;
             };
 
-            // Angular wrappers around some handy jQuery
-            $scope.scrollToParent = function(parentId) {
-                $('html, body').animate({ scrollTop:$('#' + parentId).offset().top }, 500);
-            };
-
+            // Takes care of resizing for *all* views, though individual controllers (as their view content is loaded) make the call for initial sizing
             angular.element($window).bind('resize', function() {
-                setWindowHeight(); // Takes care of resizing for *all* views, though individual controllers make the call for initial sizing
+                setWindowHeight();
             });
         }
     ] );
