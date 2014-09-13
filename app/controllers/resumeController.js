@@ -2,8 +2,8 @@
 
 module.exports = function(app) {
     app.controller('resumeController',
-        [ '$scope', 'resumeModel',
-        function($scope, resumeModel) {
+        [ '$scope', 'resumeModel', 'setWindowHeight',
+        function($scope, resumeModel, setWindowHeight) {
             $scope.jobs = resumeModel.getJobs();
             $scope.schools = resumeModel.getSchools();
 
@@ -15,7 +15,7 @@ module.exports = function(app) {
                 }
             };
 
-            $scope.$on('$viewContentLoaded', app.setHeight());
+            $scope.$on('$viewContentLoaded', setWindowHeight());
         }
     ]);
 };

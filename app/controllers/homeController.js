@@ -2,12 +2,12 @@
 
 module.exports = function(app) {
 		app.controller('homeController',
-		    [ '$scope', 'homeModel',
-		    function($scope, homeModel) {
+		    [ '$scope', 'homeModel', 'setWindowHeight',
+		    function($scope, homeModel, setWindowHeight) {
 		        $scope.skills = homeModel.getSkills();
 		        $scope.testimonials = homeModel.getTestimonials();
 
-		        $scope.$on('$viewContentLoaded', app.setHeight());
+		        $scope.$on('$viewContentLoaded', setWindowHeight());
 		    }
 		]);
 };

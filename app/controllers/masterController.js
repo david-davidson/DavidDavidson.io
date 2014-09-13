@@ -4,8 +4,8 @@ var $ = require('jquery');
 
 module.exports = function(app) {
     app.controller('masterController',
-        [ '$scope', '$window', '$location', '$timeout',
-        function($scope, $window, $location, $timeout) {
+        [ '$scope', '$window', '$location', '$timeout', 'setWindowHeight',
+        function($scope, $window, $location, $timeout, setWindowHeight) {
             $scope.$on('$routeChangeSuccess', function() {
                 if ($location.path() == '/resume') {
                     $scope.page = 'resume';
@@ -49,33 +49,8 @@ module.exports = function(app) {
                 $('html, body').animate({ scrollTop:$('#' + parentId).offset().top }, 500);
             };
 
-            app.setHeight = function() {
-                var windowHeight,
-                    navHeight,
-                    heroContentHeight,
-                    heroHeight,
-                    topMargin;
-
-                // Measure components
-                windowHeight = $(window).height();
-                navHeight = $('nav').height();
-                heroContentHeight = $('.heroContent').height();
-
-                // Calculate heights
-                heroHeight = windowHeight - navHeight;
-                if (heroContentHeight > heroHeight) {
-                    heroHeight = heroContentHeight;
-                }
-                topMargin = (heroHeight - heroContentHeight) / 2.25; // Dividing by 2 exactly makes the content look just a little too low
-
-                // Apply heights
-                $('.heroWrapper').css({ 'height': heroHeight });
-                $('.navPlaceholder').css({ 'height': navHeight });
-                $('.heroContent').css({ 'margin-top': topMargin });
-            };
-
             angular.element($window).bind('resize', function() {
-                app.setHeight(); // Takes care of resizing for *all* views, though individual controllers make the call for initial sizing
+                setWindowHeight(); // Takes care of resizing for *all* views, though individual controllers make the call for initial sizing
             });
         }
     ] );

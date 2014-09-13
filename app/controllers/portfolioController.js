@@ -2,8 +2,8 @@
 
 module.exports = function(app) {
     app.controller('portfolioController',
-        [ '$scope', 'portfolioModel',
-        function($scope, portfolioModel) {
+        [ '$scope', 'portfolioModel', 'setWindowHeight',
+        function($scope, portfolioModel, setWindowHeight) {
             $scope.projects = portfolioModel.getProjects();
             $scope.filteredProjects = $scope.projects;
             $scope.copy = portfolioModel.getCopy();
@@ -37,7 +37,7 @@ module.exports = function(app) {
                 return (!$scope.filteredProjects.length ? true: false);
             };
 
-            $scope.$on('$viewContentLoaded', app.setHeight());
+            $scope.$on('$viewContentLoaded', setWindowHeight());
         }
     ]);
 };

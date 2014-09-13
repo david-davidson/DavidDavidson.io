@@ -2,8 +2,9 @@
 
 module.exports = function(app) {
 		app.controller('contactController',
-		    [ '$scope', function($scope) {
-		        $scope.$on('$viewContentLoaded', app.setHeight());
+		    [ '$scope', 'setWindowHeight', function($scope, setWindowHeight) {
+		        // $scope.$on('$viewContentLoaded', app.setWindowHeight());
+		        $scope.$on('$viewContentLoaded', setWindowHeight());
 		    }
 		]);
 };

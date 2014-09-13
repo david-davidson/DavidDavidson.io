@@ -13,6 +13,9 @@
     require('./models/portfolioModel')(Portfolio);
     require('./models/resumeModel')(Portfolio);
 
+    // Services
+    require('./services/setWindowHeightService')(Portfolio);
+
     // Controllers
     require('./controllers/masterController')(Portfolio);
     require('./controllers/contactController')(Portfolio);
