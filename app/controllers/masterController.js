@@ -5,16 +5,16 @@ module.exports = function(app) {
         [ '$scope', '$window', '$location', '$timeout', 'setWindowHeight',
         function($scope, $window, $location, $timeout, setWindowHeight) {
             $scope.$on('$routeChangeSuccess', function() {
-                if ($location.path() == '/resume') {
+                if ($location.path() === '/resume') {
                     $scope.page = 'resume';
                     $scope.title = 'R&eacute;sum&eacute; | David Davidson';
-                } else if ($location.path() == '/copy') {
+                } else if ($location.path() === '/copy') {
                     $scope.page = 'copy';
                     $scope.title = 'Portfolio | David Davidson';
-                } else if ($location.path() == '/portfolio') {
+                } else if ($location.path() === '/portfolio') {
                     $scope.page = 'portfolio';
                     $scope.title = 'Portfolio | David Davidson';
-                } else if ($location.path() == '/contact') {
+                } else if ($location.path() === '/contact') {
                     $scope.page = 'contact';
                     $scope.title = 'Contact | David Davidson';
                 } else {
