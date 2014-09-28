@@ -41,6 +41,44 @@ module.exports = function(app) {
         this.getProjects = function() {
             return [
                 {
+                    title: 'Sextant.io',
+                    description: 'Sextant is a minimal set of tracking metrics for apps running on <span class="nobr">AngularJS&mdash;</span>as of now, it measures visits, page views per visit, average visit duration, and bounce rate, with some D3 data visualization on top. Running an Angular app? Register an account at <a href="http://sextant.io" target="_blank">Sextant.io</a>, embed the tracking script in the &lt;head&gt; of your app, and <a href="http://sextant.io" target="_blank">check it&nbsp;out!</a>',
+                    technologies: [
+                        {
+                            bullet: 'AngularJS'
+                        },
+                        {
+                            bullet: 'Node.js'
+                        },
+                        {
+                            bullet: 'Express REST APIs'
+                        },
+                        {
+                            bullet: 'MongoDB, with Mongoose schemas'
+                        },
+                        {
+                            bullet: 'Auth/auth: JWTs, Angular cookies, Passport, bcrypt'
+                        },
+                        {
+                            bullet: 'Data visualization: D3.js'
+                        },
+                        {
+                            bullet: 'Mocha, Chai, Jasmine, and Karma'
+                        },
+                        {
+                            bullet: 'Browserify / modular design'
+                        },
+                        {
+                            bullet: 'Grunt, JSHint, JSCS'
+                        },
+                        {
+                            bullet: 'Heroku'
+                        }
+                    ],
+                    image: '../images/sextant.png',
+                    url: 'https://github.com/Sextant-WDB/sextant-ng'
+                },
+                {
                     title: 'DavidDavidson.io',
                     description: 'This is the source of the site you&rsquo;re reading right now&mdash;it&rsquo;s an Angular app running on Node, deployed to Heroku. I&rsquo;ve tried to incorporate best practices: CommonJS-style modular code, MVC, etc. <a href="https://github.com/david-davidson/DavidDavidson.io" target="_blank">Take a look!</a>',
                     technologies: [
@@ -51,13 +89,13 @@ module.exports = function(app) {
                             bullet: 'Node.js'
                         },
                         {
-                            bullet: 'Browserify / modular design'
+                            bullet: 'Browserify'
                         },
                         {
                             bullet: 'Sass/SCSS'
                         },
                         {
-                            bullet: 'Grunt'
+                            bullet: 'Grunt, JSHint, JSCS'
                         },
                         {
                             bullet: 'Heroku'
@@ -68,7 +106,7 @@ module.exports = function(app) {
                 },
                 {
                     title: 'Along the Way',
-                    description: 'This was a five-day group project in Code Fellows&rsquo; full-stack-JS accelerator. It&rsquo;s a minimal Backbone app that takes start and end points, uses the Google Maps API to build a route, uses the Yelp API to find points of interest along it, and renders a map that shows both your route and the possible places to visit along the way. (<a href="http://localhost-3000.herokuapp.com/" target="_blank">Give it a try</a>.)',
+                    description: 'This was a five-day group project in Code Fellows&rsquo; full-stack-JS accelerator. It&rsquo;s a proof-of-concept Backbone app that takes start and end points, uses the Google Maps API to build a route, uses the Yelp API to find points of interest along it, and renders a map that shows both your route and the possible places to visit along the way. (You can give it a try <a href="http://localhost-3000.herokuapp.com/" target="_blank">here</a>.)',
                     technologies: [
                         {
                             bullet: 'Backbone'
@@ -92,7 +130,7 @@ module.exports = function(app) {
                             bullet: 'Sass/SCSS'
                         },
                         {
-                            bullet: 'Grunt'
+                            bullet: 'Grunt and JSHint'
                         },
                         {
                             bullet: 'Browserify'
