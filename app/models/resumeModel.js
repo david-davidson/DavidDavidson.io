@@ -98,7 +98,7 @@ module.exports = function(app) {
                 {
                     title: 'Development accelerator in full-stack JavaScript engineering',
                     who: '<a href="http://www.codefellows.org/full-stack-javascript-development-accelerator" target="_blank">Code Fellows</a>',
-                    details: 'Anticipated September&nbsp;2014, Seattle, WA',
+                    details: 'September&nbsp;2014, Seattle, WA',
                 },
                 {
                     title: 'Certificate in web design&nbsp;&amp; development',
