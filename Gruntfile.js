@@ -3,6 +3,7 @@ module.exports = function(grunt) {
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
         // Check code
         jshint: {
             files: [
@@ -16,7 +17,8 @@ module.exports = function(grunt) {
         },
         jscs: {
             src: [
-                '*.js',
+                'server.js',
+                'Gruntfile.js',
                 'app/*.js',
                 'app/**/*.js'
             ],
@@ -24,12 +26,22 @@ module.exports = function(grunt) {
                 config: '.jscsrc'
             }
         },
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js'
+            }
+        },
 
         // Build
         clean: {
             all: {
                 src: [
-                  'dist/'
+                    'dist/'
+                ]
+            },
+            test: {
+                src: [
+                    'tests/testBundle.js'
                 ]
             }
         },
@@ -45,6 +57,18 @@ module.exports = function(grunt) {
                     'app/**/*.js'
                 ],
                 dest: 'dist/scripts.js'
+            },
+            test: {
+                options: {
+                    transform: [
+                        'debowerify'
+                    ],
+                    debug: true
+                },
+                src: [
+                    'tests/*.js'
+                ],
+                dest: 'tests/testBundle.js'
             }
         },
         copy: {
@@ -119,16 +143,23 @@ module.exports = function(grunt) {
             }
         }
     });
-grunt.registerTask('default', [
-    'jshint',
-    'jscs',
-    'clean',
-    'browserify:dev',
-    'copy',
-    'sass',
-    'cssmin',
-    'uglify',
-    'express:dev',
-    'watch'
+    grunt.registerTask('default', [
+        'jshint',
+        'jscs',
+        'clean',
+        'browserify:dev',
+        'copy',
+        'sass',
+        'cssmin',
+        'uglify',
+        'express:dev',
+        'watch'
+    ]);
+    grunt.registerTask('test', [
+    	'jshint',
+    	'jscs',
+    	'clean:test',
+    	'browserify:test',
+    	'karma:unit'
     ]);
 };
