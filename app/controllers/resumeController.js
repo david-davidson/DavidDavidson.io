@@ -15,7 +15,7 @@ module.exports = function(app) {
                 }
             };
 
-            $scope.$on('$viewContentLoaded', setWindowHeight());
+            // $scope.$on('$viewContentLoaded', setWindowHeight());
         }
     ]);
 };

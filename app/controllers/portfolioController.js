@@ -37,7 +37,7 @@ module.exports = function(app) {
                 return (!$scope.filteredProjects.length ? true: false);
             };
 
-            $scope.$on('$viewContentLoaded', setWindowHeight());
+            // $scope.$on('$viewContentLoaded', setWindowHeight());
         }
     ]);
 };

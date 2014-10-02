@@ -7,7 +7,7 @@ module.exports = function(app) {
 		        $scope.skills = homeModel.getSkills();
 		        $scope.testimonials = homeModel.getTestimonials();
 
-		        $scope.$on('$viewContentLoaded', setWindowHeight());
+		        // $scope.$on('$viewContentLoaded', setWindowHeight());
 		    }
 		]);
 };

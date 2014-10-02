@@ -43,9 +43,9 @@ module.exports = function(app) {
             };
 
             // Takes care of resizing for *all* views, though individual controllers (as their view content is loaded) make the call for initial sizing
-            angular.element($window).bind('resize', function() {
-                setWindowHeight();
-            });
+            // angular.element($window).bind('resize', function() {
+            //     setWindowHeight();
+            // });
         }
     ] );
 };
