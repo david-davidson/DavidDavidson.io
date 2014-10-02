@@ -60,9 +60,6 @@ module.exports = function(app) {
                             bullet: 'Auth/auth: JWTs, Angular cookies, Passport, bcrypt'
                         },
                         {
-                            bullet: 'Data visualization: D3.js'
-                        },
-                        {
                             bullet: 'Mocha, Chai, Jasmine, and Karma'
                         },
                         {
