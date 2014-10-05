@@ -1,9 +1,4 @@
 @media (min-width: 725px) {
-    .heroWrapper {
-        h1 {
-            font-size: 50px;
-        }
-    }
     .contentWrapper {
         margin-left: 10%;
         margin-right: 10%;
@@ -92,7 +87,7 @@
         min-height: 100%;
         flex-direction: column;
 
-        h1 {
+        h1, h2 {
             padding-top: 80px;
         }
     }
