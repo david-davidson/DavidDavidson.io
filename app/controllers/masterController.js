@@ -2,8 +2,8 @@
 
 module.exports = function(app) {
     app.controller('masterController',
-        [ '$scope', '$window', '$location', '$timeout', 'setWindowHeight',
-        function($scope, $window, $location, $timeout, setWindowHeight) {
+        [ '$scope', '$window', '$location', '$timeout',
+        function($scope, $window, $location, $timeout) {
             $scope.$on('$routeChangeSuccess', function() {
                 if ($location.path() === '/resume') {
                     $scope.page = 'resume';
@@ -42,10 +42,6 @@ module.exports = function(app) {
                 $scope.dropdownHover = true;
             };
 
-            // Takes care of resizing for *all* views, though individual controllers (as their view content is loaded) make the call for initial sizing
-            angular.element($window).bind('resize', function() {
-                setWindowHeight();
-            });
         }
     ] );
 };

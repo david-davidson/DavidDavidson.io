@@ -66,9 +66,6 @@ h1, h2 {
     padding: 30px;
     background-color: $gray;
 }
-// h3 {
-//     padding-top: 40px;
-// }
 
 // Links
 a {
@@ -140,7 +137,6 @@ img {
 .blockWrapper {
     display: inline-block;
     width:100%;
-    // max-width: 1000px;
 }
 
 // Baseline buttons
@@ -201,21 +197,26 @@ button {
     background-color: $blue;
     color: white;
     text-align: center;
-    h1 {
-        margin-top: 0;
+
+    #elevatorPitch {
+        margin-bottom: 40px;
+        margin-top: -25px;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        font-size: 1em;
     }
 }
 
 .halfWrapper {
-    @extend .heroWrapper;
+    background-color: $blue;
+    color: white;
+    text-align: center;
     height: 200px;
     h2 {
-        padding-top: 50px;
+        padding-top: 75px;
+        margin: 0;
     }
-}
-
-.heroContent {
-    display: inline-block;
 }
 
 // Style the nav
@@ -260,10 +261,6 @@ nav {
     }
 }
 
-.navPlaceholder {
-    display: inline; // We only need the placeholder when the nav is fixed; keep it out of the way for now
-}
-
 a:focus, button:focus, button a:focus, input:focus {
     outline: none;
 }
@@ -272,17 +269,6 @@ a:focus, button:focus, button a:focus, input:focus {
 .noLink {
     cursor: default;
 }
-
-// Style the tagline
-#elevatorPitch {
-    margin-bottom: 40px;
-    margin-top: -25px;
-    text-align: center;
-    display: inline-block;
-    width: 100%;
-    font-size: 1em;
-}
-
 
 // Style the rule/arrow dividers
 hr {
