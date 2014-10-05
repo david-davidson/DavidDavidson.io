@@ -6,7 +6,7 @@ module.exports = function(app) {
             return [
                 {
                     title: 'Noet.com',
-                    description: 'Noet, Logos Bible Software&rsquo;s philosophy/classics division, is a suite of tools and texts for better scholarship in the humanities. I wrote almost all of Noet.com&mdash;its <a href="http://noet.com/" target="_blank">home</a> and <a href="http://noet.com/about/" target="_blank">about</a> pages, the <a href="http://noet.com/404" target="_blank">404</a>, and&nbsp;more.',
+                    description: 'Noet, Logos Bible Software&rsquo;s philosophy/classics division, is a suite of tools and texts for better scholarship in the humanities. I wrote almost all of Noet.com&mdash;its <a href="https://noet.com/" target="_blank">home</a> and <a href="https://noet.com/about" target="_blank">about</a> pages, the <a href="https://noet.com/404" target="_blank">404</a>, and&nbsp;more.',
                     url: 'http://noet.com/'
                 },
                 {
@@ -58,6 +58,9 @@ module.exports = function(app) {
                         },
                         {
                             bullet: 'Auth/auth: JWTs, Angular cookies, Passport, bcrypt'
+                        },
+                        {
+                            bullet: 'Socket.io for real-time updates'
                         },
                         {
                             bullet: 'Mocha, Chai, Jasmine, and Karma'
