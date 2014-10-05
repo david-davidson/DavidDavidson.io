@@ -1,0 +1,54 @@
+<nav data-ng-init="dropdown = false">
+    <ul>
+
+        <li>
+            <a href="/">
+                <button type="button" class="button" data-ng-class='{current: page === "home"}' data-ng-click='dropdown=false' >
+                    About
+                </button>
+            </a>
+        </li>
+
+        <li>
+            <a href="/resume">
+                <button type="button" class="button" data-ng-class='{current: page === "resume"}' data-ng-click='dropdown=false'>
+                    R&eacute;sum&eacute;
+                </button>
+            </a>
+        </li>
+
+        <li data-ng-mouseover='openDropdown()' data-ng-click='openDropdown()' data-ng-mouseleave='closeDropdown()'>
+            <button type="button" class="button noLink" data-ng-class='{current: page === "copy" || page === "portfolio"}'>
+                Portfolio
+            </button>
+
+            <ul data-ng-cloak data-ng-show='dropdown'>
+                <li>
+                    <a href="/copy">
+                        <button type="button" class="button" data-ng-class='{current: page === "copy"}'>
+                            Copy
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="/portfolio">
+                        <button type="button" class="button" data-ng-class='{current: page === "portfolio"}'>
+                            Code
+                        </button>
+                    </a>
+                </li>
+            </ul>
+
+        </li>
+
+        <li>
+            <a href="/contact">
+                <button type="button" class="button" data-ng-class='{current: page === "contact"}' data-ng-click='dropdown=false'>
+                    Contact
+                </button>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
