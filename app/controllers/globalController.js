@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(app) {
-    app.controller('masterController',
+    app.controller('globalController',
         [ '$scope', '$window', '$location', '$timeout',
         function($scope, $window, $location, $timeout) {
             $scope.$on('$routeChangeSuccess', function() {
