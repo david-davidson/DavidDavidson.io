@@ -13,12 +13,8 @@
     require('./models/portfolioModel')(Portfolio);
     require('./models/resumeModel')(Portfolio);
 
-    // Services
-    require('./services/setWindowHeightService')(Portfolio);
-
     // Controllers
     require('./controllers/masterController')(Portfolio);
-    require('./controllers/contactController')(Portfolio);
     require('./controllers/homeController')(Portfolio);
     require('./controllers/portfolioController')(Portfolio);
     require('./controllers/resumeController')(Portfolio);
@@ -51,7 +47,6 @@
             templateUrl: 'views/portfolioView.html'
         })
         .when('/contact', {
-            controller: 'contactController',
             templateUrl: 'views/contactView.html'
         })
         .otherwise({
