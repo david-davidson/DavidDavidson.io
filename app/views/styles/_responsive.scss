@@ -92,10 +92,9 @@
         min-height: 100%;
         flex-direction: column;
 
-        // Override default margin, which would mess up vertical centering
-        // #elevatorPitch {
-        //     margin-bottom: 0;
-        // }
+        h1 {
+            padding-top: 80px;
+        }
     }
 
     .halfWrapper {

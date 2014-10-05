@@ -197,6 +197,12 @@ button {
     background-color: $blue;
     color: white;
     text-align: center;
+    display: inline-block;
+    width: 100%;
+
+    h1 {
+        padding-top: 0;
+    }
 
     #elevatorPitch {
         margin-bottom: 40px;
