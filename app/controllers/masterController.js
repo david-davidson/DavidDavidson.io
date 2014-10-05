@@ -21,6 +21,8 @@ module.exports = function(app) {
                     $scope.page = 'home';
                     $scope.title = 'David Davidson | web development, copywriting, marketing';
                 }
+
+                $window.scrollTo(0,0); // Bumps reader to top of next page
             });
 
             $scope.today = new Date();
