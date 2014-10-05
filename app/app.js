@@ -14,7 +14,7 @@
     require('./models/resumeModel')(Portfolio);
 
     // Controllers
-    require('./controllers/masterController')(Portfolio);
+    require('./controllers/globalController')(Portfolio);
     require('./controllers/homeController')(Portfolio);
     require('./controllers/portfolioController')(Portfolio);
     require('./controllers/resumeController')(Portfolio);
@@ -24,6 +24,7 @@
     require('./filters/toHTML')(Portfolio);
 
     // Directives
+    require('./directives/nav')(Portfolio);
     require('./directives/arrow')(Portfolio);
     require('./directives/slider')(Portfolio);
 
