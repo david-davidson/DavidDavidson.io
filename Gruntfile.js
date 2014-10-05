@@ -7,7 +7,8 @@ module.exports = function(grunt) {
         // Check code
         jshint: {
             files: [
-                '*.js',
+                'server.js',
+                'Gruntfile.js',
                 'app/*.js',
                 'app/**/*.js'
             ],
@@ -77,7 +78,7 @@ module.exports = function(grunt) {
                 cwd: 'app/',
                 src: [
                     '*.html',
-                    '*.pdf', // For the PDF resume
+                    '*.pdf', // For the eventual PDF resume
                     'views/directives/*',
                     'views/*',
                     'images/*'
@@ -89,7 +90,7 @@ module.exports = function(grunt) {
         sass: {
             build: {
                 files: {
-                    'dist/styles.css': 'app/views/styles/styles.scss'
+                    'dist/styles.css': 'app/styles/styles.scss'
                 }
             }
         },
@@ -121,13 +122,12 @@ module.exports = function(grunt) {
         watch: {
             all: {
                 files: [
-                    'server.js',
-                    'app/app.js',
-                    'app/index.html',
-                    'app/controllers/*.js',
-                    'app/models/*.js',
-                    'app/views/**/*.html',
-                    'app/views/styles/*.scss'
+                    '*.js',
+                    'app/*.js',
+                    'app/**/*.js',
+                    'app/*.html',
+                    'app/**/*.html',
+                    'app/styles/*.scss'
                 ],
                 tasks: [
                     'jshint',
