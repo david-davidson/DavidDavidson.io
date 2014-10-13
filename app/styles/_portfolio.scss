@@ -1,13 +1,11 @@
 .technologySearch {
-    // h2 {
-    //     margin-bottom: 5px;
-    // }
     background: $darkGray;
     color: white;
     display: inline-block;
     width: 100%;
     text-align: center;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     input {
         font-size: .9em;
         border: 0;
@@ -18,7 +16,6 @@
     }
     [placeholder] {
         font-family: "museo-sans";
-        // color: red;
         &::-webkit-input-placeholder {
             color: $gray;
         }
@@ -26,13 +23,13 @@
             color: transparent;
         }
         &:-moz-placeholder { /* Firefox 18- */
-            color: $gray;  
+            color: $gray;
         }
         &::-moz-placeholder {  /* Firefox 19+ */
-            color: $gray;  
+            color: $gray;
         }
-        &:-ms-input-placeholder {  
-            color: $gray;  
+        &:-ms-input-placeholder {
+            color: $gray;
         }
     }
 }
