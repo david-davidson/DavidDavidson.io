@@ -10,7 +10,8 @@ module.exports = function(grunt) {
                 'server.js',
                 'Gruntfile.js',
                 'app/*.js',
-                'app/**/*.js'
+                'app/**/*.js',
+                'tests/controllers/*.js'
             ],
             options: {
                 jshintrc: true
@@ -21,7 +22,8 @@ module.exports = function(grunt) {
                 'server.js',
                 'Gruntfile.js',
                 'app/*.js',
-                'app/**/*.js'
+                'app/**/*.js',
+                'tests/controllers/*.js'
             ],
             options: {
                 config: '.jscsrc'
@@ -67,7 +69,7 @@ module.exports = function(grunt) {
                     debug: true
                 },
                 src: [
-                    'tests/*.js'
+                    'tests/**/*.js'
                 ],
                 dest: 'tests/testBundle.js'
             }
