@@ -163,7 +163,7 @@ module.exports = function(app) {
                             bullet: 'jQuery'
                         },
                         {
-                            bullet: "Blade"
+                            bullet: 'Blade'
                         }
                     ],
                     image: '../images/zipper-square.png',
