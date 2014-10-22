@@ -2,51 +2,50 @@
 
 module.exports = function(app) {
     app.controller('sliderController',
-        [ '$scope', '$timeout', 'homeModel',
-        function($scope, $timeout, homeModel) {
+        [ '$scope', '$timeout', 'homeModel', '$interval',
+        function($scope, $timeout, homeModel, $interval) {
             $scope.testimonials = homeModel.getTestimonials();
-            $scope.currentIndex = 0;
+            $scope.index = 0;
+            $scope.timer = 0;
+            $scope.frequency = 15; // seconds per slide
 
-            var next = function() {
-                if ($scope.currentIndex == $scope.testimonials.length - 1) {
+            // Activate the next slide, and reset the clock
+            var next = function(currentIndex, length) {
+                if (currentIndex === length - 1) {
                     // From final slide, tick over to first
-                    $scope.currentIndex = 0;
+                    return 0;
                 } else {
                     // Otherwise, just add one
-                    $scope.currentIndex++;
+                    return currentIndex + 1;
                 }
             };
 
             // Fire when someone clicks a nav dot
             $scope.activate = function(index) {
-                $scope.currentIndex = index;
+                $scope.index = index;
                 $scope.timer = 0;
             };
 
-            // Build a one-second timer...
-            $scope.timer = 0;
-            var newTimer = function() {
+            // Start a one-second background timer, and ...
+            $interval(function() {
                 $scope.timer++;
-                $timeout(newTimer, 1000);
-            };
-            // ... and start it
-            newTimer();
+            }, 1000);
 
-            // When 15 seconds are up, change slides
+            // ... when 15 seconds are up, change slides
             $scope.$watch('timer', function() {
-                if ($scope.timer > 15) {
+                if ($scope.timer >= $scope.frequency) {
                     $scope.timer = 0;
-                    next();
+                    $scope.index = next($scope.index, $scope.testimonials.length);
                 }
             });
 
             // Hide all the testimonials as default
-            $scope.$watch('currentIndex', function() {
-                $scope.testimonials.forEach(function(item) {
-                    item.visible = false;
+            $scope.$watch('index', function() {
+                $scope.testimonials.forEach(function(slide) {
+                    slide.visible = false;
                 });
-                // Then show the current testimonial
-                $scope.testimonials[$scope.currentIndex].visible = true;
+                // But show the current testimonial
+                $scope.testimonials[$scope.index].visible = true;
             });
         }
     ]);
