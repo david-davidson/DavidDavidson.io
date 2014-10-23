@@ -8,7 +8,6 @@ module.exports = function(app) {
                     title: 'Web development intern',
                     who: '<a href="http://zippercomputer.com/?utm_source=daviddavidson.io&utm_medium=web&utm_content=resume" target="_blank">Zipper Computer</a>',
                     details: 'October 2013&ndash;June 2014, Seattle, WA',
-                    id: 'zipper',
                     bullets: [
                         {
                             bullet: 'Built ZipperComputer.com&rsquo;s <a href="http://zippercomputer.com/enterprise-web-design" target="_blank">web-design</a> and <a href="http://zippercomputer.com/growth-web-consulting" target="_blank">growth-consulting</a> views using Laravel, Foundation, Blade, and&nbsp;more'
