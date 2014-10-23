@@ -21,7 +21,9 @@
     "karma": "^0.12.23",
     "karma-chrome-launcher": "^0.1.4",
     "karma-jasmine": "^0.1.5",
-    "matchdep": "*"
+    "karma-phantomjs-launcher": "^0.1.4",
+    "matchdep": "*",
+    "phantomjs": "^1.9.11"
   },
   "dependencies": {
     "express": "^4.8.2"
