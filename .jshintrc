@@ -12,6 +12,7 @@
     "equal"      : false,
     "angular"    : false,
     "expect"     : false,
+    "spyOn"      : false,
     "alert": false,
     "confirm": false,
     "document": false
