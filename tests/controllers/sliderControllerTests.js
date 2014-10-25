@@ -25,6 +25,12 @@ describe('The "Kind words" controller', function() {
         scope.timer = 0;
     });
 
+    it('Exposes nice things people have said as an array of objects', function() {
+        expect(Array.isArray(scope.testimonials)).toBe(true);
+        expect(scope.testimonials[0].testimonial).toBeDefined();
+        expect(scope.testimonials[0].from).toBeDefined();
+    });
+
     it('Has a working one-second timer', function() {
         expect(scope.timer).toEqual(0);
         interval.flush(1000);
@@ -55,7 +61,7 @@ describe('The "Kind words" controller', function() {
 
     it('Resets the timer when a user chooses a slide', function() {
         interval.flush(1000);
-        expect(scope.timer).toEqual(1); // Still 14 seconds short
+        expect(scope.timer).toEqual(1); // Still 14 seconds short, after all
         scope.activate(1);
         expect(scope.timer).toEqual(0);
     });
