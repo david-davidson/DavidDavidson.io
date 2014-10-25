@@ -5,7 +5,6 @@ module.exports = function(app) {
 	    [ '$scope', 'homeModel',
 	    function($scope, homeModel) {
 	        $scope.skills = homeModel.getSkills();
-	        $scope.testimonials = homeModel.getTestimonials();
 	    }
 	]);
 };
