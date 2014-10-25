@@ -25,14 +25,14 @@
             <ul data-ng-cloak data-ng-show='dropdown'>
                 <li>
                     <a href="/copy">
-                        <button type="button" class="button" data-ng-class='{current: page === "copy"}'>
+                        <button type="button" class="button" data-ng-class='{current: page === "copy"}' data-ng-click='dropdown=false'>
                             Copy
                         </button>
                     </a>
                 </li>
                 <li>
                     <a href="/portfolio">
-                        <button type="button" class="button" data-ng-class='{current: page === "portfolio"}'>
+                        <button type="button" class="button" data-ng-class='{current: page === "portfolio"}' data-ng-click='dropdown=false'>
                             Code
                         </button>
                     </a>
