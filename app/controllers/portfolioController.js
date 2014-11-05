@@ -17,8 +17,8 @@ module.exports = function(app) {
                     
                     var found = false;
                     // Since we only need one match, let's stop looping after we find it: some, not forEach
-                    found = project.technologies.some(function(technologies) {
-                        return (technologies.bullet.toLowerCase().indexOf(inputTechnology.toLowerCase()) != -1);
+                    found = project.technologies.some(function(technology) {
+                        return (technology.bullet.toLowerCase().indexOf(inputTechnology.toLowerCase()) !== -1);
                     });
                     if (found) {
                         newProjects.push(project);
