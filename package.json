@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "author": "David Davidson",
   "private": true,
+  "scripts": {
+    "test": "grunt test"
+  },
   "devDependencies": {
     "debowerify": "^0.8.1",
     "grunt": "*",
