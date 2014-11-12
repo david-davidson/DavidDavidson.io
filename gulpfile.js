@@ -24,7 +24,7 @@ gulp.task('jshint', function() {
 		'gulpfile.js',
 		'app/*.js',
 	    'app/**/*.js',
-	    'tests/controllers/*.js'  		
+	    'test/controllers/*.js'  		
 	])
 	.pipe(jshint())
 	.pipe(jshint.reporter('default'))
@@ -37,7 +37,7 @@ gulp.task('jscs', function() {
         'gulpfile.js',
         'app/*.js',
         'app/**/*.js',
-        'tests/controllers/*.js'
+        'test/controllers/*.js'
 	])
 	.pipe(jscs());
 });
@@ -47,7 +47,7 @@ gulp.task('jscs', function() {
  */
 
 buildConfig = require('./webpack.config.js');
-testConfig = require('./tests/webpack.config.js');
+testConfig = require('./test/webpack.config.js');
 
 var _webpack = function(config) {
 	
@@ -86,7 +86,7 @@ gulp.task('bundle', [
 
 gulp.task('_cleanTests', function() {
 	del([
-		'tests/testBundle.js'
+		'test/testBundle.js'
 	]);
 });
 
@@ -125,7 +125,7 @@ gulp.task('uglify', [ 'bundle' ], function() {
 
 gulp.task('runTests', [ 'bundleTests' ], function() {
 	return gulp.src([
-		'tests/testBundle.js'
+		'test/testBundle.js'
 	])
 	.pipe(karma({
 		configFile: 'karma.conf.js',
