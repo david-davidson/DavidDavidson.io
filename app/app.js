@@ -2,7 +2,7 @@
 
 (function() {
     require('angular/angular');
-    require('angular-route');
+    require('angular-route/angular-route');
 
     var Portfolio = angular.module('Portfolio', [
             'ngRoute'
