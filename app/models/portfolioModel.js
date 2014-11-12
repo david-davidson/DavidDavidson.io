@@ -89,13 +89,13 @@ module.exports = function(app) {
                             bullet: 'Node.js'
                         },
                         {
-                            bullet: 'Browserify'
+                            bullet: 'Webpack'
                         },
                         {
                             bullet: 'Sass/SCSS'
                         },
                         {
-                            bullet: 'Grunt, JSHint, JSCS'
+                            bullet: 'Gulp, JSHint, JSCS'
                         },
                         {
                             bullet: 'Heroku'
