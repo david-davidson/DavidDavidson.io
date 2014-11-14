@@ -33,7 +33,7 @@ describe('The global controller', function() {
 	});
 
 	it('Exposes the current date, for use in the footer', function() {
-		expect(scope.today.toDateString()).toEqual(new Date().toDateString());
+		expect(scope.today).toEqual(Date.now());
 	});
 
 	it('Lets the UI open the portfolio dropdown', function() {
