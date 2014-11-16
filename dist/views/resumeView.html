@@ -1,56 +1,5 @@
-<div class="resume">
-    <div class="halfWrapper">
-        <h2 class="blockWrapper">
-            What I&rsquo;ve done
-        </h2>
-    </div>
-
-    <div class="contentWrapper">
-        <!-- <p>
+<div class="resume"><div class="halfWrapper"><h2 class="blockWrapper">What I&rsquo;ve done</h2></div><div class="contentWrapper"><!-- <p>
             <a href="resume-DavidDavidson.pdf">
                 PDF r&eacute;sum&eacute; available
             </a>
-        </p> -->
-        <div class="narrow">
-            <div class="blockWrapper" id="{{job.id}}" data-ng-repeat='job in jobs'>
-                <h3 data-ng-bind-html='job.title | toHTML'></h3>
-                <span data-ng-bind-html='job.who | toHTML' class="who"></span>
-                <span data-ng-bind-html='job.details | toHTML' class="details"></span>
-                <div class="blockWrapper">
-                    <ul class="bullets">
-                        <li data-ng-repeat='item in job.bullets' data-ng-bind-html='item.bullet | toHTML'></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <dd-arrow></dd-arrow>
-
-    <div class="contentWrapper">
-        <div class="narrow">
-            <h2>
-                Education
-            </h2>
-
-            <div class="blockWrapper" data-ng-repeat='school in schools'>
-                <h3 data-ng-bind-html='school.title | toHTML'></h3>
-                <span data-ng-bind-html='school.who | toHTML' class="who"></span>
-                <span data-ng-bind-html='school.details | toHTML' class="details"></span>
-            </div>
-
-            <div class="paddingTop blockWrapper footer">
-                <div class="footerWrapper">
-                    <span class="wide">
-                        <a href="/portfolio">
-                            <button type="button" class="button red wide">
-                                See my portfolio
-                            </button>
-                        </a>
-                    </span>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
+        </p> --><div class="narrow"><div class="blockWrapper" id="{{job.id}}" data-ng-repeat="job in jobs"><h3 data-ng-bind-html="job.title | toHTML"></h3><span data-ng-bind-html="job.who | toHTML" class="who"></span> <span data-ng-bind-html="job.details | toHTML" class="details"></span><div class="blockWrapper"><ul class="bullets"><li data-ng-repeat="item in job.bullets" data-ng-bind-html="item.bullet | toHTML"></li></ul></div></div></div></div><dd-arrow></dd-arrow><div class="contentWrapper"><div class="narrow"><h2>Education</h2><div class="blockWrapper" data-ng-repeat="school in schools"><h3 data-ng-bind-html="school.title | toHTML"></h3><span data-ng-bind-html="school.who | toHTML" class="who"></span> <span data-ng-bind-html="school.details | toHTML" class="details"></span></div><div class="paddingTop blockWrapper footer"><div class="footerWrapper"><span class="wide"><a href="/portfolio"><button type="button" class="button red wide">See my portfolio</button></a></span></div></div></div></div></div>
