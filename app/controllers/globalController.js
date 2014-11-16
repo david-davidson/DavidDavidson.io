@@ -25,7 +25,7 @@ module.exports = function(app) {
                 $window.scrollTo(0,0); // Bumps reader to top of next page
             });
 
-            $scope.today = Date.now();
+            $scope.today = new Date().getFullYear();
 
             // On its own, ng-mouseout fires closeDropDown() way too readily, so we add one more boolean: $scope.dropdownHover, which (on mouseout) we 1. set to false *before* the timeout and 2. then check again before actually hiding the dropdown
             $scope.hideDropdown = function() {

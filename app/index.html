@@ -10,14 +10,10 @@
         <!-- Typekit fonts -->
         <script src='//use.typekit.net/fkv6lkh.js'></script>
         <script>
-            try {
-                Typekit.load();
-            }
-                catch(e) {
-            }
+            try { Typekit.load(); } catch(e) {}
         </script>
 
-        <!-- Browserified app, plus the Angular and jQuery source -->
+        <!-- Webpacked app, plus the Angular source -->
         <script src='scripts.js'></script>
 
         <!-- Sextant! -->
@@ -41,7 +37,7 @@
         </div>
 
         <footer>
-            <p>&copy; {{today | date: 'yyyy'}} David Davidson</p>
+            <p>&copy; {{today}} David Davidson</p>
         </footer>
 
     </body>
